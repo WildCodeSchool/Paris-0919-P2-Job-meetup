@@ -1,3 +1,6 @@
+@font-face{font-family: "HelveticaNeue_Medium" ;
+src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
+
 
 .buttonDiv{
     align-items: center;
@@ -6,27 +9,31 @@
 }
 .button {
     align-items: center;
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    font-size: 20px;
     background: #262626;
     border:none;
     border-radius: 10px;
     color: white;
     display: flex;
-    height: 2.7em;
-    padding: 1em;
+    height: 2.2em;
+    padding: 0em 2em;
     margin-right: 2em;
     text-align: center;
     width:auto;   
 }
 
+
+
 .container {
-    
+    background-image: url("../components/img/fond-home-small.svg");
+    background-size: cover;
     align-content: center;
-    background: #fae404;
     bottom: 0;
     display: flex;
     justify-content: space-around;
     position: fixed;
-    height: 5em;
+    height: 8em;
     left: 0;
     right: 0;
 }
@@ -34,16 +41,15 @@
 .map {
     display: flex;
     justify-content: center;
-    margin: auto;
     width: 100%;
     height:100%;
     margin-top:50px;
-    margin-bottom:70px;
+    margin-bottom: 5px;
 
 }
 .pictoMail {
     align-items: center;
     display: flex;
     margin: auto;
-    width: 3.5em;
+    width: 4.5em;
 }
