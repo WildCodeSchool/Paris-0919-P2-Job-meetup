@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import SimpleExample from './components/SimpleExample'
 
 class App extends React.Component {
   render() {
@@ -8,6 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <p>Ici tout commence</p>
+        <SimpleExample/>
       </div>
     );
   }
