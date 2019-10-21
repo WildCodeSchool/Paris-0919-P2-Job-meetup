@@ -24,7 +24,6 @@ src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
 }
 
 
-
 .container {
     background-image: url("../components/img/fond-home-small.svg");
     background-size: cover;
@@ -44,7 +43,7 @@ src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
     width: 100%;
     height:100%;
     margin-top:50px;
-    margin-bottom: 5px;
+
 
 }
 .pictoMail {
