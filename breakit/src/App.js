@@ -8,8 +8,8 @@ class App extends React.Component {
 
     return (
       <div>
-        <p>Ici tout commence</p>
-       
+        
+       <Footer/>
       </div>
     );
   }
