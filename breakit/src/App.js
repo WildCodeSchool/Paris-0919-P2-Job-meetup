@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from './components/Footer'
 import './App.css';
 
 class App extends React.Component {
@@ -8,6 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <p>Ici tout commence</p>
+       
       </div>
     );
   }
