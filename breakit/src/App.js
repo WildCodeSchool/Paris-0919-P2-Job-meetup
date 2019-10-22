@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Filter from './components/Filter';
 
 class App extends React.Component {
   render() {
@@ -7,7 +8,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <p>Ici tout commence</p>
+        <Filter />
       </div>
     );
   }

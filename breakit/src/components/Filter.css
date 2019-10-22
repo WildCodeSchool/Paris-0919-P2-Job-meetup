@@ -1,0 +1,9 @@
+.buttonfilter{
+    display:Flex;
+    justify-content: center;
+    
+}
+button.is-open{
+    width: 500px;
+    height:100px;
+}
