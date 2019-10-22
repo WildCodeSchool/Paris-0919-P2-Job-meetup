@@ -8,22 +8,19 @@ import pictoMail from '../components/img/Mail-picto.svg'
 class Footer extends React.Component {
   constructor (props) {
     super (props);
-    this.state = {isToggleOn: false}
-    this.masquerChoucroutte = this.masquerChoucroutte.bind(this);
+    this.state = {window: false}
+    this.afficheWindow = this.afficheWindow.bind(this);
   }
 
-  masquerChoucroutte() {
-    if (this.isToggleOn === false) {
-    this.setState({isToggleOn :true})
-    document.getElementById('choucroutte').style.display='block'
+  afficheWindow() {
+    if (this.window === false) {
+    this.setState({window: true})
+    document.getElementById('filterWindow').style.display='block'
   }
-  else {
-    this.setState({isToggleOn : false})
-    document.getElementById('choucroutte').style.display='none'
+    else {
+    this.setState({window: false})
+    document.getElementById('filterWindow').style.display='block'
   }
-    /* if (document.getElementById(choucroutte).style.display=='none') {
-      )
-    } else { (document.getElementById(choucroutte).style.display=='none') } */
   }
 
     render() {
@@ -34,36 +31,21 @@ class Footer extends React.Component {
         <div>
           
           <div className="map">
-              <img src={map}></img>
+              <img src={map} alt="map"></img>
           </div>
-
-          <div id="choucroutte">
-              <ul>
-                <li>Item</li>
-                <li>Item2</li>
-                <li>Item3</li>
-                <li>Item4</li>
-              </ul>
-            </div>
-            
 
           <footer className="container">
 
-            
             <div className="buttonDiv">
 
-              <button className="button" onClick={this.masquerChoucroutte}>
-              {this.state.isToggleOn ?  'On': 'A proximité'}
+              <button className="button" onClick={this.afficheWindow}>
+              {this.state.window ?  'Carte': 'A proximité'}
               </button>
-
               <div className="pictoMail">
-              <img src={pictoMail}></img>
-
+              <img src={pictoMail} alt="picto mail"></img>
+              </div>
             </div>
-            </div>
-          
           </footer>
-
         </div>
       );
     }
