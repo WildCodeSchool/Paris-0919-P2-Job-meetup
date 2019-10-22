@@ -1,9 +1,60 @@
-.buttonfilter{
-    display:Flex;
-    justify-content: center;
-    
+@font-face {
+    font-family: "HelveticaNeue_Medium";
+    src: url("../components/fonts/HelveticaNeue_Medium.ttf")
 }
-button.is-open{
-    width: 500px;
-    height:100px;
+
+.buttonDiv {
+    align-items: center;
+    display: flex;
+}
+
+.button {
+    align-items: center;
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    font-size: 20px;
+    background: #262626;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    height: 2.2em;
+    padding: 0em 2em;
+    margin-right: 2em;
+    text-align: center;
+    width: auto;
+}
+
+.container {
+    background-image: url("../components/img/fond-home-small.svg");
+    background-size: cover;
+    align-content: center;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    height: 8em;
+    left: 0;
+    right: 0;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+
+.pictoMail {
+    align-items: center;
+    display: flex;
+    margin: auto;
+    width: 4.5em;
+}
+
+#choucroutte {
+    display: none;
+    background: red;
+    width: 100%;
+    height: 300px;
 }
