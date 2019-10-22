@@ -1,4 +1,5 @@
 import React from 'react';
+import ListFilter from './components/ListFilter';
 import './App.css';
 
 class App extends React.Component {
@@ -7,7 +8,7 @@ class App extends React.Component {
 
     return (
       <div>
-        <p>Ici tout commence</p>
+        <ListFilter />
       </div>
     );
   }
