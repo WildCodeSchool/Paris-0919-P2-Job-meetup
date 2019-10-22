@@ -3,27 +3,65 @@
     src: url("../components/fonts/HelveticaNeue_Medium.ttf")
 }
 
+.filter{
+    width:50%;
+    margin: auto;
+    text-align: center;
 
+    
+}
 
-
-button {
-    align-items: center;
-    font-family: "HelveticaNeue_Medium", "sans-serif";
-    font-size: 20px;
-    background: #ffffff;
-    border: none;
-    border-radius: 10px;
-    color: black;
+.buttonfilter{
+    
     display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+button{
+    
+    width: auto;
+    background: white;
+    color: black;
+    border:none;
+    border-radius: 10px;
     height: 2.2em;
     padding: 0em 2em;
-    margin-right: 2em;
-    text-align: center;
-    width: auto;
+    font-size: 20px;
+    
+    
+
 }
 
-.checkBox {
-    display: block;
+form{
+    display: flex;
+    flex-direction: column;
 }
+
+.check-meet-up, .check-entreprise, .check-cowork{
+    margin: 1vh;
+}
+
+
+
+
+
+ /* RANGE SECTION  */
+
+
+.range p{
+    text-align: center;
+}
+
+.range .input-range__track--active{
+    background: black;
+}
+
+.range .input-range__slider{
+    background: black;
+    border: black;
+}
+
+
 
 
