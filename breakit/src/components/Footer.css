@@ -52,3 +52,11 @@ src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
     margin: auto;
     width: 4.5em;
 }
+
+
+#choucroutte {
+    display:none;
+    background: red;
+    width: 100%;
+    height: 300px;
+}
