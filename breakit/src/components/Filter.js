@@ -19,16 +19,16 @@ class Filter extends React.Component {
                         }}
                     >Filter</button>
                 </div>
-                <div className="checkBox">
+                <form className="checkBox">
                     <label>
-                        <input type="checkbox" value="Meet-up" checked></input>
+                        <input type="checkbox" value="Meet-up" ></input>
                         Meet-up
                     </label>
                     <label>
-                        <input type="checkbox" value="Entreprises" checked></input>
+                        <input type="checkbox" value="Entreprises" ></input>
                         Entreprises
                     </label>
-                </div>
+                </form>
             </div>    
         )
     }
