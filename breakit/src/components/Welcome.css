@@ -1,0 +1,14 @@
+.container {
+    background: #fff;
+    background-image: url("../components/img/fond-home-small.svg");
+    background-size: cover;
+    align-content: center;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    height: 8em;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
