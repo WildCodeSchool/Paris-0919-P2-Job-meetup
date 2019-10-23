@@ -1,6 +1,7 @@
 import React from 'react';
 import Footer from './components/Footer'
 import './App.css';
+import Filter from './components/Filter';
 
 class App extends React.Component {
   render() {
@@ -8,8 +9,8 @@ class App extends React.Component {
 
     return (
       <div>
-        
-       <Footer/>
+        <Filter />
+        <Footer/>
       </div>
     );
   }
