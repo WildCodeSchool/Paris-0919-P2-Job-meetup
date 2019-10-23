@@ -1,36 +1,39 @@
 import React from "react";
-import "./menuBurger.css";
+import "./MenuBurger.css";
 
-class menuBurger extends React.Component {
+
+class MenuBurger extends React.Component {
+  state = {
+    active: false
+  }
+  toggleClass = () => {
+    const currentState = this.state.active;
+    this.setState({
+      active : !currentState
+    })
+  }
   render() {
-    const xshaper = (x) => {
-      x.classList.toggle("change");
-      var y = document.getElementById("mnu");
-      y.classList.toggle("slider");
-    }
     return (
       <>
-        <div class="burgerContainer" onclick={xshaper(this)}>
-          <div class="bar1"></div>
-          <div class="mbar">
-            <div class="mbar1"></div>
-            <div class="mbar2"></div>
+        <div className={this.state.active ? "change burgerContainer" : "burgerContainer"} onClick={this.toggleClass}>
+          <div className="bar1"></div>
+          <div className="mbar">
+            <div className="mbar1"></div>
+            <div className="mbar2"></div>
           </div>
-          <div class="bar3"></div>
+          <div className="bar3"></div>
         </div>
-        <div id="mnu" class="burgerMenu">
-          <a class="burgerProfilePicParent" href="#"><img src="profilPic.png" alt="Profile picture" class="burgerProfilePic" /></a>
-          <a class="burgerUserName" href="#">Nicolas Borson</a>
-          <a class="burgerJob" href="#">Développeur full-stack</a>
-          <a class="burgerContact" href="#">Contact</a>
-          <a class="burgerParametres" href="#">Paramètres</a>
-          <a class="burgerDeconnexion" href="#">Deconnexion</a>
+        <div id="mnu" className={this.state.active ? "slider burgerMenu" : "burgerMenu"}>
+          <a className="burgerProfilePicParent" href="https://www.google.fr/"><img src="/profilPic.png" alt="Profil" className="burgerProfilePic" /></a>
+          <a className="burgerUserName" href="https://www.google.fr/">Nicolas Borson</a>
+          <a className="burgerJob" href="https://www.google.fr/">Développeur full-stack</a>
+          <a className="burgerContact" href="https://www.google.fr/">Contact</a>
+          <a className="burgerParametres" href="https://www.google.fr/">Paramètres</a>
+          <a className="burgerDeconnexion" href="https://www.google.fr/">Deconnexion</a>
         </div>
       </>
-    )
+    );
   }
 }
 
-
-
-export default menuBurger;
+export default MenuBurger;
