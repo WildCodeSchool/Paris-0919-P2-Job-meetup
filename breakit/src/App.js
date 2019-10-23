@@ -1,5 +1,6 @@
 import React from 'react';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import ListFilter from './components/ListFilter';
 import './App.css';
 import Filter from './components/Filter';
 
@@ -10,6 +11,7 @@ class App extends React.Component {
     return (
       <div>
         <Filter />
+        <ListFilter />
         <Footer/>
       </div>
     );
