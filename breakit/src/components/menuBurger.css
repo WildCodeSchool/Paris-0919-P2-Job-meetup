@@ -2,8 +2,8 @@
 
   .burgerMenu{
     position:fixed;
-    height:100%;
-    z-index:1;
+    height:65vh;
+    z-index:100;
     top:0;
     left:0;
     width:0;
@@ -47,8 +47,8 @@
   }
   
   .mbar{
-    z-index:2;
-    position:relative;
+    z-index:101;
+    position: relative;
     width:30px;
     height:2px;
     margin:8px 0;

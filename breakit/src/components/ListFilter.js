@@ -3,6 +3,10 @@ import './ListFilter.css';
 
 
 class listFilter extends React.Component {
+    state = {
+            isDisplayed: false,
+            }
+
     render() {
         return (
             <div className="first_container">
@@ -28,7 +32,8 @@ class listFilter extends React.Component {
                     </div>
                 </div>
             </div>
-        )
+            
+            )
     }
 }
 
