@@ -3,16 +3,23 @@
     src: url("../components/fonts/HelveticaNeue_Medium.ttf")
 }
 
+
+
 .filter{
-    width:50%;
+    width:auto;
+    height:auto;
     margin: auto;
     text-align: center;
+    overflow: hidden;
+    z-index: 40;
 }
+
 
 .buttonfilter{
     display: flex;
     justify-content: center;
     margin: 5%;
+    
 }
 
 button{
@@ -30,10 +37,22 @@ button{
 
 }
 
+.checkBox {
+    z-index: 40;
+    transition: ease 0.5s;
+    overflow: hidden;
+    height:0;
+}
+
 form{
     display: flex;
     flex-direction: column;
+    
 }
+
+.slider.checkBox{
+    height:27vh;
+  }
 
 .check-meet-up, .check-entreprise, .check-cowork{
     margin: 1vh;

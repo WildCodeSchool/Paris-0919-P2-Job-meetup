@@ -25,7 +25,7 @@ class Footer extends React.Component {
 
             <div className="buttonDiv">
 
-              <input type="button" className="FisrtButton" onClick={this.props.footerClick}  value = "A Proximité"></input>
+              <input type="button" className="FisrtButton" onClick={this.props.footerClick}  value={this.props.state.isDisplayed ? "A Proximité" : "Carte"} ></input>
               <div className="pictoMail">
               <img src={pictoMail} alt="picto mail"></img>
               </div>
