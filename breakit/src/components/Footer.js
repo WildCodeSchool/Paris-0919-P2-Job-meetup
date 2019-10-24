@@ -45,6 +45,7 @@ class Footer extends React.Component {
               <img src={pictoMail} alt="picto mail"></img>
               </div>
             </div>
+            
           </footer>
         </div>
       );
