@@ -49,7 +49,6 @@ src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
 }
 .pictoMail {
     align-items: center;
-    display: flex;
     margin: auto;
     width: 4.5em;
 }
