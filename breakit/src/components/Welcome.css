@@ -1,14 +1,37 @@
+@font-face{font-family: "HelveticaNeue_Medium" ;
+    src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
+
+    body{
+        background: #fff;
+    }
+
+ 
 .container {
-    background: #fff;
-    background-image: url("../components/img/fond-home-small.svg");
+    
+    background-image: url("../components/img/vague-welcome.svg");
     background-size: cover;
     align-content: center;
     bottom: 0;
     display: flex;
     justify-content: space-around;
     position: fixed;
-    height: 8em;
+    height: 35em;
     left: 0;
     right: 0;
-    z-index: 2;
 }
+
+.bienvenue {
+    color: #fff;
+    position: absolute;
+    left: 1.5em;
+    bottom: 8em;
+    font-family: "HelveticaNeue_Medium",  "sans-serif";
+    font-size: 2em;
+}
+
+.logo {
+    background-image: url("../components/img/logo-skills-noir.svg");
+    background-repeat: no-repeat;
+    height: 3em;
+}
+
