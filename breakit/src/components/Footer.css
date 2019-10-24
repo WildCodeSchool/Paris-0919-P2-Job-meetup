@@ -1,6 +1,9 @@
 @font-face{font-family: "HelveticaNeue_Medium" ;
 src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
 
+@font-face{font-family: "HelveticaNeue_Light" ;
+    src:url("../components/fonts/HelveticaNeue_Light.ttf")}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -12,16 +15,20 @@ body, html {
     z-index: -1;
 }
 
-.FisrtButton{
-    
+.FirstButton {
+    margin-right: 20px;
+    font-style: "HelveticaNeue_Medium" ;
+    background: #262626;
+    color: #fff;
+    border-radius: 10px;
     position: relative;
-    bottom: -3%;
+    bottom: -5vh;
 }
 
 .pictoMail {
     width: 4em;
     position: relative;
-    bottom: -10%;
+    bottom: -5vh;
 
 }
 
