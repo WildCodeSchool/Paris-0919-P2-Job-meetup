@@ -7,21 +7,13 @@ class SimpleExample extends React.Component {
       lat: 48.849044,
       lng: 2.352831,
       zoom: 17,
-      // active: false
     }
   
-
-// toggleClass = () => {
-//     const currentState = this.state.active;
-//     this.setState({
-//       active : !currentState
-//     })
-//   }
 
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
-      <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.state.isDisplayed ? "fullSize" : "miSize"}>
+      <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.state.isDisplayed ? "miSize" : "fullSize"}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'

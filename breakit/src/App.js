@@ -20,8 +20,8 @@ class App extends React.Component {
       <div>
         <MenuBurger className="menuburger" />
         <SimpleExample className="simpleexample" state={this.state}/>
-        {this.state.isDisplayed? null : <Filter className="filter"/>}
-        {this.state.isDisplayed? null : <ListFilter className="listfilter"/>}
+        {this.state.isDisplayed? <Filter className="filter"/> : null }
+        {this.state.isDisplayed? <ListFilter className="listfilter"/> : null}
         <Footer className="footer" state={this.state} footerClick={this.footerClick}/>
       </div>
     );
