@@ -1,53 +1,33 @@
 @font-face{font-family: "HelveticaNeue_Medium" ;
 src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
 
-
-.buttonDiv{
-    align-items: center;
-    display: flex;
-   
+body, html {
+    margin: 0;
+    padding: 0;
+    
 }
+
+#wave{
+    /* background: #fff; */
+    z-index: -1;
+}
+
 .FisrtButton{
-    align-items: center;
-    font-family: "HelveticaNeue_Medium", "sans-serif";
-    font-size: 20px;
-    background: #262626;
-    border:none;
-    border-radius: 10px;
-    color: white;
-    display: flex;
-    height: 2.1em;
-    padding: 0em 2em;
-    margin-right: 2em;
-    text-align: center;
-    width:auto;   
+    
+    position: relative;
+    bottom: -3%;
 }
 
-
-.container {
-    background: #fff;
-    background-image: url("../components/img/fond-home-small.svg");
-    background-size: cover;
-    align-content: center;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    position: fixed;
-    height: 8em;
-    left: 0;
-    right: 0;
-    z-index: 2;
-}
 .pictoMail {
-    align-items: center;
-    margin: auto;
     width: 4em;
-}
-.pictoMail:hover{
-    background: burlywood;
+    position: relative;
+    bottom: -10%;
+
 }
 
-
-.FisrtButton:hover{
-    background: burlywood;
+.buttonDiv {
+    margin-top:25px;
+    display: flex;
+    justify-content: center;
 }
+
