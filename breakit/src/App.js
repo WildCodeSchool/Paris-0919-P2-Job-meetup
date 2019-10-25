@@ -19,10 +19,10 @@ class App extends React.Component {
     return (
       <div>
         <MenuBurger className="menuburger" />
-        <SimpleExample className="simpleexample"/>
-        {this.state.isDisplayed? null : <Filter className="filter"/>}
+        <SimpleExample className="simpleexample" state={this.state}/>
+        {this.state.isDisplayed? <Filter className="filter"/> : null }
         {this.state.isDisplayed? <ListFilter className="listfilter"/> : null}
-        <Footer className="footer" footerClick={this.footerClick}/>
+        <Footer className="footer" state={this.state} footerClick={this.footerClick}/>
       </div>
     );
   }
