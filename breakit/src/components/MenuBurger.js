@@ -31,7 +31,7 @@ class MenuBurger extends React.Component {
           <a className="burgerJob" href="#">Développeur full-stack</a>
           <a className="burgerContact" href="#">Contact</a>
           <a className="burgerParametres" onClick={this.props.toggleClassParameters} href="#">Paramètres</a>
-          <a className="burgerDeconnexion" href="#">Deconnexion</a>
+          <a className="burgerDeconnexion" onClick={() => /*{ if*/ (window.confirm('Êtes-vous sur(e) de vouloir vous déconnecter ?'))/* this.onCancel(item)/* }*/} href="#">Deconnexion</a>
         </div>
       </>
     );

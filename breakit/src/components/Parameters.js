@@ -34,7 +34,7 @@ class Parameters extends React.Component {
                     <input className="parametersCompteInput" id="parametersNotifications" type="text" value="Oui"></input>
                 </div>
                 <div className="parametersSupprimerContainer">
-                    <p className="parametersSupprimer">Supprimer votre compte</p>
+                <div className='parametersSupprimer' onClick={() => /*{ if*/ (window.confirm('Êtes-vous sur(e) de vouloir supprimer votre compte ?'))/* this.onCancel(item)/* }*/}>Supprimer votre compte</div> 
                 </div>
             </div>
         );
