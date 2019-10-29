@@ -6,10 +6,12 @@ import Filter from './components/Filter';
 import MenuBurger from './components/MenuBurger';
 import SimpleExample from './components/SimpleExample'
 import Parameters from './components/Parameters'
+import Contact from './components/Contact'
 class App extends React.Component {
   state = {
     isDisplayed: false,
     activeparameters: false,
+    activecontact: false,
   }
 
   footerClick = () => {
@@ -23,14 +25,22 @@ class App extends React.Component {
     })
   }
 
+  toggleClassContact = () => {
+    const currentState = this.state.activecontact;
+    this.setState({
+      activecontact: !currentState
+    })
+  }
+
   render() {
     return (
       <div>
-        <MenuBurger toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} className="menuburger" />
+        <MenuBurger toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} className="menuburger" />
         <SimpleExample className="simpleexample" state={this.state} />
         {this.state.isDisplayed ? <Filter className="filter" /> : null}
         {this.state.isDisplayed ? <ListFilter className="listfilter" /> : null}
         <Footer className="footer" state={this.state} footerClick={this.footerClick} />
+        <Contact toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} />
         <Parameters toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} />
       </div>
     );

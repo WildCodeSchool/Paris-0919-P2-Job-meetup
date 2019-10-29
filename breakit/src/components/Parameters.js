@@ -4,7 +4,7 @@ import './Parameters.css';
 class Parameters extends React.Component {
     render() {
         return (
-            <div className={this.props.activeparameters ? "parametersBody" : "slider parametersBody"}>
+            <div className={this.props.activeparameters ? "slider parametersBody" : "parametersBody"}>
                 <div className="parametersHead">
                     <a href="#" class="parametersClose" onClick={this.props.toggleClassParameters} />
                     <p className="parametersParametres">Paramètres</p>
