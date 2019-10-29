@@ -1,0 +1,144 @@
+@font-face {
+    font-family: "HelveticaNeue_Light";
+    src: url("../components/fonts/HelveticaNeue_Light.ttf")
+ }
+ @font-face {
+    font-family: "HelveticaNeue_Medium";
+    src: url("../components/fonts/HelveticaNeue_Medium.ttf")
+ }
+
+ *{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background: #262626;
+}
+
+.containerProfilInscription{
+    display: block;
+    margin-top: 6vh;
+    height: 5vh;
+    
+}
+.logoProfilInscription {
+    display: block;
+    height: 7vh;
+    margin: auto;
+}
+
+.inscriptionProfilInscription {
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    display: block;
+    margin-top: 8vh;
+    text-align: center;
+    font-size: 30px;
+    color: #FAE404;
+
+}
+
+.form {
+	padding: 20px 0;
+	position: relative;
+	z-index: 2;
+}
+
+input {
+    display: block;
+    outline: 0s;
+    width: 250px;
+    color: #262626;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    font-weight: 300;
+}
+
+button{
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    appearance: none;
+    outline: 0;
+    background-color: #ffffff;
+    border: 0;
+    padding: 10px 15px;
+    color: #262626;
+    border-radius: 3px;
+    width: 120px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+}
+
+.containerMail{
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 120px 0;
+	height: 400px;
+    text-align: center;
+}
+
+.pourcent {
+    color: #FAE404;
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    font-size: 4vh;
+    text-align: center;
+    position: absolute;
+    bottom: -18px;
+    left: 18px;
+    
+}
+
+/* LOADER 1 */
+
+.loader{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+
+
+#loader-1:before, #loader-1:after{
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 10px solid transparent;
+    border-top-color: #FAE404;
+  }
+  
+  #loader-1:before{
+    z-index: 100;
+    /* animation: spin 2s infinite; */
+  }
+  
+  #loader-1:after{
+    border: 10px solid #ccc;
+  }
+  
+  @keyframes spin{
+    0%{
+      -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+  
+    100%{
+      -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
