@@ -29,12 +29,18 @@ class Parameters extends React.Component {
                 </div>
                 <div className="parametersCompteContainer2">
                     <p className="parametersCompteInfos">Localisation</p>
-                    <input className="parametersCompteInput" id="parametersLocalisation" type="text" value="Oui"></input>
+                    <select className="parametersCompteInput" id="parametersLocalisation">
+                        <option selected value="Yes">Activé</option>
+                        <option value="No">Desactivé</option>
+                    </select>
                     <p className="parametersCompteInfos">Notifications</p>
-                    <input className="parametersCompteInput" id="parametersNotifications" type="text" value="Oui"></input>
+                    <select className="parametersCompteInput" id="parametersNotifications">
+                        <option selected value="Yes">Activé</option>
+                        <option value="No">Desactivé</option>
+                    </select>
                 </div>
                 <div className="parametersSupprimerContainer">
-                <div className='parametersSupprimer' onClick={() => /*{ if*/ (window.confirm('Êtes-vous sur(e) de vouloir supprimer votre compte ?'))/* this.onCancel(item)/* }*/}>Supprimer votre compte</div> 
+                    <div className='parametersSupprimer' onClick={() => /*{ if*/(window.confirm('Êtes-vous sur(e) de vouloir supprimer votre compte ?'))/* this.onCancel(item)/* }*/}>Supprimer votre compte</div>
                 </div>
             </div>
         );
