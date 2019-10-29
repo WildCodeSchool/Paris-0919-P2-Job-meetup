@@ -3,42 +3,22 @@ import "./ProfilInscription.css";
 import logo from '../components/img/logo-blancjaune.svg'
 
 class ProfilInscription extends React.Component {
-<<<<<<< HEAD
-    state= {
-        count: 0,
-=======
     state = {
         countName: 0,
         countFirstName: 0,
         countEmail: 0,
         countPassword: 0,
->>>>>>> origin/profilCounter
         myInputName: "",
         myInputFirstName: "",
         myInputEmail: "",
         myInputPassword: "",
     }
 
-<<<<<<< HEAD
-    modifLoad = (e) => {
-=======
     modifLoadName = (e) => {
->>>>>>> origin/profilCounter
         this.setState({
             myInputName: e.target.value
         }, _ => {
             if (this.state.myInputName.length >= 1) {
-<<<<<<< HEAD
-            
-                this.setState({count: this.state.count + 25 })
-                console.log(this.state.myInputName)
-                
-            } 
-            else {
-                this.setState({count: this.state.count - 25 })
-                console.log(this.state.count)
-            }
-=======
 
                 this.setState({ countName: this.state.countName = 25 })
             }
@@ -59,7 +39,6 @@ class ProfilInscription extends React.Component {
             else {
                 this.setState({ countName: this.state.countFirstName = 0 })
             }
->>>>>>> origin/profilCounter
         })
     }
 
