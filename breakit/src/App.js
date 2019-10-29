@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
+import  ListMeetUp from './component/ListMeetUp'
 
-class App extends React.Component {
+class App extends Component {
   render() {
 
-
     return (
-      <div>
-        <p>Ici tout commence</p>
+      <div className="ListeMeetUp">
+        <ListMeetUp />
       </div>
     );
   }

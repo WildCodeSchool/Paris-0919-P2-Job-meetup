@@ -1,0 +1,14 @@
+.containerP{
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    color:white;
+    background-color: #262626;
+    width: auto;
+    height:auto;
+
+}
+img{
+    height: 200px;
+    width: 300px;
+}
