@@ -1,15 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import './ListFilter.css';
 
+const mapStateToProps = (state) => {
+    return {isFiltered : state.isFiltered}
+  }
 
 class listFilter extends React.Component {
-    state = {
-            isDisplayed: false,
-            }
-
     render() {
         return (
             <div className="first_container">
+                {this.props.isFiltered ? 
+                
                 <div className="second_container">
                     <div className="list">
                         <ul>
@@ -31,10 +33,13 @@ class listFilter extends React.Component {
                         </ul>
                     </div>
                 </div>
+
+                : null}
+                
             </div>
             
             )
     }
 }
 
-export default listFilter
+export default connect(mapStateToProps)(listFilter)
