@@ -5,16 +5,11 @@ import logo from '../components/img/logo-blancjaune.svg'
 class ProfilInscription extends React.Component {
     state= {
         count: 0,
-        countName: 0,
         myInputName: "",
         myInputFirstName: "",
         myInputEmail: "",
         myInputPassword: "",
     }
-
-    // modifCount =  e => {
-    //     this.setState({count: this.count + 25 })
-    // }
 
     modifLoad = (e) => {
         this.setState({
@@ -22,17 +17,14 @@ class ProfilInscription extends React.Component {
         }, _=>{
             if (this.state.myInputName.length >= 1) {
             
-                this.setState({countName: this.state.countName = 25 })
-                console.log(this.state.countName)
+                this.setState({count: this.state.count + 25 })
+                console.log(this.state.myInputName)
                 
             } 
             else {
-                this.setState({countName: this.state.countName = 0 })
-                console.log(this.state.countName)
+                this.setState({count: this.state.count - 25 })
+                console.log(this.state.count)
             }
-            this.setState({count: this.state.count + this.state.countName})
-            console.log(this.state.count)
-
         })
 
 
