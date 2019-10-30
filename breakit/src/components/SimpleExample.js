@@ -12,19 +12,32 @@ const mapStateToProps = (state) => {
 
 class SimpleExample extends React.Component {
   state = {
+<<<<<<< HEAD
       zoom: 17,
       lat: 48.849044, 
       lng: 2.352831
     }
+=======
+      lat: 48.849044,
+      lng: 2.352831,
+      zoom: 17,
+    }
+  
+>>>>>>> homepages
 
   render() {
 
     const position = [this.state.lat, this.state.lng];
 
     return (
+<<<<<<< HEAD
       <div>
         <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.isFiltered ? "miSize" : "fullSize"}>
           <TileLayer
+=======
+      <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.state.isDisplayed ? "miSize" : "fullSize"}>
+        <TileLayer
+>>>>>>> homepages
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />

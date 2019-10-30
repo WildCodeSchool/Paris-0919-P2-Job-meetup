@@ -17,6 +17,7 @@ class App extends React.Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <>
       <MenuBurger className="menuburger" />
       <Provider store={store}>
@@ -30,6 +31,15 @@ class App extends React.Component {
         </div>
       </Provider>
       </>
+=======
+      <div>
+        <MenuBurger className="menuburger" />
+        <SimpleExample className="simpleexample" state={this.state}/>
+        {this.state.isDisplayed? <Filter className="filter"/> : null }
+        {this.state.isDisplayed? <ListFilter className="listfilter"/> : null}
+        <Footer className="footer" state={this.state} footerClick={this.footerClick}/>
+      </div>
+>>>>>>> homepages
     );
   }
 }

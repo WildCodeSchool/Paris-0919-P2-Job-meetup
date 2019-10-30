@@ -16,7 +16,6 @@ const mapStateToProps = (state) => {
         openFilter: false,
         value: 2
     }
-    
     toggleClass = () => {
         const currentState = this.state.active;
         this.setState({

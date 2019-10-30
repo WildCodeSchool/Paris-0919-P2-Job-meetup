@@ -1,14 +1,23 @@
 @font-face {
     font-family: "HelveticaNeue_Medium";
     src: url("../components/fonts/HelveticaNeue_Medium.ttf")
+<<<<<<< HEAD
  }
  .filter{
+=======
+}
+
+
+
+.filter{
+>>>>>>> homepages
     width:auto;
     height:auto;
     margin: auto;
     text-align: center;
     overflow: hidden;
     z-index: 40;
+<<<<<<< HEAD
  }
  .buttonfilter{
     display: flex;
@@ -16,6 +25,20 @@
     margin: 5%;
  }
  button{
+=======
+}
+
+
+.buttonfilter{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    
+}
+
+button{
+    
+>>>>>>> homepages
     width: auto;
     background: white;
     color: black;
@@ -24,12 +47,22 @@
     height: 2.2em;
     padding: 0em 2em;
     font-size: 20px;
+<<<<<<< HEAD
  }
  .checkBox {
+=======
+    
+    
+
+}
+
+.checkBox {
+>>>>>>> homepages
     z-index: 40;
     transition: ease 0.5s;
     overflow: hidden;
     height:0;
+<<<<<<< HEAD
  }
  form{
     display: flex;
@@ -39,6 +72,21 @@
     height:27vh;
   }
  .check-meet-up, .check-entreprise, .check-cowork{
+=======
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.slider.checkBox{
+    height:27vh;
+  }
+
+.check-meet-up, .check-entreprise, .check-cowork{
+>>>>>>> homepages
     margin: 1vh;
  }
  /* RANGE SECTION  */
