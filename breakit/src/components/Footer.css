@@ -8,7 +8,7 @@
         
        
     }
-    .button {
+    .FisrtButton{
         align-items: center;
         font-family: "HelveticaNeue_Medium", "sans-serif";
         font-size: 20px;
@@ -27,7 +27,6 @@
     
     .container {
         background: url("../components/img/fond-home-small.svg")  no-repeat;
-        background-color: white;
         background-size: cover;
         background-position: bottom 0% right 0%;
         align-content: center;
