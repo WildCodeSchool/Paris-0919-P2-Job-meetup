@@ -78,9 +78,14 @@ class ProfilInscription extends React.Component {
                 <div>
                     <p className="inscriptionProfilInscription">Inscription</p>
                 </div>
-                <div className="loader" id="loader-1">
+                {/* <div className="loader" id="loader-1">
                     <p className="pourcent">{count} %</p>
+                </div> */}
+                <div className="ouro ouro3">
+                    <span class="left"><span class="anim"></span></span>
+                    <span class="right"><span class="anim"></span></span>
                 </div>
+
                 <div className="containerMail">
                     <form className="form">
                         <input type="text" placeholder="Nom" value={this.state.myInputName}
