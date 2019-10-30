@@ -1,10 +1,6 @@
 import { connect } from 'react-redux'
 import React from 'react'
 
-const mapStateToProps = (state) => {
-    return {users : state.users}
-}
-
 const users = [
     {   id:0,
         online: true,
@@ -65,18 +61,25 @@ const users = [
     } 
   ]
 
+  
+const mapStateToProps = (state) => {
+    return state
+}
+
 class ContactList extends React.Component {
     _userArray() {
         const action = { type : "USER_LOADED", value : users}
         this.props.dispatch(action)
     }
+
     componentWillMount() {
         this._userArray()
-    }
-    render () 
-    
-    {
         
+        
+    }
+
+    render ()
+    {
         return null
     }
 }

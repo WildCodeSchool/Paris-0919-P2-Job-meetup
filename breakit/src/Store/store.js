@@ -1,5 +1,13 @@
-import { createStore } from 'redux';
-import rootReducer from './Reducers/rootReducer'
-import toggleFilter from './Reducers/filterReducer'
 
-export default createStore(toggleFilter)
+import { createStore, combineReducers } from 'redux'
+import toggleFilter from './Reducers/filterReducer';
+import toggleFilterMap from './Reducers/filterMapReducers';
+
+// combining two reducers into a single reducer
+const reducer = combineReducers({
+    toggleFilter,
+    toggleFilterMap
+})
+const store = createStore(reducer)
+
+export default store

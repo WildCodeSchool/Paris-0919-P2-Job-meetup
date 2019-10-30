@@ -3,14 +3,14 @@ import {connect} from 'react-redux';
 import './ListFilter.css';
 
 const mapStateToProps = (state) => {
-    return {isFiltered : state.isFiltered}
+    return state
   }
 
 class listFilter extends React.Component {
     render() {
         return (
             <div className="first_container">
-                {this.props.isFiltered ? 
+                {this.props.toggleFilter.isFiltered ? 
                 
                 <div className="second_container">
                     <div className="list">

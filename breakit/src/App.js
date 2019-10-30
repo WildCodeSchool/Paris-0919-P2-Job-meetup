@@ -6,7 +6,7 @@ import Filter from './components/Filter';
 import MenuBurger from './components/MenuBurger';
 import SimpleExample from './components/SimpleExample';
 import { Provider } from 'react-redux';
-import store from './Store/store'
+import store from './Store/store';
 
 import './App.css';
 import ContactList from './components/ContactList';
@@ -18,13 +18,13 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <div>
-        <MenuBurger className="menuburger" />
-        <SimpleExample clasName="simpleexample"/>
-        <Filter className="filter"/>
-        <ListFilter className="listfilter"/>
-        <ContactList className="contact"/>
-        <Footer className="footer" footerClick={this.footerClick}/>
-      </div>
+          <MenuBurger className="menuburger"/>
+          <Filter className="filter"/>
+          <ListFilter className="listfilter"/>
+          <ContactList className="contact"/>
+          <SimpleExample clasName="simpleexample"/>
+          <Footer className="footer"/>
+        </div>
       </Provider>
       
     );

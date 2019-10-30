@@ -7,7 +7,7 @@ import 'react-input-range/lib/css/index.css'
 import './Filter.css'
 
 const mapStateToProps = (state) => {
-    return {isFiltered : state.isFiltered}
+    return state
   }
 
   class Filter extends React.Component {
@@ -23,10 +23,11 @@ const mapStateToProps = (state) => {
           active : !currentState
         })
       }
+
     render() {
         return (
             <div className="filter">
-                {this.props.isFiltered ?
+                {this.props.toggleFilter.isFiltered?
                     <div>
                     <div className="buttonfilter" onClick={this.toggleClass}>
                         <button
@@ -40,7 +41,7 @@ const mapStateToProps = (state) => {
                     <form className={this.state.active ? "slider checkBox" : "checkBox"}>
                         <div className="check-meet-up">
                             <label>
-                                <input type="checkbox" value="Meet-up" ></input>
+                                <input type="checkbox" value="Meet-up"></input>
                                 Meet-up
                             </label>
                         </div>
