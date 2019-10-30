@@ -14,9 +14,9 @@ class ProfilInscription extends React.Component {
         myInputPassword: "",
     }
 
-    modifLoadName = (e) => {
+    modifLoadName = (a) => {
         this.setState({
-            myInputName: e.target.value
+            myInputName: a.target.value
         }, _ => {
             if (this.state.myInputName.length >= 1) {
 
@@ -28,44 +28,44 @@ class ProfilInscription extends React.Component {
         })
     }
 
-    modifLoadFirstName = (e) => {
+    modifLoadFirstName = (b) => {
         this.setState({
-            myInputFirstName: e.target.value
+            myInputFirstName: b.target.value
         }, _ => {
             if (this.state.myInputFirstName.length >= 1) {
 
-                this.setState({ countName: this.state.countFirstName = 25 })
+                this.setState({ countFirstName: this.state.countFirstName = 25 })
             }
             else {
-                this.setState({ countName: this.state.countFirstName = 0 })
+                this.setState({ countFirstName: this.state.countFirstName = 0 })
             }
         })
     }
 
-    modifLoadEmail = (e) => {
+    modifLoadEmail = (c) => {
         this.setState({
-            myInputEmail: e.target.value
+            myInputEmail: c.target.value
         }, _ => {
             if (this.state.myInputEmail.length >= 1) {
 
-                this.setState({ countName: this.state.countEmail = 25 })
+                this.setState({ countEmail: this.state.countEmail = 25 })
             }
             else {
-                this.setState({ countName: this.state.countEmail = 0 })
+                this.setState({ countEmail: this.state.countEmail = 0 })
             }
         })
     }
 
-    modifLoadPassword = (e) => {
+    modifLoadPassword = (d) => {
         this.setState({
-            myInputPassword: e.target.value
+            myInputPassword: d.target.value
         }, _ => {
             if (this.state.myInputPassword.length >= 1) {
 
-                this.setState({ countName: this.state.countPassword = 25 })
+                this.setState({ countPassword: this.state.countPassword = 25 })
             }
             else {
-                this.setState({ countName: this.state.countPassword = 0 })
+                this.setState({ countPassword: this.state.countPassword = 0 })
             }
         })
     }
@@ -84,17 +84,17 @@ class ProfilInscription extends React.Component {
                 <div className="containerMail">
                     <form className="form">
                         <input type="text" placeholder="Nom" value={this.state.myInputName}
-                            onChange={e => this.modifLoadName(e)} ></input>
+                            onChange={a => this.modifLoadName(a)} ></input>
 
 
                         <input type="text" placeholder="Prénom" value={this.state.myInputFirstName}
-                            onChange={e => this.modifLoadFirstName(e)} ></input>
+                            onChange={b => this.modifLoadFirstName(b)} ></input>
 
                         <input type="email" placeholder="Email" value={this.state.myInputEmail}
-                            onChange={e => this.modifLoadEmail(e)} ></input>
+                            onChange={c => this.modifLoadEmail(c)} ></input>
 
                         <input type="password" placeholder="Mot de passe" value={this.state.myInputPassword}
-                            onChange={e => this.modifLoadPassword(e)} ></input>
+                            onChange={d => this.modifLoadPassword(d)} ></input>
 
                         <button type="submit" id="login-button">Valider</button>
 
