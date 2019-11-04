@@ -33,7 +33,7 @@ class SimpleExample extends React.Component {
           {this.props.toggleFilterMap.users.map(marker => {
 
             if (marker.online) {
-              if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'DEV' || this.props.toggleUsers.meetup&& marker.type === 'MEETUP') {
+              if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'DEV') {
                 return (
                   <Marker position={[marker.lat, marker.lng]}>
                     <Popup>
