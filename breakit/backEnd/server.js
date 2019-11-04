@@ -32,6 +32,19 @@ app.post('/api/user/signup', (req,res) => {
     })
 })
 
+app.post('/api/user/signin', (req,res) => {
+    User.findOne({'email':req.body.email}, (err,user) => {
+        if(!user) res.json({message: 'Login failed, user not found'})
+        user.comparePassword(req.body.password, (err, isMatch) => {
+            if (err) throw err;
+            if (!isMatch) return res.status(400).json({
+                message:'Wrong password'
+            });
+            res.status(200).send('Logged in successfully')
+        })
+    })
+})
+
 const port = process.env.PORT || 4000;
 
 app.listen( port, () => {
