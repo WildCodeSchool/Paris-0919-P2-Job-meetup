@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../components/img/logo-blancjaune.svg'
-import './UserChoice.css'
+import logo from '../../img/logo-blancjaune.svg'
+import './ProfilUserChoice.css'
 
 
 class UserChoice extends React.Component {

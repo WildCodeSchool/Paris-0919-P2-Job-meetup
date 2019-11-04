@@ -1,4 +1,5 @@
 import React from 'react';
+import UserChoice from './components/profil/profilSignin/ProfilUserChoice'
 import './App.css';
 
 class App extends React.Component {
@@ -7,7 +8,8 @@ class App extends React.Component {
 
     return (
       <div>
-        <p>Ici tout commence</p>
+       
+        <UserChoice/>
       </div>
     );
   }
