@@ -17,6 +17,7 @@ body {
     background: #262626;
 }
 
+
 .containerProfilInscription{
     display: block;
     margin-top: 6vh;
@@ -83,14 +84,34 @@ button{
     text-align: center;
 }
 
-.pourcent {
+.inscriptionEmpty {
     color: white;
     font-family: "HelveticaNeue_Light", "sans-serif";
     text-align: center;
     position: absolute;
     bottom: -18px;
-    left: 18px;
+    left: 27px;
     font-size: 3.5vh;
+}
+
+.inscriptionQuart, .inscriptionDemi, .inscription3Quart {
+  color: white;
+  font-family: "HelveticaNeue_Light", "sans-serif";
+  text-align: center;
+  position: absolute;
+  bottom: -18px;
+  left: 19px;
+  font-size: 3.5vh;
+}
+
+.inscriptionFull {
+  color: white;
+  font-family: "HelveticaNeue_Light", "sans-serif";
+  text-align: center;
+  position: absolute;
+  bottom: -18px;
+  left: 11px;
+  font-size: 3.5vh;
 }
 
 /* LOADER 1 */
