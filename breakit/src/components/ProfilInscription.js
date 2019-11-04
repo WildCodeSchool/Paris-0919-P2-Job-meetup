@@ -47,7 +47,7 @@ class ProfilInscription extends React.Component {
         this.setState({
             myInputEmail: c.target.value
         }, _ => {
-            if (this.state.myInputEmail.length >= 1) {
+            if (this.state.myInputEmail.includes('@')) {
 
                 this.setState({ countEmail: this.state.countEmail = 25 })
             }
@@ -70,32 +70,34 @@ class ProfilInscription extends React.Component {
             }
         })
 
-        
+
     }
-    
-    
-    
-    
+
+
+
+
 
     render() {
 
-    
+
         const count = this.state.countName + this.state.countFirstName + this.state.countEmail + this.state.countPassword
-        
-        const loaderCounter = () => {if (count===0){
-            return "loader-1"
-            
-         } else if(count===25){
-            return "loader-1Quart"
-         } else if(count===50){
-           return "loader-1Demi"
-         } else if(count===75){
-           return  "loader-13Quart"
-         } else if(count===100){
-           return  "loader-1Full"
-         }}
-         const loaderCount = loaderCounter()
-         
+
+        const loaderCounter = () => {
+            if (count === 0) {
+                return "loader-1"
+
+            } else if (count === 25) {
+                return "loader-1Quart"
+            } else if (count === 50) {
+                return "loader-1Demi"
+            } else if (count === 75) {
+                return "loader-13Quart"
+            } else if (count === 100) {
+                return "loader-1Full"
+            }
+        }
+        const loaderCount = loaderCounter()
+
         return (
             <div className="containerProfilInscription">
                 <img src={logo} alt="logo Skills" className="logoProfilInscription"></img>
