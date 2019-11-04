@@ -13,7 +13,24 @@ mongoose.connect(dbRoute)
   .then(() => console.log("DB connected"))
   .catch( error => console.log(error));
 
+const {User} = require('./model/User')
+
 app.use(bodyParser.json());
+
+app.post('/api/user/signup', (req,res) => {
+    const user = new User({
+        mail : req.body.mail,
+        firstName : req.body.firstName,
+        lastName : req.body.lastName,
+        password : req.body.password,
+        type : req.body.type,
+        skills : req.body.skills,
+    })
+    user.save((err, response) => {
+        if (err) res.status(400).send(err)
+        res.status(200).send(response)
+    })
+})
 
 const port = process.env.PORT || 4000;
 
