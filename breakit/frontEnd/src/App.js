@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfilDevSpec from './components/profil/profilSignin/ProfilDevSpec'
+import ProfilInterests from './components/profil/profilSignin/ProfilInterests'
 import './App.css';
 
 class App extends React.Component {
@@ -9,7 +9,7 @@ class App extends React.Component {
     return (
       <div>
        
-        <ProfilDevSpec/>
+        <ProfilInterests/>
       </div>
     );
   }
