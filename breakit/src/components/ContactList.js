@@ -74,8 +74,6 @@ class ContactList extends React.Component {
 
     componentWillMount() {
         this._userArray()
-        
-        
     }
 
     render ()
