@@ -1,0 +1,141 @@
+.slider.contactBody {
+    height:100vh;
+   }
+   
+   .contactBody {
+       position: fixed;
+       bottom:0;
+       z-index: 1000;
+       transition: ease 0.5s;
+       overflow: hidden;
+       height:0vh;
+       width:100%;
+       background-color: white;
+   }
+   
+   .contactClose {
+     position: absolute;
+     right: 32px;
+     top: 32px;
+     width: 32px;
+     height: 32px;
+     opacity: 1;
+   }
+   .contactClose:hover {
+     opacity: 0.5;
+     cursor: pointer;
+   }
+   .contactClose:before,
+   .contactClose:after {
+     position: absolute;
+     left: 15px;
+     content: " ";
+     height: 33px;
+     width: 2px;
+     background-color: white;
+   }
+   .contactClose:before {
+     transform: rotate(45deg);
+   }
+   .contactClose:after {
+     transform: rotate(-45deg);
+   }
+   
+   .contactContact {
+     text-align: center;
+     font-size: 30px;
+     font-family: Helvetica;
+     color: white;
+   }
+   
+   .contactHead {
+     position: relative;
+     width: 100%;
+     background: black;
+     padding: 1px;
+     top: 0;
+   }
+   
+   .contactMentionsContainer {
+     margin-top: 20px;
+     background: #f2f2f2;
+     padding: 1px;
+     border-color: #cccccc;
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+     border-top-width: 1px;
+     border-top-style: solid;
+   }
+   
+   .contactMentionsContainer2 {
+     padding-left: 3vh;
+   }
+   
+   .contactMentions {
+     color: #4d4d4d;
+     font-family: Helvetica;
+     text-align: center;
+   }
+   
+   .contactMentionsInfos {
+       color: #4d4d4d;
+       font-family: Helvetica;
+       font-size: 15px;
+       margin-bottom: 1px;
+   }
+   
+   .contactMentionsInput {
+       font-size: 19px;
+       width: 88vw;
+   }
+   
+   .contactConfidentialiteContainer {
+     background: #f2f2f2;
+     padding: 1px;
+     border-color: #cccccc;
+     border-bottom-width: 1px;
+     border-bottom-style: solid;
+     border-top-width: 1px;
+     border-top-style: solid;
+     margin-top: 15px;
+   }
+   
+   .contactConfidentialite {
+     color: #4d4d4d;
+     font-family: Helvetica;
+     text-align: center;
+   }
+   
+   .contactAssistance {
+    width: 76vw;
+    height: 200px;
+    border-style: inset;
+    border-radius: 39px;
+    box-shadow: inset 0px 0px 4px 0px #262626;
+    margin-top: 20px;
+    font-size: 15px;
+    font-family: Helvetica;
+    padding: 20px;
+   }
+
+   .contactSend {
+    font-family: Helvetica;
+    border-radius: 10px;
+    width: fit-content;
+    border-style: solid;
+    padding: 5px;
+    margin-top: 10px;
+    border-color: grey;
+    color: black;
+    background: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%)
+   }
+   .contactSend:active {
+    position: relative;
+    top: 1px;
+  }
+
+   .contactSendContainer {
+       display: flex;
+       justify-content: center;
+       padding-right: 3vh;
+   }
