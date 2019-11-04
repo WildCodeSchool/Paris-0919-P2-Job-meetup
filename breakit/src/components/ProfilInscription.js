@@ -97,6 +97,7 @@ class ProfilInscription extends React.Component {
             }
         }
         const loaderCount = loaderCounter()
+
         const inscriptionCounter = () => {
             if (count === 0) {
                 return "inscriptionEmpty"
