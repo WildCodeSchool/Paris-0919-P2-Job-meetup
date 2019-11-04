@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfilInscription from './components/ProfilInscription';
+import UserChoice from './components/UserChoice';
 import './App.css';
 
 
@@ -9,7 +9,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <ProfilInscription />
+        <UserChoice />
         
       </div>
       

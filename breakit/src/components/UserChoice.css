@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "HelveticaNeue_Light";
+    src: url("../components/fonts/HelveticaNeue_Light.ttf")
+ }
+ @font-face {
+    font-family: "HelveticaNeue_Medium";
+    src: url("../components/fonts/HelveticaNeue_Medium.ttf")
+ }
+
+ *{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background: #262626;
+}
+.containerUserProfil{
+    display: block;
+    margin-top: 6vh;
+    height: 5vh;
+    
+}
+
+.logoUserProfil {
+    display: block;
+    height: 7vh;
+    margin: auto;
+}
+
+.inscriptionUserChoice {
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    display: block;
+    margin-top: 8vh;
+    text-align: center;
+    font-size: 30px;
+    color: #FAE404;
+
+}
+
+.form {
+	padding: 20px 0;
+	position: relative;
+	z-index: 2;
+}
+
+button{
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    appearance: none;
+    outline: 0;
+    background-color: #ffffff;
+    border: 0;
+    padding: 10px 15px;
+    color: #262626;
+    border-radius: 10px;
+    width: auto;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    border: 4px solid #FAE404;
+    margin: 0.6em;
+}
+
+.containerChoice{
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 140px 0;
+	height: 400px;
+    text-align: center;
+}
