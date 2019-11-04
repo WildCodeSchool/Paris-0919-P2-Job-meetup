@@ -86,12 +86,11 @@ button{
 .pourcent {
     color: #FAE404;
     font-family: "HelveticaNeue_Light", "sans-serif";
-    font-size: 4vh;
     text-align: center;
     position: absolute;
     bottom: -18px;
     left: 18px;
-    
+    font-size: 3.5vh;
 }
 
 /* LOADER 1 */
@@ -106,7 +105,7 @@ button{
 
 
 
-#loader-1:before, #loader-1:after{
+#loader-1:before, #loader-1:after, #loader-1Quart:before, #loader-1Quart:after, #loader-1Demi:before, #loader-1Demi:after, #loader-13Quart:before, #loader-13Quart:after, #loader-1Full:before, #loader-1Full:after {
     content: "";
     position: absolute;
     top: 40px;
@@ -115,17 +114,47 @@ button{
     height: 100%;
     border-radius: 100%;
     border: 10px solid transparent;
-    border-top-color: #FAE404;
+    
   }
   
-  #loader-1:before{
+  #loader-1:before {
     z-index: 100;
     /* animation: spin 2s infinite; */
   }
   
-  #loader-1:after{
+  #loader-1:after, #loader-1Quart:after, #loader-1Demi:after, #loader-13Quart:after, #loader-1Full:after {
     border: 10px solid #ccc;
   }
+
+  #loader-1Quart:before {
+    z-index: 100;
+    border-top-color: #FAE404;
+  }
+
+  #loader-1Demi:before {
+    border-top-color: #FAE404;
+    border-right-color: #FAE404;
+    z-index: 100;
+  }
+
+  #loader-13Quart:before {
+    border-top-color: #FAE404;
+    border-right-color: #FAE404;
+    border-bottom-color: #FAE404;
+    z-index: 100;
+  }
+
+  #loader-1Full:before {
+    border-top-color: #FAE404;
+    border-right-color: #FAE404;
+    border-bottom-color: #FAE404;
+    border-left-color: #FAE404;
+    z-index: 100;
+  }
+
+
+
+
   
   @keyframes spin{
     0%{
@@ -143,7 +172,8 @@ button{
     }
   }
 
-/* LOADER */
+  /*
+LOADER
 
 
 .ouro {
@@ -205,7 +235,7 @@ button{
 
 
 
-/* v3 */
+
 .ouro3 .anim {
  -webkit-animation-delay: 0s;
  -webkit-animation-duration:3s;
@@ -223,10 +253,10 @@ button{
  animation-delay: 1.5s;
 }
 
-/* round variation */
+
 .round .ouro:after {display:none }
 
-/* double variation */
+
 .double .ouro:after {
 height: 13px; width: 13px;
 left: 7px; top: 7px;
@@ -263,5 +293,6 @@ box-shadow: none;
 50%{-webkit-transform:rotate(180deg)}
 75%{-webkit-transform:rotate(180deg)}
 100%{-webkit-transform:rotate(360deg)}
-}
+}; 
 
+*/

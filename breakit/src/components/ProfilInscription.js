@@ -14,6 +14,7 @@ class ProfilInscription extends React.Component {
         myInputPassword: "",
     }
 
+
     modifLoadName = (a) => {
         this.setState({
             myInputName: a.target.value
@@ -68,23 +69,46 @@ class ProfilInscription extends React.Component {
                 this.setState({ countPassword: this.state.countPassword = 0 })
             }
         })
+
+        
     }
+    
+    
+    
+    
 
     render() {
+
+    
         const count = this.state.countName + this.state.countFirstName + this.state.countEmail + this.state.countPassword
+        
+        const loaderCounter = () => {if (count===0){
+            return "loader-1"
+            
+         } else if(count===25){
+            return "loader-1Quart"
+         } else if(count===50){
+           return "loader-1Demi"
+         } else if(count===75){
+           return  "loader-13Quart"
+         } else if(count===100){
+           return  "loader-1Full"
+         }}
+         const loaderCount = loaderCounter()
+         
         return (
             <div className="containerProfilInscription">
                 <img src={logo} alt="logo Skills" className="logoProfilInscription"></img>
                 <div>
                     <p className="inscriptionProfilInscription">Inscription</p>
                 </div>
-                {/* <div className="loader" id="loader-1">
+                <div className="loader" id={loaderCount}>
                     <p className="pourcent">{count} %</p>
-                </div> */}
-                <div className="ouro ouro3">
+                </div>
+                {/* <div className="ouro ouro3">
                     <span class="left"><span class="anim"></span></span>
                     <span class="right"><span class="anim"></span></span>
-                </div>
+                </div> */}
 
                 <div className="containerMail">
                     <form className="form">
