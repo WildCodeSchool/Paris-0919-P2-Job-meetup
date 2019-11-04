@@ -1,0 +1,14 @@
+#leaflet-container {
+  width : 90%;
+  margin-left : 5%;
+  z-index : 10;
+  margin-top : 5vh;
+}
+.fullSize {
+height: 75vh;
+transition: ease 0.4s;
+}
+.miSize {
+height: 45vh;
+transition: ease 0.4s;
+}
