@@ -1,0 +1,88 @@
+@font-face {
+    font-family: "HelveticaNeue_Light";
+    src: url("../../fonts/HelveticaNeue_Light.ttf")
+ }
+ @font-face {
+    font-family: "HelveticaNeue_Medium";
+    src: url("../../fonts/HelveticaNeue_Medium.ttf")
+ }
+
+ *{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+    background: #262626;
+}
+.containerUserProfil{
+    display: block;
+    margin-top: 6vh;
+    height: 5vh;
+    
+}
+.containerChoice{
+    width: 100%;
+	padding: 80px 0px 00px 0px;
+    text-align: center;
+}
+.logoUserProfil {
+    display: block;
+    height: 7vh;
+    margin: auto;
+}
+
+.inscriptionUserChoice {
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    display: block;
+    margin-top: 8vh;
+    text-align: center;
+    font-size: 30px;
+    color: #FAE404;
+
+}
+
+
+textarea{
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    background-color: #ffffff;
+    padding: 30px 25px;
+    color: #262626;
+    border-radius: 10px;
+    width: 220px;
+    cursor: pointer;
+    font-size: 20px;
+    border: 4px solid #FAE404;
+    margin: 0px 0px 40px 0px;
+}
+.linearBalls{
+ 
+    
+    text-align: center;
+    margin: auto;
+}
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 7px;
+    background-color: #bbb;
+    border-radius: 100%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    
+  }
+
+.doty {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 7px;
+    background-color: #FAE404;
+    border-radius: 100%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
