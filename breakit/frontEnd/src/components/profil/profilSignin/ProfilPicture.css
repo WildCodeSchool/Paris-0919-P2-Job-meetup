@@ -52,16 +52,19 @@ body {
     max-width: 400px;
 }
 .linearBalls{
-     
+    position: fixed;
+    width: 100%;
     text-align: center;
-    
+    margin: auto;
+    bottom: 0;
+    height: 150px;
 }
 
   .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 7px;
+    margin: 0 7px 0;
     background-color: #bbb;
     border-radius: 100%;
     display: inline-block;

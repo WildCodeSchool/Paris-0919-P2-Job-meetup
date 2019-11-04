@@ -17,10 +17,6 @@ class ProfilPicture extends React.Component {
 
                 </div>
 
-                
-                          
-                
-
                 <footer className="linearBalls"> 
                 <span className="dot" onclick="currentSlide(2)"></span>
                 <span className="dot" onclick="currentSlide(3)"></span>
@@ -28,8 +24,8 @@ class ProfilPicture extends React.Component {
                 <span className="dot" onclick="currentSlide(5)"></span>
                 <span className="dot" onclick="currentSlide(6)"></span>
                 <span className="doty" onclick="currentSlide(1)"></span>         
-                
                 </footer>
+                
             </div>
         )
     }
