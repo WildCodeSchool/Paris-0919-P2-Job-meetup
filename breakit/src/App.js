@@ -19,10 +19,10 @@ class App extends React.Component {
       <Provider store={store}>
         <div>
           <MenuBurger className="menuburger"/>
-          <Filter className="filter"/>
-          <ListFilter className="listfilter"/>
           <ContactList className="contact"/>
           <SimpleExample clasName="simpleexample"/>
+          <Filter className="filter"/>
+          <ListFilter className="listfilter"/>
           <Footer className="footer"/>
         </div>
       </Provider>
