@@ -9,7 +9,7 @@ const userSchema =  mongoose.Schema(
             required: true,
             maxlength: 50
         },
-        lastName: 
+        name: 
         {
             type: String,
             required: true,
@@ -30,17 +30,6 @@ const userSchema =  mongoose.Schema(
             minlength: 5,
             maxlength: 1024
         },
-        type: 
-        {
-            type :String,
-            required : true,
-        },
-        skills: 
-        {
-            type : String,
-            required : true,
-            maxlength: 1024,
-        }
         
     },
     { timestamps: true }

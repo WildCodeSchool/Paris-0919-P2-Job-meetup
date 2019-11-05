@@ -1,114 +1,44 @@
 import React from "react";
 import "./ProfilInscription.css";
 import logo from '../img/logo-blancjaune.svg'
+import axios from 'axios'
 
 class ProfilInscription extends React.Component {
     state = {
-        countName: 0,
-        countFirstName: 0,
-        countEmail: 0,
-        countPassword: 0,
-        myInputName: "",
-        myInputFirstName: "",
-        myInputEmail: "",
-        myInputPassword: "",
+        id: 0,
+        name: null,
+        firstName: null,
+        mail: null,
+        password: null,
+        intervalIsSet: false,
+        userChecked : false
     }
 
+    componentWillUnmount() {
+        if (this.state.intervalIsSet) {
+          clearInterval(this.state.intervalIsSet);
+          this.setState({ intervalIsSet: null });
+        }
+      }
 
-    modifLoadName = (a) => {
-        this.setState({
-            myInputName: a.target.value
-        }, _ => {
-            if (this.state.myInputName.length >= 1) {
-
-                this.setState({ countName: this.state.countName = 25 })
-            }
-            else {
-                this.setState({ countName: this.state.countName = 0 })
-            }
+    putDataToDB = () => {
+        axios.post('http://localhost:4000/api/user/signup', {
+          firstName: this.state.firstName,
+          name: this.state.name,
+          mail: this.state.mail,
+          password: this.state.password,
         })
-    }
+      };
 
-    modifLoadFirstName = (b) => {
-        this.setState({
-            myInputFirstName: b.target.value
-        }, _ => {
-            if (this.state.myInputFirstName.length >= 1) {
-
-                this.setState({ countFirstName: this.state.countFirstName = 25 })
-            }
-            else {
-                this.setState({ countFirstName: this.state.countFirstName = 0 })
-            }
+      checkDB = () => {
+        axios.post('http://localhost:4000/api/user/signin', {
+          mail: this.state.mail,
+          password: this.state.password,
         })
-    }
+      };
 
-    modifLoadEmail = (c) => {
-        this.setState({
-            myInputEmail: c.target.value
-        }, _ => {
-            if (this.state.myInputEmail.includes('@')) {
-
-                this.setState({ countEmail: this.state.countEmail = 25 })
-            }
-            else {
-                this.setState({ countEmail: this.state.countEmail = 0 })
-            }
-        })
-    }
-
-    modifLoadPassword = (d) => {
-        this.setState({
-            myInputPassword: d.target.value
-        }, _ => {
-            if (this.state.myInputPassword.length >= 1) {
-
-                this.setState({ countPassword: this.state.countPassword = 25 })
-            }
-            else {
-                this.setState({ countPassword: this.state.countPassword = 0 })
-            }
-        })
-
-
-    }
 
     render() {
-
-
-        const count = this.state.countName + this.state.countFirstName + this.state.countEmail + this.state.countPassword
-
-        const loaderCounter = () => {
-            if (count === 0) {
-                return "loader-1"
-
-            } else if (count === 25) {
-                return "loader-1Quart"
-            } else if (count === 50) {
-                return "loader-1Demi"
-            } else if (count === 75) {
-                return "loader-13Quart"
-            } else if (count === 100) {
-                return "loader-1Full"
-            }
-        }
-        const loaderCount = loaderCounter()
-
-        const inscriptionCounter = () => {
-            if (count === 0) {
-                return "inscriptionEmpty"
-
-            } else if (count === 25) {
-                return "inscriptionQuart"
-            } else if (count === 50) {
-                return "inscriptionDemi"
-            } else if (count === 75) {
-                return "inscription3Quart"
-            } else if (count === 100) {
-                return "inscriptionFull"
-            }
-        }
-        const inscriptionCount = inscriptionCounter()
 
         return (
             <div className="containerProfilInscription">
@@ -116,26 +46,22 @@ class ProfilInscription extends React.Component {
                 <div>
                     <p className="inscriptionProfilInscription">Inscription</p>
                 </div>
-                <div className="loader" id={loaderCount}>
-                    <p className={inscriptionCount}>{count} %</p>
-                </div>
 
                 <div className="containerMail">
                     <form className="form">
-                        <input type="text" placeholder="Nom" value={this.state.myInputName}
-                            onChange={a => this.modifLoadName(a)} ></input>
+                    <input type="text" placeholder="Prénom" 
+                            onChange={(e) => this.setState({ name: e.target.value })} ></input>
 
+                        <input type="text" placeholder="Prénom" 
+                            onChange={(e) => this.setState({ firstName: e.target.value })} ></input>
 
-                        <input type="text" placeholder="Prénom" value={this.state.myInputFirstName}
-                            onChange={b => this.modifLoadFirstName(b)} ></input>
+                        <input type="email" placeholder="Email" 
+                            onChange={(e) => this.setState({ mail: e.target.value })} ></input>
 
-                        <input type="email" placeholder="Email" value={this.state.myInputEmail}
-                            onChange={c => this.modifLoadEmail(c)} ></input>
+                        <input type="password" placeholder="Mot de passe"
+                            onChange={(e) => this.setState({ password: e.target.value })} ></input>
 
-                        <input type="password" placeholder="Mot de passe" value={this.state.myInputPassword}
-                            onChange={d => this.modifLoadPassword(d)} ></input>
-
-                        <button type="submit" id="login-button">Valider</button>
+                        <button type="submit" id="login-button" onClick={() => this.putDataToDB()}>VALIDER</button>
 
                     </form>
                 </div>

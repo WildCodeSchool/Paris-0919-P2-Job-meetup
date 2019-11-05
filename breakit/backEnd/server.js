@@ -21,10 +21,8 @@ app.post('/api/user/signup', (req,res) => {
     const user = new User({
         mail : req.body.mail,
         firstName : req.body.firstName,
-        lastName : req.body.lastName,
+        name : req.body.name,
         password : req.body.password,
-        type : req.body.type,
-        skills : req.body.skills,
     })
     user.save((err, response) => {
         if (err) res.status(400).send(err)
@@ -41,9 +39,11 @@ app.post('/api/user/signin', (req,res) => {
                 message:'Wrong password'
             });
             res.status(200).send('Logged in successfully')
+            console.log('ok')
         })
     })
 })
+
 
 const port = process.env.PORT || 4000;
 
