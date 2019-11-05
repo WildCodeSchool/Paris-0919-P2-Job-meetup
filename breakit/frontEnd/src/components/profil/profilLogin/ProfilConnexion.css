@@ -1,10 +1,10 @@
 @font-face {
     font-family: "HelveticaNeue_Light";
-    src: url("../fonts/HelveticaNeue_Light.ttf")
+    src: url("../../fonts/HelveticaNeue_Light.ttf")
  }
  @font-face {
     font-family: "HelveticaNeue_Medium";
-    src: url("../fonts/HelveticaNeue_Medium.ttf")
+    src: url("../../fonts/HelveticaNeue_Medium.ttf")
  }
 
  *{

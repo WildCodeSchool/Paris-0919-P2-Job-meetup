@@ -1,12 +1,13 @@
 import React from 'react';
-import Footer from './components/Footer';
-import ListFilter from './components/ListFilter';
+// import Footer from './components/Footer';
+// import ListFilter from './components/ListFilter';
+import ProfilConnexion from './components/profil/profilLogin/ProfilConnexion'
 import './App.css';
-import Filter from './components/Filter';
-import MenuBurger from './components/MenuBurger';
-import SimpleExample from './components/SimpleExample'
-import Parameters from './components/Parameters'
-import Contact from './components/Contact'
+// import Filter from './components/Filter';
+// import MenuBurger from './components/MenuBurger';
+// import SimpleExample from './components/SimpleExample'
+// import Parameters from './components/Parameters'
+// import Contact from './components/Contact'
 class App extends React.Component {
   state = {
     isDisplayed: false,
@@ -35,13 +36,14 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <MenuBurger toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} className="menuburger" />
+        {/* <MenuBurger toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} className="menuburger" />
         <SimpleExample className="simpleexample" state={this.state} />
         {this.state.isDisplayed ? <Filter className="filter" /> : null}
         {this.state.isDisplayed ? <ListFilter className="listfilter" /> : null}
         <Footer className="footer" state={this.state} footerClick={this.footerClick} />
         <Contact toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} />
-        <Parameters toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} />
+        <Parameters toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} /> */}
+        <ProfilConnexion />
       </div>
     );
   }

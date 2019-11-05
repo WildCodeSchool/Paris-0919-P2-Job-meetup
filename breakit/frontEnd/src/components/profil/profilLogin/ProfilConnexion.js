@@ -1,8 +1,8 @@
 import React from "react";
-import "./ProfilInscription.css";
-import logo from '../img/logo-blancjaune.svg'
+import "./ProfilConnexion.css";
+import logo from '../../img/logo-blancjaune.svg'
 
-class ProfilInscription extends React.Component {
+class ProfilConnexion extends React.Component {
     state = {
         countName: 0,
         countFirstName: 0,
@@ -146,4 +146,4 @@ class ProfilInscription extends React.Component {
     }
 }
 
-export default ProfilInscription;
+export default ProfilConnexion;
