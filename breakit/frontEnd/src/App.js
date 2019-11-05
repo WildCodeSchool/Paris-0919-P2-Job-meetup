@@ -1,13 +1,19 @@
 import React from 'react';
-// import Footer from './components/homepage/Footer';
-// import ListFilter from './components/homepage/ListFilter';
+import { Switch, Route,  } from 'react-router-dom';
+import UserChoice from './components/profil/profilSignin/ProfilUserChoice';
+// import ProfilPicture from './components/profil/profilSignin/ProfilPicture'
+import ProfilInscription from './components/profil/profilSignin/ProfilInscription'
+import ProfilDevSpec from './components/profil/profilSignin/ProfilDevSpec';
+
+import ProfilInterests from './components/profil/profilSignin/ProfilInterests'
+// 
+import ProfilDescription from'./components/profil/profilSignin/ProfilDescription';
+
+import ProfilLanguages from './components/profil/profilSignin/ProfilLanguage';
+import ProfilPicture from './components/profil/profilSignin/ProfilPicture';
+
 import './App.css';
-// import Filter from './components/homepage/Filter';
-// import MenuBurger from './components/homepage/MenuBurger';
-// import SimpleExample from './components/homepage/SimpleExample'
-// import Parameters from './components/homepage/Parameters'
-// import Contact from './components/homepage/Contact'
-import ProfilInscription from './components/profil/ProfilInscription'
+
 
 class App extends React.Component {
   state = {
@@ -36,16 +42,35 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        {/* <MenuBurger toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} className="menuburger" />
-        <SimpleExample className="simpleexample" state={this.state} />
-        {this.state.isDisplayed ? <Filter className="filter" /> : null}
-        {this.state.isDisplayed ? <ListFilter className="listfilter" /> : null}
-        <Footer className="footer" state={this.state} footerClick={this.footerClick} />
-        <Contact toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} />
-        <Parameters toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} /> */}
-        <ProfilInscription />
-      </div>
+
+        <div>
+              <Switch>
+                  {/* Ici le Home */}
+                  <Route exact path="/" component={ProfilInscription} />
+                  {/* Boutton inscription */}
+                  <Route exact path='/ProfilUserChoice' component={UserChoice} />
+                  {/* Ici Profil user choice */}
+                  <Route exact path='/ProfilInscription' component={ProfilInscription}/>
+                  <Route exact path='/ProfilDevSpec' component={ProfilDevSpec}/>
+                  {/* Ici ProfilDevSpec */}
+                  <Route exact path='/UserChoice' component={UserChoice}/>
+                  <Route exact path='/ProfilLanguage' component={ProfilLanguages}/>
+                  {/* Ici Profil language */}
+                  <Route exact path='/ProfilDevSpec' component={ProfilDevSpec}/>
+                  <Route exact path='/ProfilInterests' component={ProfilInterests}/>
+                  {/* Ici profil interests */}
+                  <Route exact path='/ProfilLanguage' component={ProfilLanguages}/>
+                  <Route exact path='/ProfilDescription' component={ProfilDescription}/>
+                  {/* Ici profil description */}
+                  <Route exact path='/ProfilInterests' component={ProfilInterests}/>
+                  <Route exact path='/ProfilPicture' component={ProfilPicture}/>
+               
+              </Switch>
+          
+        </div>
+      
+
+      
     );
   }
 }

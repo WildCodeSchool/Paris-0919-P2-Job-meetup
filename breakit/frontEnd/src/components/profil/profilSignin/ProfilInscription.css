@@ -1,10 +1,10 @@
 @font-face {
     font-family: "HelveticaNeue_Light";
-    src: url("../fonts/HelveticaNeue_Light.ttf")
+    src: url("../../fonts/HelveticaNeue_Light.ttf")
  }
  @font-face {
     font-family: "HelveticaNeue_Medium";
-    src: url("../fonts/HelveticaNeue_Medium.ttf")
+    src: url("../../fonts/HelveticaNeue_Medium.ttf")
  }
 
  *{
@@ -42,7 +42,8 @@ body {
 .form {
 	padding: 20px 0;
 	position: relative;
-	z-index: 2;
+  z-index: 2;
+  text-align: center;
 }
 
 input {
@@ -222,3 +223,57 @@ font-size: 3.5vh;
 
 
 
+/*  ********************* Section Footer  and links  ***************************/
+
+
+.linearBalls{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  bottom: 0;
+  height: 150px;
+  display: block;
+}
+.links {
+  display: flex;
+  margin-top: 8.5vh;
+  justify-content: space-around;
+  text-align: center;
+
+}
+.links p {
+  margin: 5px 0px 6px 0px;
+}
+.links a {
+  
+  color: #fff;
+  font-family: "HelveticaNeue_Medium", "sans-serif";
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2vh;
+  text-shadow: 0px 0px 1px #FAE404;
+
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 7px 0;
+  background-color: #bbb;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  
+}
+
+.doty {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 7px;
+  background-color: #FAE404;
+  border-radius: 100%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
