@@ -9,9 +9,9 @@ import ListMeetUp from './components/homepage/ListMeetUp'
 import { Provider } from 'react-redux';
 import store from './Store/store';
 
-import './App.css';
 import ContactList from './components/homepage/ContactList';
 
+import './App.css';
 
 class App extends React.Component {
 
