@@ -49,7 +49,7 @@ class ProfilConnexion extends React.Component {
         }, _ => {
             if (this.state.myInputEmail.includes('@')) {
 
-                this.setState({ countEmail: this.state.countEmail = 25 })
+                this.setState({ countEmail: this.state.countEmail = 50 })
             }
             else {
                 this.setState({ countEmail: this.state.countEmail = 0 })
@@ -63,7 +63,7 @@ class ProfilConnexion extends React.Component {
         }, _ => {
             if (this.state.myInputPassword.length >= 1) {
 
-                this.setState({ countPassword: this.state.countPassword = 25 })
+                this.setState({ countPassword: this.state.countPassword = 50 })
             }
             else {
                 this.setState({ countPassword: this.state.countPassword = 0 })
@@ -114,7 +114,7 @@ class ProfilConnexion extends React.Component {
             <div className="containerProfilInscription">
                 <img src={logo} alt="logo Skills" className="logoProfilInscription"></img>
                 <div>
-                    <p className="inscriptionProfilInscription">Inscription</p>
+                    <p className="inscriptionProfilInscription">Connexion</p>
                 </div>
                 <div className="loader" id={loaderCount}>
                     <p className={inscriptionCount}>{count} %</p>
@@ -122,12 +122,6 @@ class ProfilConnexion extends React.Component {
 
                 <div className="containerMail">
                     <form className="form">
-                        <input type="text" placeholder="Nom" value={this.state.myInputName}
-                            onChange={a => this.modifLoadName(a)} ></input>
-
-
-                        <input type="text" placeholder="Prénom" value={this.state.myInputFirstName}
-                            onChange={b => this.modifLoadFirstName(b)} ></input>
 
                         <input type="email" placeholder="Email" value={this.state.myInputEmail}
                             onChange={c => this.modifLoadEmail(c)} ></input>
