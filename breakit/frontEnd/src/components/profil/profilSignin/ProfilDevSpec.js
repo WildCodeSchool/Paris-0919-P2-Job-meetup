@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../../img/logo-blancjaune.svg'
 import './ProfilDevSpec.css'
-
+import { Link } from 'react-router-dom';
 
 class ProfilDevSpec extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class ProfilDevSpec extends React.Component {
                     <p className="inscriptionUserChoice">Votre specialité</p>
                 </div>
 
-                <div className="containerChoice">
+                <div className="containerChoiceSpec2">
                     <form className="form">
                         <p> <button type="button" id="userFront-button">Front-end</button> </p>
                         <p> <button type="button" id="userBack-button">Back-end</button> </p>
@@ -21,14 +21,16 @@ class ProfilDevSpec extends React.Component {
                     </form>
                 </div>
 
-                <div className="linearBalls" >
-                    <span className="dot" onclick="currentSlide(2)"></span>
-                    <span className="doty" onclick="currentSlide(1)"></span>
-                    <span className="dot" onclick="currentSlide(3)"></span>
-                    <span className="dot" onclick="currentSlide(4)"></span>
-                    <span className="dot" onclick="currentSlide(5)"></span>
-                    <span className="dot" onclick="currentSlide(6)"></span>                    
+                <footer className="linearBalls"> 
+                
+                
+                {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
+                <div className="links">
+                <Link exact to ="UserChoice"><p><a href="">Précédent</a></p>   </Link>     
+                <Link exact to ="ProfilLanguage"><p><a href="">Suivant</a></p>  </Link>
                 </div>
+                
+                </footer>
                 
 
 

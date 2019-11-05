@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProfilInscription.css";
 import logo from '../../img/logo-blancjaune.svg'
-
+import { Link } from 'react-router-dom';
 class ProfilInscription extends React.Component {
     state = {
         countName: 0,
@@ -111,7 +111,8 @@ class ProfilInscription extends React.Component {
         const inscriptionCount = inscriptionCounter()
 
         return (
-            <div className="containerProfilInscription">
+            
+                 <div className="containerProfilInscription">
                 <img src={logo} alt="logo Skills" className="logoProfilInscription"></img>
                 <div>
                     <p className="inscriptionProfilInscription">Inscription</p>
@@ -135,13 +136,19 @@ class ProfilInscription extends React.Component {
                         <input type="password" placeholder="Mot de passe" value={this.state.myInputPassword}
                             onChange={d => this.modifLoadPassword(d)} ></input>
 
-                        <button type="submit" id="login-button">Valider</button>
+                        <Link exact to ='ProfilUserChoice'> <button type="submit" id="login-button">Valider</button>  </Link>
 
                     </form>
                 </div>
 
 
+                
+
             </div>
+
+            
+
+           
         )
     }
 }

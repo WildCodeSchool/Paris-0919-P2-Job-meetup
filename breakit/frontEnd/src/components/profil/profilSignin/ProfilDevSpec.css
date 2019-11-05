@@ -22,7 +22,7 @@ body {
     height: 5vh;
     
 }
-.containerChoice{
+.containerChoiceSpec2{
     width: 100%;
 	padding: 80px 0px 00px 0px;
     text-align: center;
@@ -57,17 +57,39 @@ button{
     margin: 0px 0px 40px 0px;
 }
 .linearBalls{
- 
-    
+    position: fixed;
+    width: 100%;
     text-align: center;
     margin: auto;
+    bottom: 0;
+    height: 150px;
+    display: block;
 }
+.links {
+    display: flex;
+    margin-top: 8.5vh;
+    justify-content: space-around;
+    text-align: center;
 
+}
+.links p {
+    margin: 5px 0px 6px 0px;
+}
+.links a {
+    
+    color: #fff;
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2vh;
+    text-shadow: 0px 0px 1px #FAE404;
+
+}
   .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 7px;
+    margin: 0 7px 0;
     background-color: #bbb;
     border-radius: 100%;
     display: inline-block;

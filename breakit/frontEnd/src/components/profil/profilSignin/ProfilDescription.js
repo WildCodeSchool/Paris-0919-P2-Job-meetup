@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from '../../img/logo-blancjaune.svg'
 import './ProfilDescription.css'
-
+import { Link } from 'react-router-dom';
 
 class ProfilDescription extends React.Component {
     render() {
@@ -13,7 +13,7 @@ class ProfilDescription extends React.Component {
                     <p className="inscriptionUserChoice">Description</p>
                 </div>
 
-                <div className="containerChoice">
+                <div className="containerChoiceDes">
                     <form className="form">
                         <textarea name='textarea' id="story" rows="7" cols="33" placeholder="Saisissez votre besoin..."
                         ></textarea>
@@ -23,16 +23,16 @@ class ProfilDescription extends React.Component {
 
 
                 </div>
+                <footer className="linearBalls"> 
 
-                <div className="linearBalls" >
-                    <span className="dot" onclick="currentSlide(2)"></span>
-                    <span className="dot" onclick="currentSlide(3)"></span>
-                    <span className="dot" onclick="currentSlide(4)"></span>
-                    <span className="dot" onclick="currentSlide(5)"></span>
-                    <span className="doty" onclick="currentSlide(1)"></span>
-                    <span className="dot" onclick="currentSlide(6)"></span>                    
+                
+                {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
+                <div className="links">
+               <Link exact to='ProfilInterests'><p><a href="">Précédent</a></p></Link>     
+               <Link exact to='ProfilPicture'><p><a href="">Suivant</a></p> </Link> 
                 </div>
                 
+                </footer>
 
 
             </div>

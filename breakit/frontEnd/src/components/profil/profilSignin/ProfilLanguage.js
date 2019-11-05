@@ -1,33 +1,35 @@
 import React from 'react'
 import logo from '../../img/logo-blancjaune.svg'
-import './ProfilUserChoice.css'
+import './ProfilDevSpec.css'
 import { Link } from 'react-router-dom';
 
-class UserChoice extends React.Component {
+class ProfilLanguages extends React.Component {
     render() {
         return(
             <div className="containerUserProfil">
                 <img src={logo} alt="logo Skills" className="logoUserProfil"></img>
                 <div>
-                    <p className="inscriptionUserChoice">Profil</p>
-                    <p className="inscriptionUserChoice">Vous êtes…</p>
+                    
+                    <p className="inscriptionUserChoice">Vos langages</p>
                 </div>
 
-                <div className="containerChoice45">
+                <div className="containerChoicel4">
                     <form className="form">
-                        <p> <button type="button" id="userDev-button">Un développeur</button> </p>
-                        <p> <button type="button" id="userSociety-button">Un recruteur</button> </p>
+                        <p> <button type="button" id="userFront-button">JS</button> </p>
+                        <p> <button type="button" id="userBack-button">HTML</button> </p>
+                        <p> <button type="button" id="userFullStack-button">CSS</button> </p>
                     </form>
                 </div>
-
+                
                 <footer className="linearBalls"> 
+
                 
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
-               <Link exact to='ProfilInscription'><p><a href="">Précédent</a></p></Link>     
-               <Link exact to='ProfilDevSpec'><p><a href="">Suivant</a></p> </Link> 
+                <Link exact to ="ProfilDevSpec"> <p><a href="">Précédent</a></p>   </Link>     
+                <Link exact to ="ProfilInterests"><p><a href="">Suivant</a></p>  </Link>
                 </div>
-                
+
                 </footer>
                 
 
@@ -37,4 +39,4 @@ class UserChoice extends React.Component {
     }
 }
 
-export default UserChoice
+export default ProfilLanguages
