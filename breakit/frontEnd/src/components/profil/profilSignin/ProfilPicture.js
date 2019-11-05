@@ -3,7 +3,7 @@ import logo from '../../img/logo-blancjaune.svg'
 import './ProfilPicture.css'
 import avatar from '../../img/avatar.png'
 import axios from 'axios'
-// import {storage} from '../../../firebase'
+
 
 class ProfilPicture extends React.Component {
     state = {
@@ -19,7 +19,7 @@ class ProfilPicture extends React.Component {
     fileUploadHandler = () => {
         const fd = new FormData()
         fd.append('image' , this.state.selectedFile, this.state.selectedFile.name)
-        axios.post('https://console.firebase.google.com/project/skillsproject-7ac0d/overview')
+        axios.post('')
     }
 
     render() {
