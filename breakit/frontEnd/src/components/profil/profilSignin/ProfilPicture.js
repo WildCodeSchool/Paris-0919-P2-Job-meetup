@@ -23,7 +23,13 @@ class ProfilPicture extends React.Component {
                 <span className="dot" onclick="currentSlide(4)"></span>
                 <span className="dot" onclick="currentSlide(5)"></span>
                 <span className="dot" onclick="currentSlide(6)"></span>
-                <span className="doty" onclick="currentSlide(1)"></span>         
+                <span className="doty" onclick="currentSlide(1)"></span> 
+                {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
+                <div className="links">
+                <p><a href="https://example.com">Précédent</a></p>        
+                <p><a href="https://example.com">Suivant</a></p>  
+                </div>
+                
                 </footer>
                 
             </div>
