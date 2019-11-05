@@ -4,6 +4,12 @@ import './ProfilPicture.css'
 import avatar from '../../img/avatar.png'
 
 class ProfilPicture extends React.Component {
+
+    fileSelectedHandler = event => {
+        console.log(event.target.files[0])
+    }
+
+
     render() {
         return(
             <div className="containerUserProfil">
@@ -12,10 +18,14 @@ class ProfilPicture extends React.Component {
                     <p className="inscriptionUserChoice">Photo de profil</p>
                 </div>
 
+
                 <div className="containerChoice">
                 <img src={avatar} className="avatar" />
-
                 </div>
+                <input type="file" onChange={this.fileSelectedHandler} ></input>
+                <button></button>
+
+
 
                 <footer className="linearBalls"> 
                 <span className="dot" onclick="currentSlide(2)"></span>
