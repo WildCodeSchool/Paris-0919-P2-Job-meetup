@@ -18,21 +18,22 @@ class SimpleExample extends React.Component {
     meetups: []
   }
 
-  getMeetUp(){
+  getMeetUp() {
     axios.get('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=num%C3%A9rique&facet=category&facet=tags&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=access_type&facet=price_type&refine.category=Animations+')
-    .then(result => {this.setState({ meetups: result.data.records})})
-}
-  meetupToStore(){
-    const action = {type : 'MEETUP_LOAD', value : this.state.meetups}
+      .then(result => { this.setState({ meetups: result.data.records }) })
+  }
+  meetupToStore = () => {
+    const action = { type: 'MEETUP_LOAD', value: this.state.meetups }
     this.props.dispatch(action)
   }
-componentDidMount() {
+  componentDidMount() {
     this.getMeetUp();
-}
+  }
 
   render() {
+
     this.meetupToStore()
-    
+
     const position = [this.state.lat, this.state.lng];
 
     return (
@@ -54,9 +55,9 @@ componentDidMount() {
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
-                          <h1>{marker.firstname}<span> {marker.lastname}</span></h1>
-                          <h2>{marker.type}</h2>
-                          <h3>Languages : {marker.languages}</h3>
+                          <h2>{marker.firstname}<span> {marker.lastname}</span></h2>
+                          <h3>{marker.type}</h3>
+                          <h4>Languages : {marker.languages}</h4>
                         </div>
                         <img className="avatar_map" src={marker.pic} />
                       </div>
@@ -68,20 +69,24 @@ componentDidMount() {
           })}
 
           {this.props.toggleList.meetups.map(marker2 => {
-              if (this.props.toggleUsers.meetup) {
-                return (
-                  <Marker position={[marker2.geometry.coordinates[1],marker2.geometry.coordinates[0]]}>
-                    <Popup>
-                      <div className="pop">
-                        <div className ="meetupdes">
-
-
-                        </div>
+            if (this.props.toggleUsers.meetup) {
+              return (
+                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]}>
+                  <Popup>
+                    <div className="pop">
+                      <div className="meetupdes">
+                        <h2>{marker2.fields.title}</h2>
+                        <h4>{marker2.fields.address_name}</h4>
+                        <h4>{marker2.fields.address_street}</h4>
+                        <h4>{marker2.fields.address_zipcode}</h4>
+                        <img className="avatar_map2" src={marker2.fields.cover_url} />
                       </div>
-                    </Popup>
-                  </Marker>
-                )
-              }}
+                    </div>
+                  </Popup>
+                </Marker>
+              )
+            }
+          }
           )}
         </Map>
       </div>
