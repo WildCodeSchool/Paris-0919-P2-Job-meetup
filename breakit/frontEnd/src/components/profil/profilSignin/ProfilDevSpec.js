@@ -10,7 +10,7 @@ class ProfilDevSpec extends React.Component {
                 <img src={logo} alt="logo Skills" className="logoUserProfil"></img>
                 <div>
                     
-                    <p className="inscriptionUserChoice">Votre specialitée</p>
+                    <p className="inscriptionUserChoice">Votre specialité</p>
                 </div>
 
                 <div className="containerChoice">
