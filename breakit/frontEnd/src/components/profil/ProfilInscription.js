@@ -73,10 +73,6 @@ class ProfilInscription extends React.Component {
 
     }
 
-
-
-
-
     render() {
 
 
@@ -98,6 +94,22 @@ class ProfilInscription extends React.Component {
         }
         const loaderCount = loaderCounter()
 
+        const inscriptionCounter = () => {
+            if (count === 0) {
+                return "inscriptionEmpty"
+
+            } else if (count === 25) {
+                return "inscriptionQuart"
+            } else if (count === 50) {
+                return "inscriptionDemi"
+            } else if (count === 75) {
+                return "inscription3Quart"
+            } else if (count === 100) {
+                return "inscriptionFull"
+            }
+        }
+        const inscriptionCount = inscriptionCounter()
+
         return (
             <div className="containerProfilInscription">
                 <img src={logo} alt="logo Skills" className="logoProfilInscription"></img>
@@ -105,7 +117,7 @@ class ProfilInscription extends React.Component {
                     <p className="inscriptionProfilInscription">Inscription</p>
                 </div>
                 <div className="loader" id={loaderCount}>
-                    <p className="pourcent">{count} %</p>
+                    <p className={inscriptionCount}>{count} %</p>
                 </div>
 
                 <div className="containerMail">
