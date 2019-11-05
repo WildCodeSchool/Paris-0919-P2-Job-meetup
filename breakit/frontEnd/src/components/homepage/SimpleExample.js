@@ -2,6 +2,7 @@ import React from 'react';
 
 import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
+import axios from 'axios'
 
 import './Map.css';
 
@@ -11,13 +12,27 @@ const mapStateToProps = (state) => {
 
 class SimpleExample extends React.Component {
   state = {
-    zoom: 17,
+    zoom: 13,
     lat: 48.849044,
     lng: 2.352831,
+    meetups: []
   }
 
-  render() {
+  getMeetUp(){
+    axios.get('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=num%C3%A9rique&facet=category&facet=tags&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=access_type&facet=price_type&refine.category=Animations+')
+    .then(result => {this.setState({ meetups: result.data.records})})
+}
+  meetupToStore(){
+    const action = {type : 'MEETUP_LOAD', value : this.state.meetups}
+    this.props.dispatch(action)
+  }
+componentDidMount() {
+    this.getMeetUp();
+}
 
+  render() {
+    this.meetupToStore()
+    
     const position = [this.state.lat, this.state.lng];
 
     return (
@@ -51,6 +66,19 @@ class SimpleExample extends React.Component {
               }
             }
           })}
+
+          {this.props.toggleList.meetups.map(marker2 => {
+              if (this.props.toggleUsers.meetup) {
+                return (
+                  <Marker position={[marker2.geometry.coordinates[1],marker2.geometry.coordinates[0]]}>
+                    <Popup>
+                      <div className="pop">
+                      </div>
+                    </Popup>
+                  </Marker>
+                )
+              }}
+          )}
         </Map>
       </div>
 

@@ -71,47 +71,86 @@ const mapStateToProps = (state) => {
 }
 
 class ContactList extends React.Component {
-
-
-    // CALL USERS 
+    state = {
+        meetups : []
+    }
 
     _userArray() {
         const action = { type: "USER_LOADED", value: users }
         this.props.dispatch(action)
     }
 
-    componentWillMount() {
-        this._userArray()
+    // getMeetUp = async () => {
+    //         const result = await axios.get(
+    //             ('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=num%C3%A9rique&facet=category&facet=tags&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=access_type&facet=price_type&refine.category=Animations+')
+    //         )
+    //         this.setState({ meetups: result.data.records})
+    //     }
+    
 
-    }
-
-    // CALL MEET-UPS PARIS API
-    state = {
-        meetups: []
-    }
-
-    getMeetUp = () => {
-        axios
-        .get(`https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=num%C3%A9rique&facet=category&facet=tags&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=access_type&facet=price_type&refine.category=Animations+`)
-        .then(res => this.setState({meetups: res.data.records}))
-    }
-
-    componentDidMount() {
-        this.getMeetUp()
-    }
-
-
-    // listConnect(){
-    //     const action = { type : "LIST_LOAD", value : meetups}
+    // toggleList(){
+    //     const action = { type : "LIST_LOADED", value : this.state.meetups}
+    //     console.log('test action', action.value)
     //     this.props.dispatch(action)
     // }
- 
 
+    componentDidMount() {
+        this._userArray()
+        // this.getMeetUp()
+        // this.toggleList()
+
+    }
+    
     render() {
-        console.log(this.state.meetups)
+        // const resultat = Object.keys(this.state.meetup).map(key => <DisplayList meetup={this.props.meetup} key={key} />)
         return null
     }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // CALL MEET-UPS PARIS API
+//     state = {
+//         meetups: []
+//     }
+
+//     getMeetUp = () => {
+//         axios
+//             .get(`https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=num%C3%A9rique&facet=category&facet=tags&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=access_type&facet=price_type&refine.category=Animations+`)
+//             .then(res => this.setState({meetups: res.data.records}))
+//     }
+
+//     componentDidMount() {
+//         this.getMeetUp()
+//     }
+
+
+
+ 
+
+//     render() {
+//         console.log(this.state.meetups)
+//         return null
+//     }
+// }
 
 
 export default connect(mapStateToProps)(ContactList);

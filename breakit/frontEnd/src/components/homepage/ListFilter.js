@@ -15,21 +15,16 @@ class listFilter extends React.Component {
                 <div className="second_container">
                     <div className="list">
                         <ul>
-                            <li>Meetup React.js (350m)</li>
-                            <li>Blabla JS (500m)</li>
-                            <li>Meetup de folie (649m)</li>
-                            <li>Sandwich corporation (864m)</li>
-                            <li>Choucroute.JS (1432 m)</li>
-                            <li>Meetup React.js (350m)</li>
-                            <li>Blabla JS (500m)</li>
-                            <li>Meetup de folie (649m)</li>
-                            <li>Sandwich corporation (864m)</li>
-                            <li>Choucroute.JS (1432 m)</li>
-                            <li>Meetup React.js (350m)</li>
-                            <li>Blabla JS (500m)</li>
-                            <li>Meetup de folie (649m)</li>
-                            <li>Sandwich corporation (864m)</li>
-                            <li>Choucroute.JS (1432 m)</li>
+                        {this.props.toggleList.meetups.map(marker2 => {
+                            return (
+                                <div>
+                                <li>{marker2.fields.title}</li>
+                                <li></li>
+                                
+                                </div>
+                            )
+                            })
+                        }
                         </ul>
                     </div>
                 </div>

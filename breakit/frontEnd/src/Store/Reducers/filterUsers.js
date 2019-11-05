@@ -41,7 +41,6 @@ const toggleUsers = (state = filterState, action) => {
             return nextState || state;
 
         case 'MEETUP_ON':
-            console.log('MEETUP_ON', action);
 
             if (state.meetup === false) {
                 nextState = {
