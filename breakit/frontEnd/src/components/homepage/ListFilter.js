@@ -19,7 +19,7 @@ class listFilter extends React.Component {
                             return (
                                 <div>
                                 <li>{marker2.fields.title}</li>
-                                <li></li>
+                                
                                 
                                 </div>
                             )

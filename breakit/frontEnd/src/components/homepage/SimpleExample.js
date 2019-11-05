@@ -54,9 +54,9 @@ componentDidMount() {
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
-                          <p>{marker.firstname}<span> {marker.lastname}</span></p>
-                          <p>{marker.type}</p>
-                          <p>Languages : {marker.languages}</p>
+                          <h1>{marker.firstname}<span> {marker.lastname}</span></h1>
+                          <h2>{marker.type}</h2>
+                          <h3>Languages : {marker.languages}</h3>
                         </div>
                         <img className="avatar_map" src={marker.pic} />
                       </div>
@@ -73,6 +73,10 @@ componentDidMount() {
                   <Marker position={[marker2.geometry.coordinates[1],marker2.geometry.coordinates[0]]}>
                     <Popup>
                       <div className="pop">
+                        <div className ="meetupdes">
+
+
+                        </div>
                       </div>
                     </Popup>
                   </Marker>
