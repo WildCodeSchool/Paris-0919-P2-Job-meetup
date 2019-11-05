@@ -3,7 +3,16 @@ import logo from '../../img/logo-blancjaune.svg'
 import './ProfilDevSpec.css'
 import { Link } from 'react-router-dom';
 
+
 class ProfilLanguages extends React.Component {
+    state = {
+        languages: []
+    }
+
+    handleLanguages = (event) => {
+        this.setState({languages: event.target.value}) 
+    }
+
     render() {
         return(
             <div className="containerUserProfil">
@@ -15,9 +24,9 @@ class ProfilLanguages extends React.Component {
 
                 <div className="containerChoicel4">
                     <form className="form">
-                        <p> <button type="button" id="userFront-button">JS</button> </p>
-                        <p> <button type="button" id="userBack-button">HTML</button> </p>
-                        <p> <button type="button" id="userFullStack-button">CSS</button> </p>
+                        <input className="barSearch" placeholder='Recherche ton langage' onChange={this.handleLanguages}>
+
+                        </input>
                     </form>
                 </div>
                 
