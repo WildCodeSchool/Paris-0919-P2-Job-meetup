@@ -1,16 +1,13 @@
 import React from 'react';
 import { Switch, Route,  } from 'react-router-dom';
 import UserChoice from './components/profil/profilSignin/ProfilUserChoice';
-// import ProfilPicture from './components/profil/profilSignin/ProfilPicture'
 import ProfilInscription from './components/profil/profilSignin/ProfilInscription'
 import ProfilDevSpec from './components/profil/profilSignin/ProfilDevSpec';
-
 import ProfilInterests from './components/profil/profilSignin/ProfilInterests'
-// 
 import ProfilDescription from'./components/profil/profilSignin/ProfilDescription';
-
 import ProfilLanguages from './components/profil/profilSignin/ProfilLanguage';
 import ProfilPicture from './components/profil/profilSignin/ProfilPicture';
+import ProfilConnexion from './components/profil/profilLogin/ProfilConnexion'
 
 import { Provider } from 'react-redux';
 import store from './Store/store';
@@ -19,29 +16,6 @@ import './App.css';
 
 
 class App extends React.Component {
-  state = {
-    isDisplayed: false,
-    activeparameters: false,
-    activecontact: false,
-  }
-
-  footerClick = () => {
-    this.setState({ isDisplayed: !this.state.isDisplayed })
-  }
-
-  toggleClassParameters = () => {
-    const currentState = this.state.activeparameters;
-    this.setState({
-      activeparameters: !currentState
-    })
-  }
-
-  toggleClassContact = () => {
-    const currentState = this.state.activecontact;
-    this.setState({
-      activecontact: !currentState
-    })
-  }
 
   render() {
     return (
@@ -49,8 +23,10 @@ class App extends React.Component {
         <div>
           <Provider store={store}>
               <Switch>
+                  {/* Connexion*/}
+                  <Route exact path="/" component={ProfilConnexion} />
                   {/* Ici le Home */}
-                  <Route exact path="/" component={ProfilInscription} />
+                  <Route exact path="/ProfilInscription" component={ProfilInscription} />
                   {/* Boutton inscription */}
                   <Route exact path='/ProfilUserChoice' component={UserChoice} />
                   {/* Ici Profil user choice */}
@@ -74,9 +50,6 @@ class App extends React.Component {
               </Provider>
           
         </div>
-      
-
-      
     );
   }
 }
