@@ -1,23 +1,21 @@
-import React from 'react';
-// import Footer from './components/homepage/Footer';
-// import ListFilter from './components/homepage/ListFilter';
+import React from "react"
+import Footer from './components/homepage/Footer';
+import ListFilter from './components/homepage/ListFilter';
+import Filter from './components/homepage/Filter';
+import MenuBurger from './components/homepage/MenuBurger';
+import SimpleExample from './components/homepage/SimpleExample';
+import { Provider } from 'react-redux';
+import store from './Store/store';
+import ContactList from './components/homepage/ContactList';
+import Parameters from './components/homepage/Parameters'
+import Contact from './components/homepage/Contact'
 import './App.css';
-// import Filter from './components/homepage/Filter';
-// import MenuBurger from './components/homepage/MenuBurger';
-// import SimpleExample from './components/homepage/SimpleExample'
-// import Parameters from './components/homepage/Parameters'
-// import Contact from './components/homepage/Contact'
-import ProfilInscription from './components/profil/ProfilInscription'
+
 
 class App extends React.Component {
   state = {
-    isDisplayed: false,
     activeparameters: false,
     activecontact: false,
-  }
-
-  footerClick = () => {
-    this.setState({ isDisplayed: !this.state.isDisplayed })
   }
 
   toggleClassParameters = () => {
@@ -36,18 +34,19 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        {/* <MenuBurger toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} className="menuburger" />
-        <SimpleExample className="simpleexample" state={this.state} />
-        {this.state.isDisplayed ? <Filter className="filter" /> : null}
-        {this.state.isDisplayed ? <ListFilter className="listfilter" /> : null}
-        <Footer className="footer" state={this.state} footerClick={this.footerClick} />
-        <Contact toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} />
-        <Parameters toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} /> */}
-        <ProfilInscription />
-      </div>
+      <Provider store={store}>
+        <div>
+          <MenuBurger className="menuburger" toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters}/>
+          <ContactList className="contact" />
+          <SimpleExample clasName="simpleexample" />
+          <Filter className="filter" />
+          <ListFilter className="listfilter" />
+          <Contact toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} />
+          <Parameters toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} />
+          <Footer className="footer" />
+        </div>
+      </Provider>
     );
   }
 }
-
 export default App;
