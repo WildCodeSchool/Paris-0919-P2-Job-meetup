@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "HelveticaNeue_Medium";
+  src: url("../fonts/HelveticaNeue_Light.ttf");
+}
+
+.ChatMain {
+  position: fixed;
+  right: 10px;
+  bottom: 0;
+  width: 350px;
+  border: 1px solid #ccc;
+}
+
+.chatmain-chat-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: #fae404;
+  height: 50px;
+  font-size: 16px;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 1px 1px 4px 1px grey;
+  cursor: pointer;
+}
+
+.chatmain-form-container {
+  height: 400px;
+  border: 1px solid #fae404;
+}
+.chatmain-form-container h1 {
+  padding: 10px;
+  background-color: #fae404;
+  font-size: 20px;
+  color: black;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.chatmain-form {
+  padding: 30px;
+}
+.chatmain-input {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  height: 50px;
+  font-size: 20px;
+}
+.chatmain-submit {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #fae404;
+  color: black;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chatmain-form {
+  padding: 30px;
+}
+.chatmain-input {
+  display: block;
+  width: 100%;
+  margin: 20px auto;
+  height: 50px;
+  font-size: 20px;
+}
+.chatmain-submit {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #fae404;
+  color: black;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.chatmain-chatapp {
+  margin: 0 auto;
+  height: 80vh;
+  border: 1px solid #a1a1a4;
+}
+.chatmain-header {
+  padding: 20px;
+  color: black;
+  margin-top: 0;
+  text-align: left;
+  border-bottom: 1px solid #fae404;
+  background-color: #fae404;
+}
+.chatmain-message-list {
+  list-style-type: none;
+  padding: 0px 20px;
+  overflow: scroll;
+  max-height: calc(100vh - 150px);
+  margin-bottom: 35px;
+}
+.chatmain-message-sender {
+  font-weight: bold;
+  font-size: 1em;
+  margin: 0;
+}
+.chatmain-message-text {
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+.chatmain-message-input {
+  width: 70%;
+  height: 50px;
+  border: 0;
+  border-top: 1px black;
+  font-size: 18px;
+  padding-left: 2px;
+}
+.chatmain-message-submit {
+  width: 30%;
+  background-color: #fae404;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+}
+.chatmain-input-field {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}

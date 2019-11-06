@@ -7,32 +7,33 @@ import './App.css';
 // import SimpleExample from './components/homepage/SimpleExample'
 // import Parameters from './components/homepage/Parameters'
 // import Contact from './components/homepage/Contact'
-import ProfilInscription from './components/profil/ProfilInscription'
+// import ProfilInscription from './components/profil/ProfilInscription'
+import ChatMain from './components/homepage/ChatMain'
 
 class App extends React.Component {
-  state = {
-    isDisplayed: false,
-    activeparameters: false,
-    activecontact: false,
-  }
+  // state = {
+  //   isDisplayed: false,
+  //   activeparameters: false,
+  //   activecontact: false,
+  // }
 
-  footerClick = () => {
-    this.setState({ isDisplayed: !this.state.isDisplayed })
-  }
+  // footerClick = () => {
+  //   this.setState({ isDisplayed: !this.state.isDisplayed })
+  // }
 
-  toggleClassParameters = () => {
-    const currentState = this.state.activeparameters;
-    this.setState({
-      activeparameters: !currentState
-    })
-  }
+  // toggleClassParameters = () => {
+  //   const currentState = this.state.activeparameters;
+  //   this.setState({
+  //     activeparameters: !currentState
+  //   })
+  // }
 
-  toggleClassContact = () => {
-    const currentState = this.state.activecontact;
-    this.setState({
-      activecontact: !currentState
-    })
-  }
+  // toggleClassContact = () => {
+  //   const currentState = this.state.activecontact;
+  //   this.setState({
+  //     activecontact: !currentState
+  //   })
+  // }
 
   render() {
     return (
@@ -44,7 +45,8 @@ class App extends React.Component {
         <Footer className="footer" state={this.state} footerClick={this.footerClick} />
         <Contact toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} />
         <Parameters toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} /> */}
-        <ProfilInscription />
+        {/* <ProfilInscription /> */}
+        <ChatMain />
       </div>
     );
   }
