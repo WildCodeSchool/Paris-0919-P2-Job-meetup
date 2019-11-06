@@ -1,21 +1,18 @@
 const basicState = {
-  users : []
+  users: []
 }
 
-function toggleFilterMap(state=basicState, action) {
- let nextState
-console.log('triggered' , action);
+function toggleFilterMap(state = basicState, action) {
+  let nextState
 
- switch (action.type) {
-   case 'USER_LOADED' : 
-   console.log('USER_LOADED');
-   
-    state.users = action.value
-    nextState = state
-    
-    return nextState || state
-      default : return state
-     }
- }
- 
+  switch (action.type) {
+    case 'USER_LOADED':
+      state.users = action.value
+      nextState = state
+
+      return nextState || state
+    default: return state
+  }
+}
+
 export default toggleFilterMap

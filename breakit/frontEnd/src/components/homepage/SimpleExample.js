@@ -40,7 +40,7 @@ class SimpleExample extends React.Component {
 
     return (
       <div>
-        <img className="logo" src={Logo}/>
+        <img className="logo" src={Logo} alt='logo du site skills'/>
 
         <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.toggleFilter.isFiltered ? "miSize" : "fullSize"}>
 
@@ -50,7 +50,6 @@ class SimpleExample extends React.Component {
           />
 
           {this.props.toggleFilterMap.users.map(marker => {
-
             if (marker.online) {
               if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'DEV') {
                 return (
@@ -62,7 +61,7 @@ class SimpleExample extends React.Component {
                           <h3>{marker.type}</h3>
                           <h4>Languages : {marker.languages}</h4>
                         </div>
-                        <img className="avatar_map" src={marker.pic} />
+                        <img className="avatar_map" src={marker.pic} alt='position du marker' />
                       </div>
                     </Popup>
                   </Marker>

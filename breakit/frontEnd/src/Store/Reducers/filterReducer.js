@@ -1,28 +1,27 @@
 const initialState = {
-  isFiltered : false
+  isFiltered: false
 }
 
-function toggleFilter(state=initialState, action) {
+function toggleFilter(state = initialState, action) {
   let nextState
   switch (action.type) {
     case 'TOGGLE_FILTER':
-      console.log('TOGGLE_FILTER',action);
-      
-      if(state.isFiltered === false) {
+
+      if (state.isFiltered === false) {
         nextState = {
           ...state,
-          isFiltered : true
+          isFiltered: true
         }
       } else {
-          nextState = {
-            ...state,
-            isFiltered : false
-          }
-      
+        nextState = {
+          ...state,
+          isFiltered: false
+        }
+
       }
       return nextState || state
-      default:
-        return state
+    default:
+      return state
   }
 }
 

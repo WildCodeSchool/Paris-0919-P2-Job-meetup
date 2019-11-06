@@ -46,14 +46,3 @@
  .check-meet-up, .check-entreprise, .check-cowork{
     margin: 1vh;
  }
- /* RANGE SECTION  */
- .range p{
-    text-align: center;
- }
- .range .input-range__track--active{
-    background: black;
- }
- .range .input-range__slider{
-    background: black;
-    border: black;
- }

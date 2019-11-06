@@ -9,7 +9,7 @@ class MenuBurger extends React.Component {
   toggleClass = () => {
     const currentState = this.state.active;
     this.setState({
-      active : !currentState
+      active: !currentState
     })
   }
   render() {
