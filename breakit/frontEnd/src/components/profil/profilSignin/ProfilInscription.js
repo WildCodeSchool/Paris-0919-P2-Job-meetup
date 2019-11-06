@@ -16,15 +16,6 @@ class ProfilInscription extends React.Component {
         mail : null,
         password : null,
     }
-
-    /* 
-
-      checkDB = () => {
-        axios.post('http://localhost:4000/api/user/signin', {
-          mail: this.state.mail,
-          password: this.state.password,
-        })
-      }; */
       
       _userInfo(){
         const action = {type : 'USER_LOG', value : this.state}

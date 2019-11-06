@@ -21,13 +21,10 @@ app.post('/api/user/signup', (req,res) => {
     const user = new User({
         mail : req.body.mail,
         firstName : req.body.firstName,
-        name : req.body.name,
+        lastName : req.body.lastName,
         password : req.body.password,
         type : req.body.type,
-        spec : req.body.spec,
-        languages : req.body.languages,
-        interest : req.body.interest,
-        text : req.body.text,
+        skills : req.body.skills,
     })
     user.save((err, response) => {
         if (err) res.status(400).send(err)
@@ -37,18 +34,27 @@ app.post('/api/user/signup', (req,res) => {
 
 app.post('/api/user/signin', (req,res) => {
     User.findOne({'email':req.body.email}, (err,user) => {
-        if(!user) res.json({message: 'Login failed, user not found'})
-        user.comparePassword(req.body.password, (err, isMatch) => {
-            if (err) throw err;
-            if (!isMatch) return res.status(400).json({
-                message:'Wrong password'
-            });
-            res.status(200).send('Logged in successfully')
-            console.log('ok')
-        })
+        if(!user) {
+            res.json({message: 'Login failed, user not found'})
+        } else {
+            user.comparePassword(req.body.password, (err, isMatch) => {
+                if (err) {throw err};
+                if (!isMatch) {return res.status(400).json({
+                    message:'Wrong password'
+                });}
+            return res.status(200).send('Logged in successfully')
+            })
+        }
     })
 })
 
+app.get('/api/user/getDev', (req, res) => {
+    User.find({type : "Dev"}, function(err, result) {
+        if (err) throw err;
+        console.log(result.map(user => {user.lastName}))
+        res.status(200).json(result.map(user => {user.lastName}))
+    })
+})
 
 const port = process.env.PORT || 4000;
 

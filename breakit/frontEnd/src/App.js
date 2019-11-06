@@ -7,17 +7,25 @@ import ProfilInterests from './components/profil/profilSignin/ProfilInterests'
 import ProfilDescription from'./components/profil/profilSignin/ProfilDescription';
 import ProfilLanguages from './components/profil/profilSignin/ProfilLanguage';
 import ProfilPicture from './components/profil/profilSignin/ProfilPicture';
-import ProfilConnexion from './components/profil/profilLogin/ProfilConnexion'
+import ProfilConnexion from './components/profil/profilLogin/ProfilConnexion';
+/* import Home from './components/homepage/Home'; */
+
 
 import { Provider } from 'react-redux';
 import store from './Store/store';
+/* import PrivateRoute from 'react-private-route' */
 
 import './App.css';
 
 
 class App extends React.Component {
 
+  isLoggedIn() {
+    return this.props.isLoggedIn;
+  }
+
   render() {
+
     return (
 
         <div>
@@ -44,7 +52,7 @@ class App extends React.Component {
                   {/* Ici profil description */}
                   <Route exact path='/ProfilInterests' component={ProfilInterests}/>
                   <Route exact path='/ProfilPicture' component={ProfilPicture}/>
-               
+                  {/* <PrivateRoute exact path="/Home" component={Home} isAuthenticated={() => !!this.isLoggedIn()}/> */}
               </Switch>
 
               </Provider>

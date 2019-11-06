@@ -1,21 +1,24 @@
 import React from "react";
 import "./ProfilConnexion.css";
 import logo from '../../img/logo-blancjaune.svg'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 class ProfilConnexion extends React.Component {
     state = {
-        countName: 0,
-        countFirstName: 0,
-        countEmail: 0,
-        countPassword: 0,
-        myInputName: "",
-        myInputFirstName: "",
-        myInputEmail: "",
-        myInputPassword: "",
+        mail: null,
+        password : null,
     }
 
+      checkDB = () => {
+          const body = {
+            mail: this.state.mail,
+            password: this.state.password,
+          }
+        axios.post('http://localhost:4000/api/user/signin', body)
+      };
 
-    modifLoadName = (a) => {
+  /*   modifLoadName = (a) => {
         this.setState({
             myInputName: a.target.value
         }, _ => {
@@ -72,11 +75,11 @@ class ProfilConnexion extends React.Component {
 
 
     }
-
+ */
     render() {
 
 
-        const count = this.state.countName + this.state.countFirstName + this.state.countEmail + this.state.countPassword
+       /*  const count = this.state.countName + this.state.countFirstName + this.state.countEmail + this.state.countPassword
 
         const loaderCounter = () => {
             if (count === 0) {
@@ -108,7 +111,7 @@ class ProfilConnexion extends React.Component {
                 return "inscriptionFull"
             }
         }
-        const inscriptionCount = inscriptionCounter()
+        const inscriptionCount = inscriptionCounter() */
 
         return (
             <div className="containerProfilInscription">
@@ -116,22 +119,24 @@ class ProfilConnexion extends React.Component {
                 <div>
                     <p className="inscriptionProfilInscription">Connexion</p>
                 </div>
-                <div className="loader" id={loaderCount}>
+                {/* <div className="loader" id={loaderCount}>
                     <p className={inscriptionCount}>{count} %</p>
-                </div>
+                </div> */}
 
                 <div className="containerMail">
                     <form className="form">
 
-                        <input type="email" placeholder="Email" value={this.state.myInputEmail}
-                            onChange={c => this.modifLoadEmail(c)} ></input>
+                        <input type="email" placeholder="Email"
+                            onChange={(e) => this.setState({ mail: e.target.value })} ></input>
 
-                        <input type="password" placeholder="Mot de passe" value={this.state.myInputPassword}
-                            onChange={d => this.modifLoadPassword(d)} ></input>
+                        <input type="password" placeholder="Mot de passe"
+                            onChange={(e) => this.setState({ password: e.target.value })} ></input>
 
-                        <button type="submit" id="login-button">Valider</button>
-
+                        <button onClick={() => this.checkDB()} type="submit" id="login-button">Valider</button>
                     </form>
+                    <div className="links">
+                    <div className = "link_text">Not register yet ? Please <Link exact to='ProfilInscription'><p className="link_button">Sign Up</p> </Link> </div>
+                    </div>
                 </div>
 
 

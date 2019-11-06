@@ -220,5 +220,23 @@ font-size: 3.5vh;
     }
   }
 
+.link_text{
+    color: rgb(180, 180, 180);
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    text-decoration: none;
+    font-size: 1.7vh;
+    text-shadow: 0px 0px 1px #FAE404;
+}
+ 
+ .link_button {
+    
+    color: #fff;
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 2vh;
+    text-shadow: 0px 0px 1px #FAE404;
+
+}
 
 
