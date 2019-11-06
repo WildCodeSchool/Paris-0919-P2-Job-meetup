@@ -1,6 +1,5 @@
 import React from "react"
 
-import InputRange from "react-input-range";
 import { connect } from 'react-redux';
 
 import 'react-input-range/lib/css/index.css'

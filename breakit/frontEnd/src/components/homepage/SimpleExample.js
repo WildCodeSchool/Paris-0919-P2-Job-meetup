@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import axios from 'axios'
 
+import Logo from '../img/logo-skills-noir.svg'
 import './Map.css';
 
 const mapStateToProps = (state) => {
@@ -16,7 +17,6 @@ class SimpleExample extends React.Component {
     lat: 48.849044,
     lng: 2.352831,
     meetups: []
-
   }
 
   getMeetUp() {
@@ -40,6 +40,7 @@ class SimpleExample extends React.Component {
 
     return (
       <div>
+        <img className="logo" src={Logo}/>
 
         <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.toggleFilter.isFiltered ? "miSize" : "fullSize"}>
 

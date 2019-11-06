@@ -1,7 +1,21 @@
 @font-face{font-family: "HelveticaNeue_Medium" ;
   src:url("../fonts/HelveticaNeue_Medium.ttf")}
 
-#leaflet-container {
+
+body {
+  overflow: none;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 2em;
+  margin-top: 1em;
+}
+
+  #leaflet-container {
   width : 90%;
   margin-left : 5%;
   z-index : 10;

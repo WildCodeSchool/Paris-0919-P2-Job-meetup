@@ -2,14 +2,17 @@
     font-family: "HelveticaNeue_Medium";
     src: url("../fonts/HelveticaNeue_Medium.ttf")
  }
+
+
  .filter{
     width:auto;
-    height:auto;
+    height: auto;
     margin: auto;
     text-align: center;
     overflow: hidden;
     z-index: 40;
  }
+
  .buttonfilter{
     display: flex;
     justify-content: center;
@@ -19,11 +22,13 @@
     width: auto;
     background: white;
     color: black;
-    border:none;
+    border: 1px solid #262626;
+    box-shadow: 2px 2px 2px 1px rgba(122, 112, 112, 0.486);
     border-radius: 10px;
     height: 2.2em;
     padding: 0em 2em;
     font-size: 20px;
+    font-family: 'HelveticaNeue_Medium';
  }
  .checkBox {
     z-index: 40;
@@ -36,7 +41,7 @@
     flex-direction: column;
  }
  .slider.checkBox{
-    height:27vh;
+    height:18vh;
   }
  .check-meet-up, .check-entreprise, .check-cowork{
     margin: 1vh;
