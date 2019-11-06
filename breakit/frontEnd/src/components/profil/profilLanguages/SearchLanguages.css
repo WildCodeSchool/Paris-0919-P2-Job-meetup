@@ -1,6 +1,6 @@
 @font-face {
     font-family: "HelveticaNeue_Light";
-    src: url("/fonts/OpenSans-Regular-webfont.woff2")
+    src: url("../../fonts/HelveticaNeue_Light.ttf")
    }
 
 
@@ -16,16 +16,21 @@
 .inputSearchLanguages {
     
     border: 4px solid #FAE404;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
     padding: 20px 40px;
-    font-size: 1.15em;
+    font-size: 1.4em;
+    font-family: "HelveticaNeue_Light" , "sans-serif";
     
 }
 
 .suggestionsList {
-    color: #262626;
+    color: #505050;
     list-style-type: none;
     background: #FAE404;
-    border-radius: 5px;
-    font-size: 1.15em;
+    border-radius: 0px 5px 5px 5px;
+    font-size: 1.4em;
+    font-family: "HelveticaNeue_Light" , "sans-serif";
+    margin-top: 0em;
+    padding: 20px 20px;
+    
 }
