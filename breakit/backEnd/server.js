@@ -23,6 +23,11 @@ app.post('/api/user/signup', (req,res) => {
         firstName : req.body.firstName,
         name : req.body.name,
         password : req.body.password,
+        type : req.body.type,
+        spec : req.body.spec,
+        languages : req.body.languages,
+        interest : req.body.interest,
+        text : req.body.text,
     })
     user.save((err, response) => {
         if (err) res.status(400).send(err)

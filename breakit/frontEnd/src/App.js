@@ -12,6 +12,9 @@ import ProfilDescription from'./components/profil/profilSignin/ProfilDescription
 import ProfilLanguages from './components/profil/profilSignin/ProfilLanguage';
 import ProfilPicture from './components/profil/profilSignin/ProfilPicture';
 
+import { Provider } from 'react-redux';
+import store from './Store/store';
+
 import './App.css';
 
 
@@ -44,6 +47,7 @@ class App extends React.Component {
     return (
 
         <div>
+          <Provider store={store}>
               <Switch>
                   {/* Ici le Home */}
                   <Route exact path="/" component={ProfilInscription} />
@@ -66,6 +70,8 @@ class App extends React.Component {
                   <Route exact path='/ProfilPicture' component={ProfilPicture}/>
                
               </Switch>
+
+              </Provider>
           
         </div>
       

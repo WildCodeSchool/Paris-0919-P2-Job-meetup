@@ -2,39 +2,34 @@ import React from "react";
 import "./ProfilInscription.css";
 import logo from '../../img/logo-blancjaune.svg'
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+import { connect } from 'react-redux'
+
+const mapStateToProps = (state) => {
+  return state
+}
+
 class ProfilInscription extends React.Component {
     state = {
-        id: 0,
-        name: null,
-        firstName: null,
-        mail: null,
-        password: null,
-        intervalIsSet: false,
-        userChecked : false
+        name : null,
+        firstName : null,
+        mail : null,
+        password : null,
     }
 
-    componentWillUnmount() {
-        if (this.state.intervalIsSet) {
-          clearInterval(this.state.intervalIsSet);
-          this.setState({ intervalIsSet: null });
-        }
-      }
-
-    putDataToDB = () => {
-        axios.post('http://localhost:4000/api/user/signup', {
-          firstName: this.state.firstName,
-          name: this.state.name,
-          mail: this.state.mail,
-          password: this.state.password,
-        })
-      };
+    /* 
 
       checkDB = () => {
         axios.post('http://localhost:4000/api/user/signin', {
           mail: this.state.mail,
           password: this.state.password,
         })
-      };
+      }; */
+      
+      _userInfo(){
+        const action = {type : 'USER_LOG', value : this.state}
+        this.props.dispatch(action)
+      }
 
 
     render() {
@@ -49,7 +44,7 @@ class ProfilInscription extends React.Component {
 
                 <div className="containerMail">
                     <form className="form">
-                    <input type="text" placeholder="Prénom" 
+                    <input type="text" placeholder="Nom" 
                             onChange={(e) => this.setState({ name: e.target.value })} ></input>
 
                         <input type="text" placeholder="Prénom" 
@@ -61,7 +56,7 @@ class ProfilInscription extends React.Component {
                         <input type="password" placeholder="Mot de passe"
                             onChange={(e) => this.setState({ password: e.target.value })} ></input>
 
-                        <Link exact to ='ProfilUserChoice'> <button type="submit" id="login-button">Valider</button>  </Link>
+                        <Link  onClick = {() => this._userInfo()} exact to ='ProfilUserChoice'> <button type="submit" id="login-button">Valider</button>  </Link>
 
                     </form>
                 </div>
@@ -78,4 +73,4 @@ class ProfilInscription extends React.Component {
     }
 }
 
-export default ProfilInscription;
+export default connect(mapStateToProps)(ProfilInscription);

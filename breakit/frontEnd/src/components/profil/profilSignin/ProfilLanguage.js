@@ -2,8 +2,37 @@ import React from 'react'
 import logo from '../../img/logo-blancjaune.svg'
 import './ProfilDevSpec.css'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+
+const mapStateToProps = (state) => {
+    return state
+  }
 
 class ProfilLanguages extends React.Component {
+
+    state = {
+        languages : []
+    }
+
+    _userInfo(){
+        const action = {type : 'USER_LANG', value : this.state}
+        this.props.dispatch(action)
+      }
+    
+    handleClick = (name) => {
+        const lang = this.state.languages
+        const index = lang.indexOf(name)
+
+        if (index === -1){
+            lang.push(name)
+        }
+        else {
+            lang.splice(index, 1)
+        }
+        this.setState({languages : lang})
+
+    }
+
     render() {
         return(
             <div className="containerUserProfil">
@@ -15,9 +44,9 @@ class ProfilLanguages extends React.Component {
 
                 <div className="containerChoicel4">
                     <form className="form">
-                        <p> <button type="button" id="userFront-button">JS</button> </p>
-                        <p> <button type="button" id="userBack-button">HTML</button> </p>
-                        <p> <button type="button" id="userFullStack-button">CSS</button> </p>
+                        <p> <button onClick={() => this.handleClick("JS")} type="button" id="userFront-button">JS</button> </p>
+                        <p> <button onClick={() => this.handleClick("HTML")} type="button" id="userBack-button">HTML</button> </p>
+                        <p> <button onClick={() => this.handleClick("CSS")} type="button" id="userFullStack-button">CSS</button> </p>
                     </form>
                 </div>
                 
@@ -27,7 +56,7 @@ class ProfilLanguages extends React.Component {
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
                 <Link exact to ="ProfilDevSpec"> <p><a href="">Précédent</a></p>   </Link>     
-                <Link exact to ="ProfilInterests"><p><a href="">Suivant</a></p>  </Link>
+                <Link onClick = {() => this._userInfo()} exact to ="ProfilInterests"><p><a href="">Suivant</a></p>  </Link>
                 </div>
 
                 </footer>
@@ -39,4 +68,4 @@ class ProfilLanguages extends React.Component {
     }
 }
 
-export default ProfilLanguages
+export default connect(mapStateToProps)(ProfilLanguages)

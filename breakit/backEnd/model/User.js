@@ -30,6 +30,36 @@ const userSchema =  mongoose.Schema(
             minlength: 5,
             maxlength: 1024
         },
+        type :
+        {
+            type: String,
+            required: true,
+            minlength: 0,
+            maxlength: 24
+        },
+        spec :
+        {
+            type: Array,
+            required: true,
+        },
+        languages :
+        {
+            type: Array,
+            required: true,
+        },
+        interest : 
+        {
+            type: Array,
+            required: true,
+        },
+        text : 
+        {
+            type : String,
+            required : true,
+            minlength : 0,
+            maxlength : 2048
+        }
+
         
     },
     { timestamps: true }

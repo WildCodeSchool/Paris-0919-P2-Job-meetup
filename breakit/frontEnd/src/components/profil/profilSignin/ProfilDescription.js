@@ -2,8 +2,23 @@ import React from 'react'
 import logo from '../../img/logo-blancjaune.svg'
 import './ProfilDescription.css'
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux'
+
+const mapStateToProps = (state) => {
+    return state
+  }
 
 class ProfilDescription extends React.Component {
+
+    state = {
+        text : null,
+    }
+
+    _userInfo(){
+        const action = {type : 'USER_DESC', value : this.state}
+        this.props.dispatch(action)
+      }
+
     render() {
         return(
             <div className="containerUserProfil">
@@ -15,7 +30,7 @@ class ProfilDescription extends React.Component {
 
                 <div className="containerChoiceDes">
                     <form className="form">
-                        <textarea name='textarea' id="story" rows="7" cols="33" placeholder="Saisissez votre besoin..."
+                        <textarea onChange={(e) => this.setState({ text: e.target.value })} name='textarea' id="story" rows="7" cols="33" placeholder="Saisissez votre besoin..."
                         ></textarea>
                     </form>
                     
@@ -29,7 +44,7 @@ class ProfilDescription extends React.Component {
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
                <Link exact to='ProfilInterests'><p><a href="">Précédent</a></p></Link>     
-               <Link exact to='ProfilPicture'><p><a href="">Suivant</a></p> </Link> 
+               <Link onClick = {() => this._userInfo()} exact to='ProfilPicture'><p><a href="">Suivant</a></p> </Link> 
                 </div>
                 
                 </footer>
@@ -40,4 +55,4 @@ class ProfilDescription extends React.Component {
     }
 }
 
-export default ProfilDescription
+export default connect(mapStateToProps)(ProfilDescription)
