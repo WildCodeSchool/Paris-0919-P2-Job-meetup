@@ -1,4 +1,5 @@
 import React from 'react'
+import './SearchLanguages.css'
 
 class SearchLanguages extends React.Component {
   state = {
@@ -24,7 +25,7 @@ class SearchLanguages extends React.Component {
       return null;
     }
     return (
-      <ul>
+      <ul className="suggestionsList">
         {suggestions.map(item => <li onClick={() => this.suggestionsSelected(item)}>{item}</li>)}
       </ul>
     )
@@ -41,10 +42,11 @@ class SearchLanguages extends React.Component {
   render() {
     const { text } = this.state
     return (
-      <div>
+      <div className="containerSearchLanguages">
         <input
           type='text'
           value={text}
+          className="inputSearchLanguages"
           onChange={(this.handleChange)}
         />
         {this.renderSuggestions()}
