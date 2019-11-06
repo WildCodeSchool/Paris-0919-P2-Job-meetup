@@ -9,12 +9,12 @@ const mapStateToProps = (state) => {
 
 class listFilter extends React.Component {
 	state = {
-		lat:48.849044,
-		lng:2.352831,
+		lat: 48.849044,
+		lng: 2.352831,
 	}
 	deg2rad = (x) => {
 		return Math.PI * x / 180
-	  }
+	}
 
 	earth_radius = 6378137
 	lat1 = this.state.lat
@@ -43,13 +43,13 @@ class listFilter extends React.Component {
 		const dla = (rla2 - rla1) / 2;
 		const a = (Math.sin(dla) * Math.sin(dla)) + Math.cos(rla1) * Math.cos(rla2) * (Math.sin(dlo) * Math.sin(dlo))
 		const d = 0.002 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-		return Math.round(earth_radius * d * 100)/100
+		return Math.round(earth_radius * d * 100) / 100
 	}
 
 	render() {
 		console.log(this.props.toggleList.meetups);
-		
-		
+
+
 		return (
 			<div className="first_container">
 				{this.props.toggleFilter.isFiltered ?
@@ -58,14 +58,13 @@ class listFilter extends React.Component {
 						<div className="list">
 							<ul>
 								{this.props.toggleList.meetups.map(marker2 => {
-
-		
-		return (
-			<div>
-				<li>{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
-			</div>
-		)}
-	)}
+									return (
+										<div>
+											<li>{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
+										</div>
+									)
+								}
+								)}
 							</ul>
 						</div>
 					</div>

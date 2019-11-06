@@ -30,6 +30,11 @@
     font-size: 20px;
     font-family: 'HelveticaNeue_Medium';
  }
+button:active {
+   box-shadow: none;
+   position: relative;
+   top: 0.2em;
+ }
  .checkBox {
     z-index: 40;
     transition: ease 0.5s;
