@@ -4,13 +4,15 @@ import toggleFilter from './Reducers/filterReducer';
 import toggleFilterMap from './Reducers/filterMapReducers';
 import toggleUsers from './Reducers/filterUsers';
 import toggleList from './Reducers/filterMeetupReducer';
+import toggleRange from './Reducers/rangeReducer';
 
 // combining two reducers into a single reducer
 const reducer = combineReducers({
     toggleFilter,
     toggleFilterMap,
     toggleUsers,
-    toggleList
+    toggleList,
+    toggleRange
 })
 const store = createStore(reducer)
 

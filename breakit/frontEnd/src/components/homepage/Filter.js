@@ -31,6 +31,10 @@ class Filter extends React.Component {
         const action = { type: key }
         this.props.dispatch(action)
     }
+    toggleRange = (key) => {
+        const action = {type: key}
+        this.props.dispatch(action)
+    }
 
 
     render() {
@@ -65,14 +69,6 @@ class Filter extends React.Component {
                                     <input type="checkbox" value="Cafés-Coworking" onClick={() => this.toggleUsers('DEV_ON')}></input>
                                     Developpeurs
                             </label>
-                            </div>
-                            <div className="range">
-                                <p>Rayon</p>
-                                <InputRange
-                                    maxValue={15}
-                                    minValue={0}
-                                    value={this.state.value}
-                                    onChange={value => this.setState({ value })} />
                             </div>
                         </form>
                     </div>

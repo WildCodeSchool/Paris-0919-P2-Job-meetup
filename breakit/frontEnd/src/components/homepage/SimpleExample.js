@@ -16,6 +16,7 @@ class SimpleExample extends React.Component {
     lat: 48.849044,
     lng: 2.352831,
     meetups: []
+
   }
 
   getMeetUp() {
@@ -30,8 +31,9 @@ class SimpleExample extends React.Component {
     this.getMeetUp();
   }
 
-  render() {
 
+
+  render() {
     this.meetupToStore()
 
     const position = [this.state.lat, this.state.lng];
