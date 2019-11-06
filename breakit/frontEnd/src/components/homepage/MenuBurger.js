@@ -1,17 +1,19 @@
 import React from "react";
+import Parameters from "./Parameters"
 import "./MenuBurger.css";
 
 
 class MenuBurger extends React.Component {
   state = {
-    active: false
+    active: false,
   }
   toggleClass = () => {
     const currentState = this.state.active;
     this.setState({
-      active: !currentState
+      active : !currentState
     })
   }
+  
   render() {
     return (
       <>
@@ -24,12 +26,12 @@ class MenuBurger extends React.Component {
           <div className="bar3"></div>
         </div>
         <div id="mnu" className={this.state.active ? "slider burgerMenu" : "burgerMenu"}>
-          <a className="burgerProfilePicParent" href="https://www.google.fr/"><img src="/profilPic.png" alt="Profil" className="burgerProfilePic" /></a>
-          <a className="burgerUserName" href="https://www.google.fr/">Nicolas Borson</a>
-          <a className="burgerJob" href="https://www.google.fr/">Développeur full-stack</a>
-          <a className="burgerContact" href="https://www.google.fr/">Contact</a>
-          <a className="burgerParametres" href="https://www.google.fr/">Paramètres</a>
-          <a className="burgerDeconnexion" href="https://www.google.fr/">Deconnexion</a>
+          <a className="burgerProfilePicParent" href="#"><img src="/profilPic.png" alt="Profil" className="burgerProfilePic" /></a>
+          <a className="burgerUserName" href="#">Nicolas Borson</a>
+          <a className="burgerJob" href="#">Développeur full-stack</a>
+          <a className="burgerContact" onClick={this.props.toggleClassContact} href="#">Contact</a>
+          <a className="burgerParametres" onClick={this.props.toggleClassParameters} href="#">Paramètres</a>
+          <a className="burgerDeconnexion" onClick={() => /*{ if*/ (window.confirm('Êtes-vous sur(e) de vouloir vous déconnecter ?'))/* this.onCancel(item)/* }*/} href="#">Deconnexion</a>
         </div>
       </>
     );
