@@ -1,39 +1,60 @@
 @font-face {
-    font-family: "HelveticaNeue_Light";
-    src: url("../../fonts/HelveticaNeue_Light.ttf")
-   }
-
-
-.containerSearchLanguages {
-    width: 100%;
-    height: 100vh ;
-    justify-content: center;
-    align-items: center;
-    background-color: #262626;
+  font-family: "HelveticaNeue_Light";
+  src: url("../../fonts/HelveticaNeue_Light.ttf");
 }
 
+.containerSearchLanguages {
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #262626;
+}
 
 .inputSearchLanguages {
-    
-    border: 4px solid #FAE404;
-    border-radius: 5px 5px 0px 0px;
-    padding: 20px 40px;
-    font-size: 1.4em;
-    font-family: "HelveticaNeue_Light" , "sans-serif";
-    
+  border: 4px solid #fae404;
+  border-radius: 5px 5px 0px 0px;
+  padding: 20px 40px;
+  font-size: 1.4em;
+  font-family: "HelveticaNeue_Light", "sans-serif";
 }
 
 .suggestionsList {
-    color: #505050;
-    list-style-type: none;
-    background: #FAE404;
+  color: #505050;
+  list-style-type: none;
+  background: #fae404;
+  border-radius: 0px 5px 5px 5px;
+  font-size: 1.4em;
+  font-family: "HelveticaNeue_Light", "sans-serif";
+  margin-top: 0em;
+  padding: 20px 20px;
+}
+
+.listElements {
+   width: auto;
+   
+}
+
+.cardItem {
+    padding: 4vw;
+    height:8vh;
+    text-align: center;
+    margin: auto;
+    width: 45vw;
+    background-color: #fae404;
     border-radius: 0px 5px 5px 5px;
     font-size: 1.4em;
-    font-family: "HelveticaNeue_Light" , "sans-serif";
-    margin-top: 0em;
-    padding: 20px 20px;
-    
+    font-family: "HelveticaNeue_Light", "sans-serif";
+
 }
-.displayCard{
-color: white;
+.x {
+
+    height: 5vh;
+    width: auto;
+    background-color: #fae404;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    color: rgb(114, 110, 110);
+    font-weight: bold;
 }

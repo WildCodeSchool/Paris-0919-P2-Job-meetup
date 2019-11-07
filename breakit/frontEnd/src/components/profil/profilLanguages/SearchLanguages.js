@@ -76,16 +76,18 @@ class SearchLanguages extends React.Component {
           onChange={(this.handleChange)}
         />
         <button onClick={() => this.addCompetence(text)} value="add">Add Me</button>
+        {this.renderSuggestions()}
+
         <div className="displayCard">
           <p>
             {this.state.cardsLanguages.map(card =>
-              <li>
-                <button>{card}</button>
-                <button onClick={() => this.handleClick(card)}>X</button>
+              <li className="listElements">
+                <div className="cardItem">{card} <button className='x'onClick={() => this.handleClick(card)}>X</button></div>
+                
               </li>)}
           </p>
         </div>
-        {this.renderSuggestions()}
+       
 
       </div>
     )
