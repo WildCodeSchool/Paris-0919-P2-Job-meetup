@@ -36,6 +36,10 @@ class listFilter extends React.Component {
 		return Math.round(earth_radius * d * 100) / 100
 	}
 
+	compareNombres(a, b) {
+		return a - b;
+	  }
+
 	render() {
 		console.log(this.props.toggleList.meetups);
 
@@ -65,3 +69,4 @@ class listFilter extends React.Component {
 }
 
 export default connect(mapStateToProps)(listFilter)
+

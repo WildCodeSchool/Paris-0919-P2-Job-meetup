@@ -2,6 +2,14 @@ import React from 'react';
 import './Parameters.css';
 
 class Parameters extends React.Component {
+    state = {
+        firstName : "Nicolas",
+        lastName : "Borson",
+        telephone : "06 06 118 712",
+        mail : "nicolasborson@skills.app",
+        password : "salut"
+      }
+     
     render() {
         return (
             <div className={this.props.activeparameters ? "slider parametersBody" : "parametersBody"}>
@@ -14,15 +22,15 @@ class Parameters extends React.Component {
                 </div>
                 <div className="parametersCompteContainer2">
                     <p className="parametersCompteInfos">Prénom</p>
-                    <input className="parametersCompteInput" id="parametersPrenom" type="text" value="Nicolas"></input>
+                    <input className="parametersCompteInput" id="parametersPrenom" type="text" value={this.state.firstName} onChange={e => this.setState({firstName: e.target.value})}></input>
                     <p className="parametersCompteInfos">Nom</p>
-                    <input className="parametersCompteInput" id="parametersNom" type="text" value="Borson"></input>
+                    <input className="parametersCompteInput" id="parametersNom" type="text" value={this.state.lastName} onChange={e => this.setState({lastName: e.target.value})}></input>
                     <p className="parametersCompteInfos">Numéro de téléphone</p>
-                    <input className="parametersCompteInput" id="parametersNumero" type="text" value="06 06 118 712"></input>
+                    <input className="parametersCompteInput" id="parametersNumero" type="tel" value={this.state.telephone} onChange={e => this.setState({telephone: e.target.value})}></input>
                     <p className="parametersCompteInfos">Adresse e-mail</p>
-                    <input className="parametersCompteInput" id="parametersEmail" type="text" value="nicolasborson@skills.app"></input>
+                    <input className="parametersCompteInput" id="parametersEmail" type="email" value={this.state.mail} onChange={e => this.setState({mail: e.target.value})}></input>
                     <p className="parametersCompteInfos">Mot de passe</p>
-                    <input className="parametersCompteInput" id="parametersMotdepasse" type="text" value="●●●●●●"></input>
+                    <input className="parametersCompteInput" id="parametersMotdepasse" type="password" value={this.state.password} onChange={e => this.setState({password: e.target.value})}></input>
                 </div>
                 <div className="parametersConfidentialiteContainer">
                     <p className="parametersConfidentialite">Confidentialité</p>
