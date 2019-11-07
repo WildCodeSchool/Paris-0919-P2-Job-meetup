@@ -16,7 +16,7 @@ class SearchLanguages extends React.Component {
       const regex = new RegExp(`^${value}`, 'i');
       suggestions = languages.sort().filter(v => regex.test(v))
     }
-    this.setState(() => ({suggestions, text: value }))
+    this.setState(() => ({ suggestions, text: value }))
   }
 
   renderSuggestions = () => {
@@ -25,9 +25,14 @@ class SearchLanguages extends React.Component {
       return null;
     }
     return (
-      <ul className="suggestionsList">
-        {suggestions.map(item => <li onClick={() => this.suggestionsSelected(item)}>{item}</li>)}
-      </ul>
+      <div>
+        <ul className="suggestionsList">
+          {suggestions.map(item =>
+            <li
+              onClick={() => this.suggestionsSelected(item)}>{item}
+            </li>)}
+        </ul>
+      </div>
     )
   }
 
@@ -38,9 +43,30 @@ class SearchLanguages extends React.Component {
     }))
   }
 
+  addCompetence = (name) => {
+    const index = this.state.cardsLanguages.indexOf(name)
+    if (index === -1) {
+      this.setState({ cardsLanguages: this.state.cardsLanguages.concat(this.state.text) })
+    }
+    else {
+      return null
+    }
+
+  }
+
+  handleClick = (name) => {
+    const interest = this.state.cardsLanguages
+    const index = interest.indexOf(name)
+    interest.splice(index, 1)
+    this.setState({ interest: interest })
+  }
+
+
+
 
   render() {
     const { text } = this.state
+
     return (
       <div className="containerSearchLanguages">
         <input
@@ -49,7 +75,18 @@ class SearchLanguages extends React.Component {
           className="inputSearchLanguages"
           onChange={(this.handleChange)}
         />
+        <button onClick={() => this.addCompetence(text)} value="add">Add Me</button>
+        <div className="displayCard">
+          <p>
+            {this.state.cardsLanguages.map(card =>
+              <li>
+                <button>{card}</button>
+                <button onClick={() => this.handleClick(card)}>X</button>
+              </li>)}
+          </p>
+        </div>
         {this.renderSuggestions()}
+
       </div>
     )
   }
