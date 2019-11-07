@@ -75,7 +75,7 @@ class SearchLanguages extends React.Component {
           className="inputSearchLanguages"
           onChange={(this.handleChange)}
         />
-        <button onClick={() => this.addCompetence(text)} value="add">Add Me</button>
+        <button className="Add" onClick={() => this.addCompetence(text)} value="add">Add</button>
         {this.renderSuggestions()}
 
         <div className="displayCard">
