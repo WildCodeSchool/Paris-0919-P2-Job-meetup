@@ -24,7 +24,10 @@ app.post('/api/user/signup', (req,res) => {
         lastName : req.body.lastName,
         password : req.body.password,
         type : req.body.type,
-        skills : req.body.skills,
+        spec : req.body.spec,
+        languages : req.body.languages,
+        interest : req.body.interest,
+        text : req.body.text
     })
     user.save((err, response) => {
         if (err) res.status(400).send(err)
@@ -33,18 +36,16 @@ app.post('/api/user/signup', (req,res) => {
 })
 
 app.post('/api/user/signin', (req,res) => {
-    User.findOne({'email':req.body.email}, (err,user) => {
-        if(!user) {
-            res.json({message: 'Login failed, user not found'})
-        } else {
-            user.comparePassword(req.body.password, (err, isMatch) => {
-                if (err) {throw err};
-                if (!isMatch) {return res.status(400).json({
-                    message:'Wrong password'
-                });}
-            return res.status(200).send('Logged in successfully')
-            })
-        }
+    User.findOne({'mail':req.body.mail}, (err,user) => {
+        if(!user) res.json({message: 'Login failed, user not found'})
+        user.comparePassword(req.body.password, (err, isMatch) => {
+            if (err) throw err;
+            if (!isMatch) return res.status(400).json({
+                message:'Wrong password'
+            });
+            res.status(200).send('Logged in successfully')
+            console.log('ok')
+        })
     })
 })
 
