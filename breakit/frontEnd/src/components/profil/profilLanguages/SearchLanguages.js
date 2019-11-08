@@ -45,7 +45,7 @@ class SearchLanguages extends React.Component {
 
   addCompetence = (name) => {
     const index = this.state.cardsLanguages.indexOf(name)
-    if (index === -1) {
+    if (index === -1 || index === null) {
       this.setState({ cardsLanguages: this.state.cardsLanguages.concat(this.state.text) })
     }
     else {

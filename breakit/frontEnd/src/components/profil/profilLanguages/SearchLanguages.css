@@ -48,14 +48,15 @@
   font-family: "HelveticaNeue_Light", "sans-serif";
 }
 .x {
-  height: 5vh;
-  margin-left: 25%;
+
+  margin-left: 27%;
   background-color: #fae404;
   font-size: 1em;
   border:none;
   cursor: pointer;
   color: rgb(114, 110, 110);
   font-weight: bold;
+  font-family: "HelveticaNeue_Light", "sans-serif";
 }
 .Add {
   position: absolute;

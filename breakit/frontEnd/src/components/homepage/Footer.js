@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css'
-import pictoMail from '../img/Mail-picto.svg'
+import pictoMail from '..npm/img/Mail-picto.svg'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
