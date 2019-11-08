@@ -36,18 +36,10 @@ class listFilter extends React.Component {
 		return Math.round(earth_radius * d * 100) / 100
 	}
 
-	compareNombres(a, b) {
-		return a - b;
-	  }
-
 	render() {
-		console.log(this.props.toggleList.meetups);
-
-
 		return (
 			<div className="first_container">
 				{this.props.toggleFilter.isFiltered ?
-
 					<div className="second_container">
 						<div className="list">
 							<ul>
