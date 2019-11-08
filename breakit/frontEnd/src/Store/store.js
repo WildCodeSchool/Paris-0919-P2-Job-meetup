@@ -11,7 +11,8 @@ const reducer = combineReducers({
     toggleFilterMap,
     toggleUsers,
     LoginUser,
-    validLog
+    validLog,
+    toggleList,
 })
 const store = createStore(reducer)
 

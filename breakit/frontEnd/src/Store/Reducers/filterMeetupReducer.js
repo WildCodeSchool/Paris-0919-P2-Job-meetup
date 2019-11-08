@@ -1,19 +1,17 @@
 const initialState = {
-    meetups : []
+  meetups: [],
 }
 
-function toggleList(state= initialState, action) {
-    let nextstate
-    // console.log(meetup.fields.)
-    switch (action.type) {
-        case 'LIST_LOADED' :
-        const stateLis = state
-        stateLis.meetup = action.value
-        nextstate = stateLis
-        console.log(nextstate)
-        return nextstate || state
-        default: return state
-    }
+function toggleList(state = initialState, action) {
+  let nextState
+
+  switch (action.type) {
+    case 'MEETUP_LOAD':
+      state.meetups = action.value
+      nextState = state
+      return nextState || state
+    default: return state
+  }
 }
 
 export default toggleList
