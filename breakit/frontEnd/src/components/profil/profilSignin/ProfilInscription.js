@@ -2,7 +2,6 @@ import React from "react";
 import "./ProfilInscription.css";
 import logo from '../../img/logo-blancjaune.svg'
 import { Link } from 'react-router-dom';
-import axios from 'axios'
 import { connect } from 'react-redux'
 
 const mapStateToProps = (state) => {
@@ -47,7 +46,7 @@ class ProfilInscription extends React.Component {
                         <input type="password" placeholder="Mot de passe"
                             onChange={(e) => this.setState({ password: e.target.value })} ></input>
 
-                        <Link  onClick = {() => this._userInfo()} exact to ='ProfilUserChoice'> <button type="submit" id="login-button">Valider</button>  </Link>
+                        <Link  onClick = {() => this._userInfo()} to ='ProfilUserChoice'> <button type="submit" id="login-button">Valider</button>  </Link>
 
                     </form>
                 </div>

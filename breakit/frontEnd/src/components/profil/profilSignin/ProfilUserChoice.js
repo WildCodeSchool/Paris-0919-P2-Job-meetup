@@ -40,8 +40,8 @@ class UserChoice extends React.Component {
                 
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
-               <Link exact to='ProfilInscription'><p><a href="">Précédent</a></p></Link>     
-               <Link onClick = {() => this._userInfo()} exact to='ProfilDevSpec'><p><a href="">Suivant</a></p> </Link> 
+               <Link to='ProfilInscription'><p>Précédent</p></Link>     
+               <Link onClick = {() => this._userInfo()} to='ProfilDevSpec'><p>Suivant</p> </Link> 
                 </div>
                 
                 </footer>

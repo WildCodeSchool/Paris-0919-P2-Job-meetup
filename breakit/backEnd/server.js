@@ -39,7 +39,7 @@ app.post('/api/user/signin', (req,res) => {
     User.findOne({'mail':req.body.mail}, (err,user) => {
         if(!user) res.json({message: 'Login failed, user not found'})
         user.comparePassword(req.body.password, (err, isMatch) => {
-            if (err) throw err;
+            if (err) res.status(400).send('USer does not exist');
             if (!isMatch) return res.status(400).json({
                 message:'Wrong password'
             });

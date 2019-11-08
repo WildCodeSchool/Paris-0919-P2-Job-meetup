@@ -48,7 +48,7 @@ class ProfilPicture extends React.Component {
                 </div>
 
                 <div className="containerChoice">
-                <img src={avatar} className="avatar" />
+                <img src={avatar} className="avatar" alt="" />
 
                 </div>
 
@@ -57,9 +57,9 @@ class ProfilPicture extends React.Component {
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 
                 <div className="links">
-                <Link exact to='ProfilDescription'><p><a>Précédent</a></p> </Link>
-                <Link onClick = {() => this.putDataToDB()} exact to='ProfilPicture'><p><a>Valider</a></p> </Link>      
-                <p><a>Suivant</a></p>
+                <Link to='ProfilDescription'><p>Précédent</p> </Link>
+                <Link onClick = {() => this.putDataToDB()} to='ProfilPicture'><p>Valider</p> </Link>      
+                <p>Suivant</p>
                 </div>
                 </footer>
                 

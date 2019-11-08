@@ -1,8 +1,13 @@
 import React from "react";
 import "./ProfilConnexion.css";
 import logo from '../../img/logo-blancjaune.svg'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import axios from 'axios'
+import { connect } from 'react-redux'
+
+const mapStateToProps = (state) => {
+    return state
+  }
 
 class ProfilConnexion extends React.Component {
     state = {
@@ -11,12 +16,22 @@ class ProfilConnexion extends React.Component {
     }
 
       checkDB = () => {
-          const body = {
+          const test = {
             mail: this.state.mail,
             password: this.state.password,
           }
-        axios.post('http://localhost:4000/api/user/signin', body)
-      };
+        axios.post('http://localhost:4000/api/user/signin', test)
+        .then(res => {
+            if (res.data === 'Logged in successfully') {
+            const action = { type: 'LOG'}
+            this.props.dispatch(action)
+            this.redirect()
+        }}
+          )
+    }
+        redirect =()=>{
+            this.props.history.push('/Home')
+        }
 
   /*   modifLoadName = (a) => {
         this.setState({
@@ -78,7 +93,6 @@ class ProfilConnexion extends React.Component {
  */
     render() {
 
-
        /*  const count = this.state.countName + this.state.countFirstName + this.state.countEmail + this.state.countPassword
 
         const loaderCounter = () => {
@@ -124,7 +138,7 @@ class ProfilConnexion extends React.Component {
                 </div> */}
 
                 <div className="containerMail">
-                    <form className="form">
+                    <div className="form">
 
                         <input type="email" placeholder="Email"
                             onChange={(e) => this.setState({ mail: e.target.value })} ></input>
@@ -132,10 +146,10 @@ class ProfilConnexion extends React.Component {
                         <input type="password" placeholder="Mot de passe"
                             onChange={(e) => this.setState({ password: e.target.value })} ></input>
 
-                        <button onClick={() => this.checkDB()} type="submit" id="login-button">Valider</button>
-                    </form>
+                        <button  onClick = {() => this.checkDB()} type="submit" id="login-button">Valider</button>
+                    </div>
                     <div className="links">
-                    <div className = "link_text">Not register yet ? Please <Link exact to='ProfilInscription'><p className="link_button">Sign Up</p> </Link> </div>
+                    <div className = "link_text">Not register yet ? Please <Link to='ProfilInscription'><p className="link_button">Sign Up</p> </Link> </div>
                     </div>
                 </div>
 
@@ -145,4 +159,4 @@ class ProfilConnexion extends React.Component {
     }
 }
 
-export default ProfilConnexion;
+export default withRouter(connect(mapStateToProps)(ProfilConnexion));

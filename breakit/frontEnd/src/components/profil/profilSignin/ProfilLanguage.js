@@ -55,8 +55,8 @@ class ProfilLanguages extends React.Component {
                 
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
-                <Link exact to ="ProfilDevSpec"> <p><a href="">Précédent</a></p>   </Link>     
-                <Link onClick = {() => this._userInfo()} exact to ="ProfilInterests"><p><a href="">Suivant</a></p>  </Link>
+                <Link to ="ProfilDevSpec"> <p>Précédent</p>   </Link>     
+                <Link onClick = {() => this._userInfo()} to ="ProfilInterests"><p>Suivant</p>  </Link>
                 </div>
 
                 </footer>

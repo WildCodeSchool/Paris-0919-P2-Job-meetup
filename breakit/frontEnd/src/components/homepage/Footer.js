@@ -19,19 +19,7 @@ class Footer extends React.Component {
   
       return (
         
-        <div>
-
-          <footer className="container">
-
-            <div className="buttonDiv">
-
-              <input type="button" className="button" onClick={this.props.footerClick}  value={this.props.state.isDisplayed ? "Carte" : "A Proximité"} ></input>
-              <div className="pictoMail">
-              <img src={pictoMail} alt="picto mail"></img>
-              </div>
-            </div>
-          </footer>
-        </div>
+        <div></div>
       );
     }
   }

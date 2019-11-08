@@ -55,8 +55,8 @@ class ProfilDevSpec extends React.Component {
                 
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
-                <Link exact to ="UserChoice"><p><a href="">Précédent</a></p>   </Link>     
-                <Link onClick = {() => this._userInfo()} exact to ="ProfilLanguage"><p><a href="">Suivant</a></p>  </Link>
+                <Link to ="UserChoice"><p>>Précédent</p>   </Link>     
+                <Link onClick = {() => this._userInfo()} to ="ProfilLanguage"><p>Suivant</p>  </Link>
                 </div>
                 
                 </footer>
