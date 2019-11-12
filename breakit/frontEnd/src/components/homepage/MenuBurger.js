@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
 
 import "./MenuBurger.css";
 
+const mapStateToProps = (state) => {
+  return state
+}
 
 class MenuBurger extends React.Component {
   state = {
@@ -28,7 +32,7 @@ class MenuBurger extends React.Component {
         </div>
         <div id="mnu" className={this.state.active ? "slider burgerMenu" : "burgerMenu"}>
           <div className="burgerProfilePicParent" ><img src="/profilPic.png" alt="Profil" className="burgerProfilePic" /></div>
-          <div className="burgerUserName" >Nicolas Borson</div>
+          <div className="burgerUserName" ><p>{this.props.storeLoggedUser.user.firstName} {this.props.storeLoggedUser.user.name} </p></div>
           <div className="burgerJob" >Développeur full-stack</div>
           <Link to="/Contact" className="burgerContact" >Contact</Link>
           <Link to="/Parameters" className="burgerParametres" >Paramètres</Link>
@@ -39,4 +43,4 @@ class MenuBurger extends React.Component {
   }
 }
 
-export default MenuBurger;
+export default connect(mapStateToProps)(MenuBurger);

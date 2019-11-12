@@ -1,0 +1,34 @@
+export default
+`Java
+Python
+PHP
+C#
+Javascript
+C++
+C
+Objective-C
+R
+Swift
+Matlab
+Ruby
+VBA
+Visual Basic
+Scala
+Perl
+Iua
+Delphi
+Go
+Haskell
+Assembly
+VB.NET
+Groovy
+PL/SQL
+SQL
+IOS
+Ruby/Rails
+HTML
+CSS
+Shell
+Arduino
+Lua
+Rust`.split('\n')

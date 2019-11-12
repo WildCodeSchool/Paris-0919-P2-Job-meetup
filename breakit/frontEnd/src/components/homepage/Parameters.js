@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 
 import './Parameters.css';
+
+const mapStateToProps = (state) => {
+    return state
+  }
 
 
 class Parameters extends React.Component {
@@ -17,13 +22,11 @@ class Parameters extends React.Component {
                 </div>
                 <div className="parametersCompteContainer2">
                     <p className="parametersCompteInfos">Prénom</p>
-                    <input className="parametersCompteInput" id="parametersPrenom" type="text" value="Nicolas"></input>
+                    <input className="parametersCompteInput" id="parametersPrenom" type="text" value={this.props.storeLoggedUser.user.firstName}></input>
                     <p className="parametersCompteInfos">Nom</p>
-                    <input className="parametersCompteInput" id="parametersNom" type="text" value="Borson"></input>
-                    <p className="parametersCompteInfos">Numéro de téléphone</p>
-                    <input className="parametersCompteInput" id="parametersNumero" type="text" value="06 06 118 712"></input>
+                    <input className="parametersCompteInput" id="parametersNom" type="text" value={this.props.storeLoggedUser.user.name}></input>
                     <p className="parametersCompteInfos">Adresse e-mail</p>
-                    <input className="parametersCompteInput" id="parametersEmail" type="text" value="nicolasborson@skills.app"></input>
+                    <input className="parametersCompteInput" id="parametersEmail" type="text" value={this.props.storeLoggedUser.user.mail}></input>
                     <p className="parametersCompteInfos">Mot de passe</p>
                     <input className="parametersCompteInput" id="parametersMotdepasse" type="text" value="●●●●●●"></input>
                 </div>
@@ -50,4 +53,4 @@ class Parameters extends React.Component {
     }
 }
 
-export default Parameters;
+export default connect(mapStateToProps)(Parameters);
