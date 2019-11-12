@@ -27,7 +27,7 @@ class ProfilInscription extends React.Component {
         return (
             
                  <div className="containerProfilInscription">
-                <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
+                <Link to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
                     <p className="inscriptionProfilInscription">Inscription</p>
                 </div>

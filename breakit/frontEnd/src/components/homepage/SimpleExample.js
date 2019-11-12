@@ -57,11 +57,11 @@ class SimpleExample extends React.Component {
             url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
 
-          {this.state.Users.map(marker => {
+          {this.state.Users.map((marker, i) => {
             if (marker.online) {
-              if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'Dev') {
+              if ((this.props.toggleUsers.cto && marker.type === 'CTO') || (this.props.toggleUsers.dev && marker.type === 'Dev')) {
                 return (
-                  <Marker position={marker.geoLoc}>
+                  <Marker position={marker.geoLoc} key={i}>
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
@@ -77,10 +77,10 @@ class SimpleExample extends React.Component {
             }
           })}
 
-          {this.props.toggleList.meetups.map(marker2 => {
+          {this.props.toggleList.meetups.map((marker2, i) => {
             if (this.props.toggleUsers.meetup) {
               return (
-                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]}>
+                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]} key={i}>
                   <Popup>
                     <div className="pop">
                       <div className="meetupdes">
@@ -88,7 +88,7 @@ class SimpleExample extends React.Component {
                         <h4>{marker2.fields.address_name}</h4>
                         <h4>{marker2.fields.address_street}</h4>
                         <h4>{marker2.fields.address_zipcode}</h4>
-                        <img className="avatar_map2" src={marker2.fields.cover_url} />
+                        <img className="avatar_map2" src={marker2.fields.cover_url} alt="avatar_img" />
                       </div>
                     </div>
                   </Popup>

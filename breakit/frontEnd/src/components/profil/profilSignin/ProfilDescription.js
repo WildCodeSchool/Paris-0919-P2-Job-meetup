@@ -22,7 +22,7 @@ class ProfilDescription extends React.Component {
     render() {
         return(
             <div className="containerUserProfil">
-                <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
+                <Link to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
                     <p className="inscriptionUserChoice">Profil</p>
                     <p className="inscriptionUserChoice">Description</p>

@@ -22,7 +22,7 @@ class MenuBurger extends React.Component {
 
   componentDidMount = () => {
     setTimeout(() => {
-    if (this.props.storeLoggedUser.user.spec != undefined)   {
+    if (this.props.storeLoggedUser.user.spec !== undefined)   {
       this.setState({propsLoaded : !this.state.propsLoaded})
       }}, 200)
   }

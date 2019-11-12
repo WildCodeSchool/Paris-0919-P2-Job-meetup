@@ -55,10 +55,10 @@ class listFilter extends React.Component {
 					<div className="ListFilter_container_2">
 						<div className="list">
 							<ul className = "list_meetup_around">
-								{this.props.toggleList.meetups.map(marker2 => {
+								{this.props.toggleList.meetups.map((marker2, i) => {
 									return (
-										<div>
-											<li className = "list_meetup_around_map">{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
+										<div key={i}>
+											<li  className = "list_meetup_around_map">{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
 										</div>
 									)
 								}

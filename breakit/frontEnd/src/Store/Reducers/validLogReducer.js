@@ -6,7 +6,6 @@ const initialState = {
     let nextState
     switch (action.type) {
       case 'LOG':
-        console.log('LOG',action);
         
         if(state.isLoggedIn === false) {
           nextState = {

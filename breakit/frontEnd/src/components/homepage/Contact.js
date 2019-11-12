@@ -8,7 +8,7 @@ class Contact extends React.Component {
         return (
             <div className="slider contactBody">
                 <div className="contactHead">
-                    <Link class="contactClose" to="/Home"/>
+                    <Link className="contactClose" to="/Home"/>
                     <p className="contactContact">Contact</p>
                 </div>
                 <div className="contactMentionsContainer">

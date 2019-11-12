@@ -80,7 +80,7 @@ class SearchLanguages extends React.Component {
       
 
       <div className="containerSearchLanguages">
-          <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
+          <Link to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
           <div>
               <p className="chooseYourLanguages "> Choisissez vos languages...</p>
           </div>
@@ -110,8 +110,8 @@ class SearchLanguages extends React.Component {
         <footer className="linearBalls">
           {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
           <div className="links">
-            <Link exact to="ProfilDevSpec"> <p>Précédent</p></Link>
-            <Link onClick = {() => this._userInfo()} exact to="ProfilInterests"><p>Suivant</p></Link>
+            <Link to="ProfilDevSpec"> <p>Précédent</p></Link>
+            <Link onClick = {() => this._userInfo()} to="ProfilInterests"><p>Suivant</p></Link>
           </div>
         </footer>
       </div>
