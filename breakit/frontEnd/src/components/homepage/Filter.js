@@ -52,21 +52,21 @@ class Filter extends React.Component {
             <form className={this.state.active ? "slider checkBox" : "checkBox"}>
               <div className="check-meet-up">
                 <label>
-                  <input type="checkbox" value="Meet-up" onClick={() => this.toggleUsers('MEETUP_ON')}></input>
+                  <input className="checkbox" type="checkbox" value="Meet-up" onClick={() => this.toggleUsers('MEETUP_ON')}></input>
                   Meet-up
-                            </label>
+                </label>
               </div>
               <div className="check-entreprise">
                 <label>
-                  <input type="checkbox" value="Entreprises" onClick={() => this.toggleUsers('CTO_ON')}></input>
+                  <input className="checkbox" type="checkbox" value="Entreprises" onClick={() => this.toggleUsers('CTO_ON')}></input>
                   Entreprises
-                            </label>
+                </label>
               </div>
               <div className="check-cowork">
                 <label>
-                  <input type="checkbox" value="Cafés-Coworking" onClick={() => this.toggleUsers('DEV_ON')}></input>
-                  Developpeurs
-                            </label>
+                  <input className="checkbox" type="checkbox" value="Cafés-Coworking" onClick={() => this.toggleUsers('DEV_ON')}></input>
+                  Développeurs
+                </label>
               </div>
             </form>
           </div>
