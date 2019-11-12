@@ -70,20 +70,18 @@ class SearchLanguages extends React.Component {
     const { text } = this.state
 
     return (
-
+      
 
       <div className="containerSearchLanguages">
-
-        <div className="logoUserProfilSearch" >
-          <img src={logo} alt="logo Skills"></img>
-        </div>
-
+          <img src={logo} alt="logo Skills"className="logoUserProfilSearch" ></img>
+       <p className="chooseYourLanguages "> Choisissez vos languages...</p>
         <input
           type='text'
           value={text}
           className="inputSearchLanguages"
           onChange={(this.handleChange)}
         />
+
         <button className="Add" onClick={() => this.addCompetence(text)} value="add">Add</button>
         {this.renderSuggestions()}
 
@@ -102,8 +100,8 @@ class SearchLanguages extends React.Component {
 
           {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
           <div className="linksSearch">
-            <Link exact to="ProfilDevSpec"> <p><a href="">Précédent</a></p>   </Link>
-            <Link exact to="ProfilInterests"><p><a href="">Suivant</a></p>  </Link>
+            <Link exact to="ProfilDevSpec"> <p>Précédent</p></Link>
+            <Link exact to="ProfilInterests"><p>Suivant</p></Link>
           </div>
 
         </footer>

@@ -14,17 +14,26 @@
 }
 
 .containerSearchLanguages {
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
+  display: block;
+  margin-top: 6vh;
+  height: 5vh;
   background-color: #262626;
+}
+.chooseYourLanguages {
+  font-family: "HelveticaNeue_Medium", "sans-serif";
+  display: block;
+  margin-top: 8vh;
+  text-align: center;
+  font-size: 30px;
+  color: #FAE404;
+
 }
 
 .inputSearchLanguages {
   border: 4px solid #fae404;
   border-radius: 5px 5px 5px 5px;
   padding: 20px 40px;
+  margin-top: 5%;
   font-size: 1.4em;
   font-family: "HelveticaNeue_Light", "sans-serif";
 }
@@ -58,10 +67,12 @@
   font-family: "HelveticaNeue_Light", "sans-serif";
 }
 .x {
-
-  margin-left: 27%;
+  width: 10vw;
+  position: absolute;
+  bottom: 48%;
+  right: 28%;
   background-color: #fae404;
-  font-size: 1em;
+  font-size: 0.8em;
   border:none;
   cursor: pointer;
   color: rgb(114, 110, 110);
@@ -70,9 +81,10 @@
 }
 .Add {
   position: absolute;
-  right: 20%;
-  top: 3.5%;
+  right: 18%;
+  bottom: 54.4%;
   height: 5vh;
+  width: 15vw;
   background-color: #fae404;
   border-radius: 7px 7px 7px 7px;
   font-size: 1.4em;
@@ -100,15 +112,25 @@ button{
 .logoUserProfilSearch {
   display: block;
   height: 7vh;
-
+  margin: auto;
 }
+
 .linksSearch {
   display: flex;
   margin-top: 8.5vh;
   justify-content: space-around;
   text-align: center;
-
+  color: #fff;
+  font-family: "HelveticaNeue_Medium", "sans-serif";
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2vh;
+  text-shadow: 0px 0px 1px #FAE404;
+}
+a{
+  text-decoration: none;
 }
 .linksSearch p {
   margin: 5px 0px 6px 0px;
+  color: white;
 }
