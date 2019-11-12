@@ -1,19 +1,16 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Switch, Route,  } from 'react-router-dom';
 import UserChoice from './components/profil/profilSignin/ProfilUserChoice';
 // import ProfilPicture from './components/profil/profilSignin/ProfilPicture'
-import ProfilInscription from './components/profil/profilSignin/ProfilInscription'
+import ProfilInscription from './components/profil/profilSignin/ProfilInscription';
 import ProfilDevSpec from './components/profil/profilSignin/ProfilDevSpec';
-
+import SearchLanguages from './components/profil/profilSignin/SearchLanguages'
 import ProfilInterests from './components/profil/profilSignin/ProfilInterests'
-// 
 import ProfilDescription from'./components/profil/profilSignin/ProfilDescription';
-
-import ProfilLanguages from './components/profil/profilSignin/ProfilLanguage';
 import ProfilPicture from './components/profil/profilSignin/ProfilPicture';
-
+import Languages from './components/profil/profilSignin/Languages';
 import './App.css';
+
 
 
 class App extends React.Component {
@@ -55,17 +52,18 @@ class App extends React.Component {
                   <Route exact path='/ProfilDevSpec' component={ProfilDevSpec}/>
                   {/* Ici ProfilDevSpec */}
                   <Route exact path='/UserChoice' component={UserChoice}/>
-                  <Route exact path='/ProfilLanguage' component={ProfilLanguages}/>
+                  <Route exact path='/SearchLanguages' component={() => <SearchLanguages languages={Languages} />} />
                   {/* Ici Profil language */}
                   <Route exact path='/ProfilDevSpec' component={ProfilDevSpec}/>
                   <Route exact path='/ProfilInterests' component={ProfilInterests}/>
                   {/* Ici profil interests */}
-                  <Route exact path='/ProfilLanguage' component={ProfilLanguages}/>
+                  <Route 
+                    exact path='/SearchLanguages'  
+                    component={SearchLanguages} />
                   <Route exact path='/ProfilDescription' component={ProfilDescription}/>
                   {/* Ici profil description */}
                   <Route exact path='/ProfilInterests' component={ProfilInterests}/>
                   <Route exact path='/ProfilPicture' component={ProfilPicture}/>
-               
               </Switch>
           
         </div>
@@ -74,40 +72,5 @@ class App extends React.Component {
       
     );
   }
-=======
-// import Footer from './components/homepage/Footer';
-// import ListFilter from './components/homepage/ListFilter';
-// import Filter from './components/homepage/Filter';
-// import MenuBurger from './components/homepage/MenuBurger';
-// import SimpleExample from './components/homepage/SimpleExample';
-// import { Provider } from 'react-redux';
-// import store from './Store/store';
-// import ContactList from './components/homepage/ContactList';
-import SearchLanguages from './components/profil/profilLanguages/SearchLanguages'
-import Languages from './components/profil/profilLanguages/Languages'
-import './App.css';
-
-
-class App extends React.Component {
- render() {
-   return (
-     <div>
-       <SearchLanguages languages={Languages}/>
-     </div>
-     
-
-     /* <Provider store={store}>
-       <div>
-         <MenuBurger className="menuburger"/>
-         <ContactList className="contact"/>
-         <SimpleExample clasName="simpleexample"/>
-         <Filter className="filter"/>
-         <ListFilter className="listfilter"/>
-         <Footer className="footer"/>
-       </div>
-     </Provider> */
-   );
- }
->>>>>>> newSearchLanguages
 }
 export default App;

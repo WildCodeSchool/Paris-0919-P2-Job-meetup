@@ -1,5 +1,7 @@
 import React from 'react'
 import './SearchLanguages.css'
+import { Link } from 'react-router-dom';
+import logo from '../../img/logo-blancjaune.svg'
 
 class SearchLanguages extends React.Component {
   state = {
@@ -45,7 +47,7 @@ class SearchLanguages extends React.Component {
 
   addCompetence = (name) => {
     const index = this.state.cardsLanguages.indexOf(name)
-    if (index === -1 || index === null) {
+    if (index === -1) {
       this.setState({ cardsLanguages: this.state.cardsLanguages.concat(this.state.text) })
     }
     else {
@@ -68,7 +70,14 @@ class SearchLanguages extends React.Component {
     const { text } = this.state
 
     return (
+
+
       <div className="containerSearchLanguages">
+
+        <div className="logoUserProfilSearch" >
+          <img src={logo} alt="logo Skills"></img>
+        </div>
+
         <input
           type='text'
           value={text}
@@ -82,13 +91,22 @@ class SearchLanguages extends React.Component {
           <p>
             {this.state.cardsLanguages.map(card =>
               <li className="listElements">
-                <div className="cardItem">{card} <button className='x'onClick={() => this.handleClick(card)}>X</button></div>
-                
+                <div className="cardItem">{card} <button className='x' onClick={() => this.handleClick(card)}>X</button></div>
+
               </li>)}
           </p>
         </div>
-       
 
+        <footer className="linearBalls">
+
+
+          {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
+          <div className="linksSearch">
+            <Link exact to="ProfilDevSpec"> <p><a href="">Précédent</a></p>   </Link>
+            <Link exact to="ProfilInterests"><p><a href="">Suivant</a></p>  </Link>
+          </div>
+
+        </footer>
       </div>
     )
   }

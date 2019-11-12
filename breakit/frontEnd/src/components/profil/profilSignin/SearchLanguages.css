@@ -2,6 +2,16 @@
   font-family: "HelveticaNeue_Light";
   src: url("../../fonts/HelveticaNeue_Light.ttf");
 }
+@font-face {
+  font-family: "HelveticaNeue_Medium";
+  src: url("../../fonts/HelveticaNeue_Medium.ttf")
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
 
 .containerSearchLanguages {
   width: 100%;
@@ -72,4 +82,33 @@
 }
 .Add  :hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button{
+  font-family: "HelveticaNeue_Light", "sans-serif";
+  background-color: #ffffff;
+  padding: 30px 25px;
+  color: #262626;
+  border-radius: 10px;
+  width: 220px;
+  cursor: pointer;
+  font-size: 20px;
+  border: 4px solid #FAE404;
+  margin: 0px 0px 40px 0px;
+}
+
+.logoUserProfilSearch {
+  display: block;
+  height: 7vh;
+
+}
+.linksSearch {
+  display: flex;
+  margin-top: 8.5vh;
+  justify-content: space-around;
+  text-align: center;
+
+}
+.linksSearch p {
+  margin: 5px 0px 6px 0px;
 }
