@@ -36,7 +36,6 @@ class SimpleExample extends React.Component {
   getUsersOnline() {
       axios.get('http://localhost:4000/api/user/getOnlineUsers')
       .then(res => {
-        console.log('trxcytvuybi', res.data)
         return this.setState({Users : res.data})
       })
   }
@@ -47,7 +46,6 @@ class SimpleExample extends React.Component {
     this.meetupToStore()
 
     const position = [this.state.lat, this.state.lng];
-    console.log('userslof' , this.state.Users)
     return (
       <div>
         <img className="logo" src={Logo} alt='logo du site skills'/>

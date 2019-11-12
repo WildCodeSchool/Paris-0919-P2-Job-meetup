@@ -46,7 +46,6 @@ class listFilter extends React.Component {
 	}
 
 	render() {
-		console.log(this.props.toggleList.meetups);
 
 
 		return (

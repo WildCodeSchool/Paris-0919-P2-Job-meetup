@@ -74,7 +74,6 @@ class SearchLanguages extends React.Component {
   }
 
   render() {
-    console.log('languages', this.state.cardsLanguages)
     const { text } = this.state
 
     return (

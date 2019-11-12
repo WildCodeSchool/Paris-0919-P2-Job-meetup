@@ -19,8 +19,6 @@ class UserChoice extends React.Component {
       }
 
     render() {
-        console.log(this.state)
-        console.log(this.props)
         return(
             <div className="containerUserProfil">
                 <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
