@@ -1,0 +1,259 @@
+@font-face {
+    font-family: "HelveticaNeue_Light";
+    src: url("../../fonts/HelveticaNeue_Light.ttf")
+ }
+ @font-face {
+    font-family: "HelveticaNeue_Medium";
+    src: url("../../fonts/HelveticaNeue_Medium.ttf")
+ }
+
+/*  *{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+} */
+
+
+.containerProfilInscription{
+    background-color: #262626;
+    padding : 0;
+    height: 200vh;
+    margin : 0;
+    
+}
+.logoProfilInscription {
+    display: block;
+    height: 7vh;
+    margin: auto;
+}
+
+img.logoUserProfil {
+  margin-top : 5vh;
+}
+
+.inscriptionProfilInscription {
+    font-family: "HelveticaNeue_Medium", "sans-serif";
+    display: block;
+    margin-top: 8vh;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+
+}
+
+.form {
+	padding: 20px 0;
+	position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.Inscription_input {
+    display: block;
+    outline: 0s;
+    width: 250px;
+    color: #262626;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    transition-duration: 0.25s;
+    font-weight: 300;
+}
+
+#login-button{
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    appearance: none;
+    outline: 0;
+    background-color: #ffffff;
+    border: 0;
+    padding: 10px 15px;
+    color: #262626;
+    border-radius: 3px;
+    width: 120px;
+    cursor: pointer;
+    font-size: 18px;
+    transition-duration: 0.25s;
+}
+
+.containerMail{
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 120px 0;
+	height: 400px;
+    text-align: center;
+}
+
+.inscriptionEmpty {
+  color: white;
+  font-family: "HelveticaNeue_Light", "sans-serif";
+  text-align: center;
+  position: absolute;
+  bottom: -18px;
+  left: 27px;
+  font-size: 3.5vh;
+}
+
+.inscriptionQuart {
+color: #FEFAD7;
+font-family: "HelveticaNeue_Light", "sans-serif";
+text-align: center;
+position: absolute;
+bottom: -18px;
+left: 19px;
+font-size: 3.5vh;
+}
+
+.inscriptionDemi {
+color: #FDF393;
+font-family: "HelveticaNeue_Light", "sans-serif";
+text-align: center;
+position: absolute;
+bottom: -18px;
+left: 19px;
+font-size: 3.5vh;
+}
+
+.inscription3Quart {
+color: #FCED59;
+font-family: "HelveticaNeue_Light", "sans-serif";
+text-align: center;
+position: absolute;
+bottom: -18px;
+left: 19px;
+font-size: 3.5vh;
+}
+
+.inscriptionFull {
+color: #FAE404;
+font-family: "HelveticaNeue_Light", "sans-serif";
+text-align: center;
+position: absolute;
+bottom: -18px;
+left: 11px;
+font-size: 3.5vh;
+}
+
+.pourcent {
+    color: white;
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    text-align: center;
+    position: absolute;
+    bottom: -18px;
+    left: 18px;
+    font-size: 3.5vh;
+}
+
+/* LOADER 1 */
+
+.loader{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+    margin: 0 auto;
+  }
+
+
+
+#loader-1:before, #loader-1:after, #loader-1Quart:before, #loader-1Quart:after, #loader-1Demi:before, #loader-1Demi:after, #loader-13Quart:before, #loader-13Quart:after, #loader-1Full:before, #loader-1Full:after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 10px solid transparent;
+    
+  }
+  
+  #loader-1:before {
+    z-index: 100;
+    /* animation: spin 2s infinite; */
+  }
+  
+  #loader-1:after, #loader-1Quart:after, #loader-1Demi:after, #loader-13Quart:after, #loader-1Full:after {
+    border: 10px solid #ccc;
+  }
+
+  #loader-1Quart:before {
+    z-index: 100;
+    border-top-color: #FAE404;
+  }
+
+  #loader-1Demi:before {
+    border-top-color: #FAE404;
+    border-right-color: #FAE404;
+    z-index: 100;
+  }
+
+  #loader-13Quart:before {
+    border-top-color: #FAE404;
+    border-right-color: #FAE404;
+    border-bottom-color: #FAE404;
+    z-index: 100;
+  }
+
+  #loader-1Full:before {
+    border-top-color: #FAE404;
+    border-right-color: #FAE404;
+    border-bottom-color: #FAE404;
+    border-left-color: #FAE404;
+    z-index: 100;
+  }
+
+
+
+  #loader-1:before, #loader-1Quart:before, #loader-1Demi:before, #loader-13Quart:before, #loader-1Full:before {
+    
+    animation: spin 5s ease-out infinite;
+  }
+  
+
+  @keyframes spin{
+    0%{
+      transform: rotate(0deg);
+    }
+  
+    100%{
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+/*  ********************* Section Footer  and links  ***************************/
+
+
+.linearBalls{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  bottom: 0;
+  height: 150px;
+  display: block;
+}
+.links {
+  display: flex;
+  margin-top: 8.5vh;
+  justify-content: space-around;
+  text-align: center;
+
+}
+.links p {
+  margin: 5px 0px 6px 0px;
+}
+.links a {
+  
+  color: #fff;
+  font-family: "HelveticaNeue_Medium", "sans-serif";
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2vh;
+  text-shadow: 0px 0px 1px #FAE404;
+
+}
