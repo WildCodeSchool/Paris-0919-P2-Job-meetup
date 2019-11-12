@@ -7,20 +7,12 @@
     src: url("../../fonts/HelveticaNeue_Medium.ttf")
  }
 
- *{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
 
-body {
-    background: #262626;
-}
 .containerUserProfil{
-    display: block;
-    margin-top: 6vh;
-    height: 5vh;
-    
+    background-color: #262626;
+    padding : 0;
+    height: 200vh;
+    margin : 0;
 }
 .containerChoice{
     width: 100%;
@@ -31,6 +23,10 @@ body {
     display: block;
     height: 7vh;
     margin: auto;
+}
+
+img.logoUserProfil {
+    margin-top : 5vh;
 }
 
 .containerChoiceDes {

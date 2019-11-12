@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import './Parameters.css';
+
 
 class Parameters extends React.Component {
     render() {
         return (
-            <div className={this.props.activeparameters ? "slider parametersBody" : "parametersBody"}>
+            <div className="slider parametersBody">
                 <div className="parametersHead">
-                    <a href="#" class="parametersClose" onClick={this.props.toggleClassParameters} />
+                    <Link class="parametersClose" to = "/Home" />
                     <p className="parametersParametres">Paramètres</p>
                 </div>
                 <div className="parametersCompteContainer">

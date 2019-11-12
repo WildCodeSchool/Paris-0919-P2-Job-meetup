@@ -37,7 +37,7 @@ class ProfilInterests extends React.Component {
     render() {
         return(
             <div className="containerUserProfil">
-                <img src={logo} alt="logo Skills" className="logoUserProfil"></img>
+                <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
                     
                     <p className="inscriptionUserChoice">Centres d'intérêts</p>
@@ -45,9 +45,9 @@ class ProfilInterests extends React.Component {
 
                 <div className="containerChoiceSpec3">
                     <form className="form">
-                        <p> <button onClick={() => this.handleClick("Meet-Up")} type="button" id="meetup-button">Meet-Up</button> </p>
-                        <p> <button onClick={() => this.handleClick("Job")} type="button" id="job-button">Job</button> </p>
-                        <p> <button onClick={() => this.handleClick("Rencontres pro")} type="button" id="rencontres-button">Rencontres pro</button> </p>
+                        <p> <button className="Interest_button" onClick={() => this.handleClick("Meet-Up")} type="button" id="meetup-button">Meet-Up</button> </p>
+                        <p> <button className="Interest_button" onClick={() => this.handleClick("Job")} type="button" id="job-button">Job</button> </p>
+                        <p> <button  className="Interest_button"onClick={() => this.handleClick("Rencontres pro")} type="button" id="rencontres-button">Rencontres pro</button> </p>
                     </form>
                 </div>
 
@@ -55,8 +55,8 @@ class ProfilInterests extends React.Component {
                 
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
-                <Link to ="ProfilLanguage"> <p>Précédent</p>   </Link>     
-                <Link onClick = {() => this._userInfo()} to ="ProfilDescription"><p>Suivant</p>  </Link>
+                <Link to ="/ProfilLanguage"> <p>Précédent</p>   </Link>     
+                <Link onClick = {() => this._userInfo()} to ="/ProfilDescription"><p>Suivant</p>  </Link>
                 </div>
                 
 

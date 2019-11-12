@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+
 import "./MenuBurger.css";
 
 
@@ -9,7 +11,7 @@ class MenuBurger extends React.Component {
   toggleClass = () => {
     const currentState = this.state.active;
     this.setState({
-      active: !currentState
+      active : !currentState
     })
   }
   
@@ -28,8 +30,8 @@ class MenuBurger extends React.Component {
           <div className="burgerProfilePicParent" ><img src="/profilPic.png" alt="Profil" className="burgerProfilePic" /></div>
           <div className="burgerUserName" >Nicolas Borson</div>
           <div className="burgerJob" >Développeur full-stack</div>
-          <div className="burgerContact" onClick={this.props.toggleClassContact} >Contact</div>
-          <div className="burgerParametres" onClick={this.props.toggleClassParameters} >Paramètres</div>
+          <Link to="/Contact" className="burgerContact" >Contact</Link>
+          <Link to="/Parameters" className="burgerParametres" >Paramètres</Link>
           <div className="burgerDeconnexion" onClick={() => /*{ if*/ (window.confirm('Êtes-vous sur(e) de vouloir vous déconnecter ?'))/* this.onCancel(item)/* }*/} href="#">Deconnexion</div>
         </div>
       </>

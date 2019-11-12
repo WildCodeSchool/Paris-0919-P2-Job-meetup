@@ -8,25 +8,24 @@
  }
 
  *{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    overflow : hidden; 
 }
 
-body {
-    background: #262626;
-}
 
 .containerProfilInscription{
-    display: block;
-    margin-top: 6vh;
-    height: 5vh;
-    
+    background-color: #262626;
+    padding : 0;
+    height: 200vh;
+    margin : 0;   
 }
 .logoProfilInscription {
     display: block;
     height: 7vh;
     margin: auto;
+}
+
+img.logoProfilInscription {
+  margin-top : 5vh;
 }
 
 .inscriptionProfilInscription {
@@ -45,7 +44,8 @@ body {
 	z-index: 2;
 }
 
-input {
+.Connect_input {
+  
     display: block;
     outline: 0s;
     width: 250px;
@@ -60,7 +60,7 @@ input {
     font-weight: 300;
 }
 
-button{
+#login-button{
     font-family: "HelveticaNeue_Light", "sans-serif";
     appearance: none;
     outline: 0;
@@ -76,10 +76,9 @@ button{
 }
 
 .containerMail{
-	max-width: 600px;
-	margin: 0 auto;
-	padding: 120px 0;
-	height: 400px;
+    max-width: 600px;
+    margin: 8vh auto;
+    height: 500px;
     text-align: center;
 }
 

@@ -23,7 +23,7 @@ class UserChoice extends React.Component {
         console.log(this.props)
         return(
             <div className="containerUserProfil">
-                <img src={logo} alt="logo Skills" className="logoUserProfil"></img>
+                <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
                     <p className="inscriptionUserChoice">Profil</p>
                     <p className="inscriptionUserChoice">Vous êtes…</p>
@@ -31,17 +31,16 @@ class UserChoice extends React.Component {
 
                 <div className="containerChoice45">
                     <form className="form">
-                        <p> <button onClick={() => this.setState({ type: 'Dev' })} type="button" id="userDev-button">Un développeur</button> </p>
-                        <p> <button onClick={() => this.setState({ type: 'CTO' })} type="button" id="userSociety-button">Un recruteur</button> </p>
+                        <p> <button className="Choice_button" onClick={() => this.setState({ type: 'Dev' })} type="button" id="userDev-button">Un développeur</button> </p>
+                        <p> <button className="Choice_button" onClick={() => this.setState({ type: 'CTO' })} type="button" id="userSociety-button">Un recruteur</button> </p>
                     </form>
                 </div>
 
                 <footer className="linearBalls"> 
-                
-                {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
+
                 <div className="links">
-               <Link to='ProfilInscription'><p>Précédent</p></Link>     
-               <Link onClick = {() => this._userInfo()} to='ProfilDevSpec'><p>Suivant</p> </Link> 
+               <Link to='/ProfilInscription'><p>Précédent</p></Link>     
+               <Link onClick = {() => this._userInfo()} to='/ProfilDevSpec'><p>Suivant</p> </Link> 
                 </div>
                 
                 </footer>

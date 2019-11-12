@@ -7,30 +7,32 @@
     src: url("../../fonts/HelveticaNeue_Medium.ttf")
  }
 
- *{
+/*  *{
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}
+} */
 
-body {
-    background: #262626;
-}
 .containerUserProfil{
-    display: block;
-    margin-top: 6vh;
-    height: 5vh;
+    background-color: #262626;
+    padding : 0;
+    height: 200vh;
+    margin : 0;
     
 }
 .containerChoiceSpec2{
     width: 100%;
-	padding: 80px 0px 00px 0px;
+	padding: 10px 0px 00px 0px;
     text-align: center;
 }
 .logoUserProfil {
     display: block;
     height: 7vh;
     margin: auto;
+}
+
+img.logoUserProfil {
+    margin-top : 5vh;
 }
 
 .inscriptionUserChoice {
@@ -44,7 +46,7 @@ body {
 }
 
 
-button{
+.Spec_button{
     font-family: "HelveticaNeue_Light", "sans-serif";
     background-color: #ffffff;
     padding: 30px 25px;

@@ -36,31 +36,35 @@ class ProfilPicture extends React.Component {
             interest : this.props.LoginUser.interest,
             text : this.props.LoginUser.text,
         })
+        .then(res => {
+            if (res.data === 'SignUp successfull') {
+            const action = { type: 'LOG'}
+            this.props.dispatch(action)
+            this.redirect()
+        }})
       };
+
+      redirect =()=>{
+        this.props.history.push('/Home')
+    }
 
     render() {
         console.log(this.props)
         return(
             <div className="containerUserProfil">
-                <img src={logo} alt="logo Skills" className="logoUserProfil"></img>
+                <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
                     <p className="inscriptionUserChoice">Photo de profil</p>
                 </div>
-
                 <div className="containerChoice">
-                <img src={avatar} className="avatar" alt="" />
-
+                    <img src={avatar} className="avatar" alt="" />
                 </div>
 
                 <footer className="linearBalls"> 
-
-                {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
-                
-                <div className="links">
-                <Link to='ProfilDescription'><p>Précédent</p> </Link>
-                <Link onClick = {() => this.putDataToDB()} to='ProfilPicture'><p>Valider</p> </Link>      
-                <p>Suivant</p>
-                </div>
+                    <div className="links">
+                        <Link to='/ProfilDescription'><p>Précédent</p> </Link>
+                        <button onClick = {() => this.putDataToDB()} to='/ProfilPicture'><p>Valider</p> </button>
+                    </div>
                 </footer>
                 
             </div>

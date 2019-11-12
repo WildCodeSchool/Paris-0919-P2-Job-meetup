@@ -36,7 +36,7 @@ class ProfilDevSpec extends React.Component {
     render() {
         return(
             <div className="containerUserProfil">
-                <img src={logo} alt="logo Skills" className="logoUserProfil"></img>
+                <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
                     
                     <p className="inscriptionUserChoice">Votre specialité</p>
@@ -44,9 +44,9 @@ class ProfilDevSpec extends React.Component {
 
                 <div className="containerChoiceSpec2">
                     <form className="form">
-                        <p> <button onClick={() => this.handleClick("Front-end")} name="Front-end" type="button" id="userFront-button">Front-end</button> </p>
-                        <p> <button onClick={() => this.handleClick("Back-end")} name="Back-end" type="button" id="userBack-button">Back-end</button> </p>
-                        <p> <button onClick={() => this.handleClick("Fullstack")} name="Fullstack" type="button" id="userFullStack-button">Fullstack</button> </p>
+                        <p> <button className="Spec_button" onClick={() => this.handleClick("Front-end")} name="Front-end" type="button" id="userFront-button">Front-end</button> </p>
+                        <p> <button className="Spec_button" onClick={() => this.handleClick("Back-end")} name="Back-end" type="button" id="userBack-button">Back-end</button> </p>
+                        <p> <button className="Spec_button" onClick={() => this.handleClick("Fullstack")} name="Fullstack" type="button" id="userFullStack-button">Fullstack</button> </p>
                     </form>
                 </div>
 
@@ -55,8 +55,8 @@ class ProfilDevSpec extends React.Component {
                 
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
-                <Link to ="UserChoice"><p>>Précédent</p>   </Link>     
-                <Link onClick = {() => this._userInfo()} to ="ProfilLanguage"><p>Suivant</p>  </Link>
+                <Link to ="/ProfilUserChoice"><p>Précédent</p>   </Link>     
+                <Link onClick = {() => this._userInfo()} to ="/ProfilLanguage"><p>Suivant</p>  </Link>
                 </div>
                 
                 </footer>

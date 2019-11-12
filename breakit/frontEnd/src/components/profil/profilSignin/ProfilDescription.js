@@ -22,7 +22,7 @@ class ProfilDescription extends React.Component {
     render() {
         return(
             <div className="containerUserProfil">
-                <img src={logo} alt="logo Skills" className="logoUserProfil"></img>
+                <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
                     <p className="inscriptionUserChoice">Profil</p>
                     <p className="inscriptionUserChoice">Description</p>
@@ -33,18 +33,13 @@ class ProfilDescription extends React.Component {
                         <textarea onChange={(e) => this.setState({ text: e.target.value })} name='textarea' id="story" rows="7" cols="33" placeholder="Saisissez votre besoin..."
                         ></textarea>
                     </form>
-                    
-
-
 
                 </div>
                 <footer className="linearBalls"> 
 
-                
-                {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
-               <Link to='ProfilInterests'><p>>Précédent</p></Link>     
-               <Link onClick = {() => this._userInfo()} to='ProfilPicture'><p>>Suivant</p> </Link> 
+                    <Link to='/ProfilInterests'><p>Précédent</p></Link>     
+                    <Link onClick = {() => this._userInfo()} to='/ProfilPicture'><p>Suivant</p> </Link> 
                 </div>
                 
                 </footer>

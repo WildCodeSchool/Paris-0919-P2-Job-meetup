@@ -23,7 +23,7 @@ class ProfilConnexion extends React.Component {
         axios.post('http://localhost:4000/api/user/signin', test)
         .then(res => {
             if (res.data === 'Logged in successfully') {
-            const action = { type: 'LOG'}
+            const action = { type: 'LOG', value: this.state.mail}
             this.props.dispatch(action)
             this.redirect()
         }}
@@ -140,10 +140,10 @@ class ProfilConnexion extends React.Component {
                 <div className="containerMail">
                     <div className="form">
 
-                        <input type="email" placeholder="Email"
+                        <input className="Connect_input" type="email" placeholder="Email"
                             onChange={(e) => this.setState({ mail: e.target.value })} ></input>
 
-                        <input type="password" placeholder="Mot de passe"
+                        <input className="Connect_input" type="password" placeholder="Mot de passe"
                             onChange={(e) => this.setState({ password: e.target.value })} ></input>
 
                         <button  onClick = {() => this.checkDB()} type="submit" id="login-button">Valider</button>
