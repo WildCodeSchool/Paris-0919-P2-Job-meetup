@@ -44,9 +44,8 @@ const LoginUser = (state = loginState, action) => {
         case 'USER_LANG' : 
             nextState = {
                 ...state,
-                languages : action.value.languages
+                languages : action.value.cardsLanguages
             }
-            
             return nextState || state;
 
         case 'USER_INT' : 

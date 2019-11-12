@@ -5,7 +5,8 @@ import ProfilInscription from './components/profil/profilSignin/ProfilInscriptio
 import ProfilDevSpec from './components/profil/profilSignin/ProfilDevSpec';
 import ProfilInterests from './components/profil/profilSignin/ProfilInterests'
 import ProfilDescription from'./components/profil/profilSignin/ProfilDescription';
-import ProfilLanguages from './components/profil/profilSignin/ProfilLanguage';
+import SearchLanguages from './components/profil/profilSignin/SearchLanguages';
+import Languages from './components/profil/profilSignin/Languages'
 import ProfilPicture from './components/profil/profilSignin/ProfilPicture';
 import ProfilConnexion from './components/profil/profilLogin/ProfilConnexion';
 import Parameters from './components/homepage/Parameters'

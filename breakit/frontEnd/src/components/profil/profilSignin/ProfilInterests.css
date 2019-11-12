@@ -7,16 +7,15 @@
     src: url("../../fonts/HelveticaNeue_Medium.ttf")
  }
 
-/*  *{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-} */
 
 .containerUserProfil{
+    overflow : hidden;
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
     background-color: #262626;
     padding : 0;
-    height: 200vh;
+    height: 100vh;
     margin : 0;
 }
 .containerChoiceSpec3{
@@ -25,13 +24,13 @@
     text-align: center;
 }
 .logoUserProfil {
+    margin : 0;
     display: block;
     height: 7vh;
-    margin: auto;
 }
 
 img.logoUserProfil {
-    margin-top : 5vh;
+    margin-top : 0vh;
   }
 
 .inscriptionUserChoice {

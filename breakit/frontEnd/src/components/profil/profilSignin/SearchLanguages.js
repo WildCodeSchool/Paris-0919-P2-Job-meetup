@@ -69,48 +69,51 @@ class SearchLanguages extends React.Component {
   }
 
   _userInfo(){
-    const action = {type : 'USER_LANG', value : this.state. cardsLanguages}
+    const action = {type : 'USER_LANG', value : this.state}
     this.props.dispatch(action)
   }
 
   render() {
+    console.log('languages', this.state.cardsLanguages)
     const { text } = this.state
 
     return (
       
 
       <div className="containerSearchLanguages">
-          <img src={logo} alt="logo Skills"className="logoUserProfilSearch" ></img>
-       <p className="chooseYourLanguages "> Choisissez vos languages...</p>
+          <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
+          <div>
+              <p className="chooseYourLanguages "> Choisissez vos languages...</p>
+          </div>
+       <div className="inputContainerLang">
+       <div className="inputLanguagesContainer">
         <input
-          type='text'
-          value={text}
-          className="inputSearchLanguages"
-          onChange={(this.handleChange)}
-        />
-
-        <button className="Add" onClick={() => this.addCompetence(text)} value="add">Add</button>
-        {this.renderSuggestions()}
-
+            type='text'
+            value={text}
+            className="inputSearchLanguages"
+            onChange={(this.handleChange)}
+          />
+          <button className="Add" onClick={() => this.addCompetence(text)} value="add">Add</button>
+          {this.renderSuggestions()}
+        </div>
         <div className="displayCard">
           <p>
             {this.state.cardsLanguages.map(card =>
               <li className="listElements">
-                <div className="cardItem">{card} <button className='x' onClick={() => this.handleClick(card)}>X</button></div>
+                <div className="cardItem">{card} </div>
+                <button className='x' onClick={() => this.handleClick(card)}>X</button>
 
               </li>)}
           </p>
         </div>
+       </div>
 
         <footer className="linearBalls">
-
-
           {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
-          <div className="linksSearch">
+          <div className="links">
             <Link exact to="ProfilDevSpec"> <p>Précédent</p></Link>
             <Link onClick = {() => this._userInfo()} exact to="ProfilInterests"><p>Suivant</p></Link>
           </div>
-
         </footer>
       </div>
     )

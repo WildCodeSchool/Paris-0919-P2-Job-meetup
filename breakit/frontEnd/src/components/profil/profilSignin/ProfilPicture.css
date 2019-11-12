@@ -17,9 +17,13 @@
 /*  ********************* Section Profil ***************************/
 
 .containerUserProfil{
+    overflow : hidden;
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
     background-color: #262626;
     padding : 0;
-    height: 200vh;
+    height: 100vh;
     margin : 0;
 }
 

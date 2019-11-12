@@ -7,18 +7,31 @@
   src: url("../../fonts/HelveticaNeue_Medium.ttf")
 }
 
-*{
-	box-sizing: border-box;
+.containerSearchLanguages {
+  overflow : hidden;
+  box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+  background-color: #262626;
+  padding : 0;
+  height: 100vh;
+  margin : 0;
 }
 
-.containerSearchLanguages {
-  display: block;
-  margin-top: 6vh;
-  height: 5vh;
-  background-color: #262626;
+.inputLanguagesContainer{
+    height : 20vh;
 }
+
+.inputContainerLang {
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0px 00px 0px;
+  text-align: center; 
+}
+
 .chooseYourLanguages {
   font-family: "HelveticaNeue_Medium", "sans-serif";
   display: block;
@@ -30,15 +43,20 @@
 }
 
 .inputSearchLanguages {
+  width : 70%;
   border: 4px solid #fae404;
   border-radius: 5px 5px 5px 5px;
-  padding: 20px 40px;
-  margin-top: 5%;
+  padding : 2vh;
+  margin: auto;
   font-size: 1.4em;
   font-family: "HelveticaNeue_Light", "sans-serif";
 }
 
 .suggestionsList {
+  height : 7vh;
+  width : 60%;
+  margin-left : 20%;
+  overflow: scroll;
   color: #505050;
   list-style-type: none;
   background: #fae404;
@@ -46,31 +64,36 @@
   font-size: 1.4em;
   font-family: "HelveticaNeue_Light", "sans-serif";
   margin-top: 0em;
-  padding: 20px 20px;
+  padding: 0 20px;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .listElements {
   width: auto;
   list-style: none;
   margin: 1vh;
+  margin-top : 1.9vh;
+  z-index : 0;
 }
 
+
+
 .cardItem {
-  padding: 4vw;
-  height: 8vh;
+  padding: 1%;
+  padding-right: 10%;
+  height: 5vh;
   text-align: center;
-  margin: auto;
-  width: 45vw;
+  width: 25vh;
   background-color: #fae404;
   border-radius: 5px 5px 5px 5px;
   font-size: 1.4em;
   font-family: "HelveticaNeue_Light", "sans-serif";
 }
 .x {
-  width: 10vw;
-  position: absolute;
-  bottom: 48%;
-  right: 28%;
+  position : relative;
+  margin-left: 20vh;
+  width: 4vh;
   background-color: #fae404;
   font-size: 0.8em;
   border:none;
@@ -78,35 +101,22 @@
   color: rgb(114, 110, 110);
   font-weight: bold;
   font-family: "HelveticaNeue_Light", "sans-serif";
+  cursor: pointer;
 }
 .Add {
-  position: absolute;
-  right: 18%;
-  bottom: 54.4%;
-  height: 5vh;
-  width: 15vw;
+  margin-left :24vh;
+  margin-top : 1vh;
+  position: relative;
   background-color: #fae404;
   border-radius: 7px 7px 7px 7px;
   font-size: 1.4em;
   border-style: none;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
+  cursor: pointer;
 }
 .Add  :hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-button{
-  font-family: "HelveticaNeue_Light", "sans-serif";
-  background-color: #ffffff;
-  padding: 30px 25px;
-  color: #262626;
-  border-radius: 10px;
-  width: 220px;
-  cursor: pointer;
-  font-size: 20px;
-  border: 4px solid #FAE404;
-  margin: 0px 0px 40px 0px;
 }
 
 .logoUserProfilSearch {

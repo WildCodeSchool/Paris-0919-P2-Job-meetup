@@ -38,7 +38,6 @@ class ProfilDevSpec extends React.Component {
             <div className="containerUserProfil">
                 <Link exact to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
-                    
                     <p className="inscriptionUserChoice">Votre specialité</p>
                 </div>
 
