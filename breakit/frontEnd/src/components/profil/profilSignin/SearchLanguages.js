@@ -2,6 +2,11 @@ import React from 'react'
 import './SearchLanguages.css'
 import { Link } from 'react-router-dom';
 import logo from '../../img/logo-blancjaune.svg'
+import { connect } from 'react-redux'
+
+const mapStateToProps = (state) => {
+  return state
+}
 
 class SearchLanguages extends React.Component {
   state = {
@@ -63,8 +68,10 @@ class SearchLanguages extends React.Component {
     this.setState({ interest: interest })
   }
 
-
-
+  _userInfo(){
+    const action = {type : 'USER_LANG', value : this.state. cardsLanguages}
+    this.props.dispatch(action)
+  }
 
   render() {
     const { text } = this.state
@@ -101,7 +108,7 @@ class SearchLanguages extends React.Component {
           {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
           <div className="linksSearch">
             <Link exact to="ProfilDevSpec"> <p>Précédent</p></Link>
-            <Link exact to="ProfilInterests"><p>Suivant</p></Link>
+            <Link onClick = {() => this._userInfo()} exact to="ProfilInterests"><p>Suivant</p></Link>
           </div>
 
         </footer>
@@ -112,4 +119,4 @@ class SearchLanguages extends React.Component {
 
 
 
-export default SearchLanguages
+export default connect(mapStateToProps)(SearchLanguages)

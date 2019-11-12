@@ -55,7 +55,7 @@ class ProfilInterests extends React.Component {
                 
                 {/* <p> <button type="button" id="userFullStack-button">Soumettre</button> </p> */}
                 <div className="links">
-                <Link to ="/ProfilLanguage"> <p>Précédent</p>   </Link>     
+                <Link to ="/SearchLanguages"> <p>Précédent</p>   </Link>     
                 <Link onClick = {() => this._userInfo()} to ="/ProfilDescription"><p>Suivant</p>  </Link>
                 </div>
                 
