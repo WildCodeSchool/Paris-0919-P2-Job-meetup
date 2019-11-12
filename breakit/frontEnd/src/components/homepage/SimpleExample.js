@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import axios from 'axios'
-
+import L from 'leaflet';
 import Logo from '../img/logo-skills-noir.svg'
 import './Map.css';
 
@@ -38,9 +38,27 @@ class SimpleExample extends React.Component {
 
     const position = [this.state.lat, this.state.lng];
 
+    const IconMeetup = L.icon({
+      iconRetinaUrl: require('../img/icon-meetup.png'),
+      iconUrl: require('../img/icon-meetup.png'),
+      iconSize: new L.Point(40, 40),
+    })
+
+    const IconDev = L.icon({
+      iconRetinaUrl: require('../img/icon-dev.png'),
+      iconUrl: require('../img/icon-dev.png'),
+      iconSize: new L.Point(40, 40),
+    })
+
+    const IconRh = L.icon({
+      iconRetinaUrl: require('../img/icon-rh.png'),
+      iconUrl: require('../img/icon-rh.png'),
+      iconSize: new L.Point(40, 40),
+    })
+
     return (
       <div>
-        <img className="logo" src={Logo} alt='logo du site skills'/>
+        <img className="logo" src={Logo} alt='logo du site skills' />
 
         <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.toggleFilter.isFiltered ? "miSize" : "fullSize"}>
 
@@ -53,7 +71,8 @@ class SimpleExample extends React.Component {
             if (marker.online) {
               if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'DEV') {
                 return (
-                  <Marker position={[marker.lat, marker.lng]}>
+                  <Marker position={[marker.lat, marker.lng]}
+                  icon={this.props.toggleUsers.cto && marker.type === 'CTO' ? IconRh : IconDev}>
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
@@ -73,7 +92,8 @@ class SimpleExample extends React.Component {
           {this.props.toggleList.meetups.map(marker2 => {
             if (this.props.toggleUsers.meetup) {
               return (
-                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]}>
+                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]}
+                  icon={IconMeetup}>
                   <Popup>
                     <div className="pop">
                       <div className="meetupdes">
