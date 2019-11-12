@@ -38,7 +38,7 @@ class ProfilPicture extends React.Component {
         })
         .then(res => {
             if (res.data === 'SignUp successfull') {
-            const action = { type: 'LOG'}
+            const action = { type: 'LOG', value: this.props.LoginUser.mail,}
             this.props.dispatch(action)
             this.redirect()
         }})

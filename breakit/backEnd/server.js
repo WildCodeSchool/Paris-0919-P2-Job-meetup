@@ -47,7 +47,6 @@ app.post('/api/user/signin', (req,res) => {
             if (err) res.status(400).send('User does not exist');
             if (!isMatch) return res.status(400).send('Wrong password');
             res.status(200).send('Logged in successfully')
-            console.log('ok')
         })
     })
 })
@@ -71,10 +70,32 @@ app.post('/api/user/getUsers', (req, res) => {
             }
         }
             )
-        console.log(onlineUser)
         res.status(200).send(onlineUser)
     })
 })
+
+/* -------------- get Users for map ----------------- */
+
+app.get('/api/user/getOnlineUsers', function(req, res) {
+    User.find({}, function(err, users) {
+      var userMap = [];
+      users.forEach(function(user, i) {
+        userMap[i] = {
+            name : user.name,
+            firstName : user.firstName,
+            mail : user.mail,
+            type : user.type,
+            spec : user.spec,
+            languages : user.languages,
+            interest : user.interest,
+            text : user.text,
+            geoLoc : user.geoLoc,
+            online : user.online
+        };
+      });
+      res.status(200).send(userMap)
+    });
+  });
 
 const port = process.env.PORT || 4000;
 

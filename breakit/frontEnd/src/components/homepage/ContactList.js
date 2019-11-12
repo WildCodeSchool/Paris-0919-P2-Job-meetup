@@ -70,12 +70,10 @@ const mapStateToProps = (state) => {
 class ContactList extends React.Component {
 
     getUserInfos(){
-      console.log(this.props.storeLoggedUser.user)
       axios.post('http://localhost:4000/api/user/getUsers',
       {mail : this.props.storeLoggedUser.user}
       )
       .then(res => {
-        console.log('userlog', res.data)
         const action = { type: "LOG", value: res.data }
         this.props.dispatch(action)
       })

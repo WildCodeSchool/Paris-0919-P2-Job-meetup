@@ -58,7 +58,15 @@ const userSchema =  mongoose.Schema(
             required : true,
             minlength : 0,
             maxlength : 2048
-        }
+        },
+        geoLoc : {
+            type : Array,
+            required : false
+        },
+        online : {
+          type : Boolean,
+          required : false
+      }
 
         
     },

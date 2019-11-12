@@ -16,7 +16,8 @@ class SimpleExample extends React.Component {
     zoom: 13,
     lat: 48.849044,
     lng: 2.352831,
-    meetups: []
+    meetups: [],
+    Users : []
   }
 
   getMeetUp() {
@@ -29,6 +30,15 @@ class SimpleExample extends React.Component {
   }
   componentDidMount() {
     this.getMeetUp();
+    this.getUsersOnline()
+  }
+
+  getUsersOnline() {
+      axios.get('http://localhost:4000/api/user/getOnlineUsers')
+      .then(res => {
+        console.log('trxcytvuybi', res.data)
+        return this.setState({Users : res.data})
+      })
   }
 
 
@@ -37,7 +47,7 @@ class SimpleExample extends React.Component {
     this.meetupToStore()
 
     const position = [this.state.lat, this.state.lng];
-
+    console.log('userslof' , this.state.Users)
     return (
       <div>
         <img className="logo" src={Logo} alt='logo du site skills'/>
@@ -49,19 +59,18 @@ class SimpleExample extends React.Component {
             url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
 
-          {this.props.toggleFilterMap.users.map(marker => {
+          {this.state.Users.map(marker => {
             if (marker.online) {
-              if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'DEV') {
+              if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'Dev') {
                 return (
-                  <Marker position={[marker.lat, marker.lng]}>
+                  <Marker position={marker.geoLoc}>
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
-                          <h2>{marker.firstname}<span> {marker.lastname}</span></h2>
+                          <h2>{marker.firstName}<span> {marker.name}</span></h2>
                           <h3>{marker.type}</h3>
-                          <h4>Languages : {marker.languages}</h4>
+                          <h4>Languages : {marker.languages.join(' / ')}</h4>
                         </div>
-                        <img className="avatar_map" src={marker.pic} alt='position du marker' />
                       </div>
                     </Popup>
                   </Marker>
