@@ -1,5 +1,5 @@
 @font-face{font-family: "HelveticaNeue_Light" ;
-    src:url("../components/fonts/HelveticaNeue_Light.ttf")}
+    src: url("../fonts/HelveticaNeue_Light.ttf")}
 
 .second_container {
     background-color: #262626;

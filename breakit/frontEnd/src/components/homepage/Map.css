@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #leaflet-container {
 
     width : 90%;
@@ -17,3 +18,56 @@
 }
 
   
+=======
+@font-face{font-family: "HelveticaNeue_Medium" ;
+  src:url("../fonts/HelveticaNeue_Medium.ttf")}
+
+
+body {
+  overflow: none;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 2em;
+  margin-top: 1em;
+}
+
+  #leaflet-container {
+  width : 90%;
+  margin-left : 5%;
+  z-index : 10;
+  margin-top : 5vh;
+}
+.fullSize {
+height: 75vh;
+transition: ease 0.4s;
+}
+.miSize {
+height: 45vh;
+transition: ease 0.4s;
+}
+.popup_desc{
+  display: flex;
+  flex-direction: column;
+  font-family: "HelveticaNeue_Medium", "sans-serif";
+}
+.avatar_map{
+  height: 80px;
+  width: 80px;
+  margin:auto;
+  border-radius: 5%;
+}
+
+.avatar_map2{
+  height: 150px;
+  width: auto;
+  margin:auto;
+  display: flex;
+  align-items: center;
+  border-radius: 5%;
+}
+>>>>>>> newSearchLanguages

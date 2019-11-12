@@ -1,5 +1,5 @@
 @font-face{font-family: "HelveticaNeue_Medium" ;
-    src:url("../components/fonts/HelveticaNeue_Medium.ttf")}
+    src:url("../fonts/HelveticaNeue_Light.ttf")}
     
     
 .buttonDiv{
@@ -26,7 +26,7 @@
     
     
     .container {
-        background: url("../components/img/fond-home-small.svg")  no-repeat;
+        background: url("../img/fond-home-small.svg")  no-repeat;
         background-color: white;
         background-size: cover;
         background-position: bottom 0% right 0%;

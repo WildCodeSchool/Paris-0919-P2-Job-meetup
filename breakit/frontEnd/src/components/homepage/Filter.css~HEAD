@@ -1,6 +1,6 @@
 @font-face {
     font-family: "HelveticaNeue_Medium";
-    src: url("../components/fonts/HelveticaNeue_Medium.ttf")
+    src: url("../fonts/HelveticaNeue_Medium.ttf")
 }
 
 

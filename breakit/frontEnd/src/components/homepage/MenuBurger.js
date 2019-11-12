@@ -1,4 +1,5 @@
 import React from "react";
+import Parameters from "./Parameters"
 import "./MenuBurger.css";
 
 
@@ -9,7 +10,7 @@ class MenuBurger extends React.Component {
   toggleClass = () => {
     const currentState = this.state.active;
     this.setState({
-      active : !currentState
+      active: !currentState
     })
   }
   

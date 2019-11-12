@@ -1,5 +1,10 @@
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+  overflow: none;
 }
 
 .App-logo {
@@ -25,18 +30,3 @@
     height : 50vh;
 }
 
-.simpleexample {
-
-}
-
-.filter {
-
-}
-
-.listfilter {
-
-}
-
-.footer {
-
-}
