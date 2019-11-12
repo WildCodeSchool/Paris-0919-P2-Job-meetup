@@ -1,0 +1,24 @@
+@font-face{font-family: "HelveticaNeue_Light" ;
+    src:url("../fonts/HelveticaNeue_Light.ttf")}
+
+.ListFilter_container_2 {
+    background-color: #262626;
+    width: 100%;
+    height: 21vh;
+    position: relative;
+    bottom: 0;
+    overflow: auto;
+    margin-bottom : 8em;
+    scrollbar-width: none;
+}
+
+.list_meetup_around {
+    color: #fff;
+    list-style: none;
+}
+
+.list_meetup_around_map {
+    padding: 7px 0;
+    font-family: "HelveticaNeue_Light",  "sans-serif";
+    font-size: 1.15em;
+}
