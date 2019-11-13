@@ -50,7 +50,7 @@ class listFilter extends React.Component {
 									return (
 
 										<div key={i}>
-											<li  className = "list_meetup_around_map">{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
+								<li  className = "list_meetup_around_map">{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
 										</div>
 									)
 								}
