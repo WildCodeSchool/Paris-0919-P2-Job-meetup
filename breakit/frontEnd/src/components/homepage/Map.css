@@ -50,3 +50,11 @@ transition: ease 0.4s;
   align-items: center;
   border-radius: 5%;
 }
+.linkMeetup{
+  cursor: pointer;
+  color: blue;
+}
+.pop {
+  overflow: auto;
+  max-width:150px;
+}

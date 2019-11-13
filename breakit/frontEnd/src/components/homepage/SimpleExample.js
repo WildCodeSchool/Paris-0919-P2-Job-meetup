@@ -20,7 +20,7 @@ class SimpleExample extends React.Component {
   }
 
   getMeetUp() {
-    axios.get('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=num%C3%A9rique&facet=category&facet=tags&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=access_type&facet=price_type&refine.category=Animations+')
+    axios.get('https://opendata.paris.fr/api/records/1.0/search/?dataset=que-faire-a-paris-&q=num%C3%A9rique&rows=27&facet=category&facet=tags&facet=address_zipcode&facet=address_city&facet=pmr&facet=blind&facet=deaf&facet=access_type&facet=price_type')
       .then(result => { this.setState({ meetups: result.data.records }) })
   }
   meetupToStore = () => {
@@ -78,19 +78,18 @@ class SimpleExample extends React.Component {
 
           {this.props.toggleList.meetups.map((marker2, i) => {
             if (this.props.toggleUsers.meetup) {
-              return ( 
+              return (
                 <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]} key={i}>
                   <Popup>
                     <div className="pop">
                       <div className="meetupdes">
-                        <h2>{marker2.fields.title}</h2>
-                        <h4>{marker2.fields.address_name}</h4>
-                        <h4>{marker2.fields.address_street}</h4>
-                            
-                         {/* <Link to='/contact_url'>  {marker2.fields.contact_url} clic </Link> */}
-                         <h4 onClick = { () => {window.open(marker2.fields.contact_url, "_blank")}}>Lien vers l'événement</h4>
-                        <h4>{marker2.fields.address_zipcode}</h4>
                         <img className="avatar_map2" src={marker2.fields.cover_url} alt="avatar_img" />
+                        <h3>{marker2.fields.title}</h3>
+                        <h4>{marker2.fields.address_name}</h4>
+                        <h4>{marker2.fields.address_street} {marker2.fields.address_zipcode}</h4>
+                        {/* <Link to='/contact_url'>  {marker2.fields.contact_url} clic </Link> */}
+                        <h4 className='linkMeetup' onClick={() => { window.open(marker2.fields.contact_url, "_blank") }}>Lien vers l'événement</h4>
+
                       </div>
                     </div>
                   </Popup>
