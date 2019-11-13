@@ -1,52 +1,53 @@
-import React from "react"
-import Footer from './components/homepage/Footer';
-import ListFilter from './components/homepage/ListFilter';
-import Filter from './components/homepage/Filter';
-import MenuBurger from './components/homepage/MenuBurger';
-import SimpleExample from './components/homepage/SimpleExample';
-import { Provider } from 'react-redux';
-import store from './Store/store';
-import ContactList from './components/homepage/ContactList';
+
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import UserChoice from './components/profil/profilSignin/ProfilUserChoice';
+import ProfilInscription from './components/profil/profilSignin/ProfilInscription'
+import ProfilDevSpec from './components/profil/profilSignin/ProfilDevSpec';
+import ProfilInterests from './components/profil/profilSignin/ProfilInterests'
+import ProfilDescription from'./components/profil/profilSignin/ProfilDescription';
+import SearchLanguages from './components/profil/profilSignin/SearchLanguages';
+import Languages from './components/profil/profilSignin/Languages'
+import ProfilPicture from './components/profil/profilSignin/ProfilPicture';
+import ProfilConnexion from './components/profil/profilLogin/ProfilConnexion';
 import Parameters from './components/homepage/Parameters'
 import Contact from './components/homepage/Contact'
+import Home from './components/homepage/Home';
+import { connect } from 'react-redux'
+import PrivateRoute from "./components/utils/PrivateRoute";
+
 import './App.css';
+
+const mapStateToProps = (state) => {
+    return state
+  }
 
 
 class App extends React.Component {
-  state = {
-    activeparameters: false,
-    activecontact: false,
-  }
-
-  toggleClassParameters = () => {
-    const currentState = this.state.activeparameters;
-    this.setState({
-      activeparameters: !currentState
-    })
-  }
-
-  toggleClassContact = () => {
-    const currentState = this.state.activecontact;
-    this.setState({
-      activecontact: !currentState
-    })
-  }
 
   render() {
     return (
-      <Provider store={store}>
+
         <div>
-          <MenuBurger className="menuburger" toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters}/>
-          <ContactList className="contact" />
-          <SimpleExample clasName="simpleexample" />
-          <Filter className="filter" />
-          <ListFilter className="listfilter" />
-          <Contact toggleClassContact={this.toggleClassContact} activecontact={this.state.activecontact} />
-          <Parameters toggleClassParameters={this.toggleClassParameters} activeparameters={this.state.activeparameters} />
-          <Footer className="footer" />
+          
+              <Switch>
+                  <Route exact path="/" component={ProfilConnexion} />
+                  <Route path='/ProfilInscription' component={ProfilInscription}/>
+                  <Route path='/ProfilUserChoice' component={UserChoice} />
+                  <Route path='/ProfilDevSpec' component={ProfilDevSpec}/>
+                  <Route exact path='/SearchLanguages' component={() => <SearchLanguages languages={Languages} />} />
+                  {/* Ici Profil language */}
+                  <Route path='/ProfilInterests' component={ProfilInterests}/>
+                  <Route path='/ProfilDescription' component={ProfilDescription}/>
+                  <Route path='/ProfilPicture' component={ProfilPicture}/>
+                  <PrivateRoute path="/Home" component={Home} isAuthenticated={this.props.validLog.isLoggedIn} redirect="/"/>
+                  <PrivateRoute className="Parameters" path="/Contact" isAuthenticated={this.props.validLog.isLoggedIn} component={Contact} />
+                  <PrivateRoute className="Parameters" path="/Parameters" isAuthenticated={this.props.validLog.isLoggedIn} component={Parameters} />
+              </Switch>
+          
         </div>
-      </Provider>
     );
   }
 }
-export default App;
+
+export default connect(mapStateToProps)(App);

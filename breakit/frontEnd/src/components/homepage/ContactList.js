@@ -1,7 +1,8 @@
 import { connect } from 'react-redux'
 import React from 'react'
+import axios from 'axios'
 
-const users = [
+/* const users = [
   {
     id: 0,
     online: true,
@@ -60,24 +61,31 @@ const users = [
     lat: 48.8704088,
     lng: 2.3721571
   }
-]
+] */
 
 const mapStateToProps = (state) => {
   return state
 }
 
 class ContactList extends React.Component {
-  state = {
-    meetups: []
-  }
 
-  _userArray() {
+    getUserInfos(){
+      axios.post('http://localhost:4000/api/user/getUsers',
+      {mail : this.props.storeLoggedUser.user}
+      )
+      .then(res => {
+        const action = { type: "LOG", value: res.data }
+        this.props.dispatch(action)
+      })
+    }
+
+  /* _userArray() {
     const action = { type: "USER_LOADED", value: users }
     this.props.dispatch(action)
-  }
+  } */
 
   componentDidMount() {
-    this._userArray()
+    this.getUserInfos()
   }
 
   render() {

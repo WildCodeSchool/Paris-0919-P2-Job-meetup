@@ -1,4 +1,128 @@
 .slider.parametersBody {
+  height:100vh;
+ }
+ 
+ .parametersBody {
+     position: fixed;
+     bottom:0;
+     z-index: 1000;
+     transition: ease 0.5s;
+     overflow: hidden;
+     height:0vh;
+     width:100%;
+     background-color: white;
+ }
+ 
+ .parametersClose {
+   position: absolute;
+   right: 32px;
+   top: 32px;
+   width: 32px;
+   height: 32px;
+   opacity: 1;
+ }
+ .parametersClose:hover {
+   opacity: 0.5;
+   cursor: pointer;
+ }
+ .parametersClose:before,
+ .parametersClose:after {
+   position: absolute;
+   left: 15px;
+   content: " ";
+   height: 33px;
+   width: 2px;
+   background-color: white;
+ }
+ .parametersClose:before {
+   transform: rotate(45deg);
+ }
+ .parametersClose:after {
+   transform: rotate(-45deg);
+ }
+ 
+ .parametersParametres {
+   text-align: center;
+   font-size: 30px;
+   font-family: Helvetica;
+   color: white;
+ }
+ 
+ .parametersHead {
+   position: relative;
+   width: 100%;
+   background: black;
+   padding: 1px;
+   top: 0;
+ }
+ 
+ .parametersCompteContainer {
+   margin-top: 20px;
+   background: #f2f2f2;
+   padding: 1px;
+   border-color: #cccccc;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-top-width: 1px;
+   border-top-style: solid;
+ }
+ 
+ .parametersCompteContainer2 {
+   padding-left: 3vh;
+ }
+ 
+ .parametersCompte {
+   color: #4d4d4d;
+   font-family: Helvetica;
+   text-align: center;
+ }
+ 
+ .parametersCompteInfos {
+     color: #4d4d4d;
+     font-family: Helvetica;
+     font-size: 15px;
+     margin-bottom: 1px;
+ }
+ 
+ .parametersCompteInput {
+     font-size: 19px;
+     width: 88vw;
+ }
+ 
+ .parametersConfidentialiteContainer {
+   background: #f2f2f2;
+   padding: 1px;
+   border-color: #cccccc;
+   border-bottom-width: 1px;
+   border-bottom-style: solid;
+   border-top-width: 1px;
+   border-top-style: solid;
+   margin-top: 15px;
+ }
+ 
+ .parametersConfidentialite {
+   color: #4d4d4d;
+   font-family: Helvetica;
+   text-align: center;
+ }
+ 
+ .parametersSupprimerContainer {
+     padding: 1px;
+     border-color: #cccccc;
+     border-bottom-width: 1px;
+     border-top-width: 1px;
+     border-top-style: solid;
+     margin-top: 40px;
+     padding-top: 10px;
+ }
+ 
+ .parametersSupprimer {
+     color: rgba(255, 0, 0, 0.708);
+     font-family: Helvetica;
+     text-align: center;
+     font-size: 19px;
+ }
+=======
  height:100vh;
 }
 
@@ -122,3 +246,4 @@
     text-align: center;
     font-size: 19px;
 }
+
