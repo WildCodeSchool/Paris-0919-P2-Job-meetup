@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import './ListFilter.css';
+import SimpleExample from './SimpleExample';
 
 const mapStateToProps = (state) => {
 	return state
@@ -57,6 +58,7 @@ class listFilter extends React.Component {
 							<ul className = "list_meetup_around">
 								{this.props.toggleList.meetups.map((marker2, i) => {
 									return (
+
 										<div key={i}>
 											<li  className = "list_meetup_around_map">{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
 										</div>

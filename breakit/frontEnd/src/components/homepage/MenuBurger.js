@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import {connect} from 'react-redux'
 
+import Parameters from "./Parameters"
+
 import "./MenuBurger.css";
 
 const mapStateToProps = (state) => {

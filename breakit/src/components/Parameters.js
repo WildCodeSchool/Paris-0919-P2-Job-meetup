@@ -1,20 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import { connect } from 'react-redux'
-
 import './Parameters.css';
-
-const mapStateToProps = (state) => {
-    return state
-  }
-
 
 class Parameters extends React.Component {
     render() {
         return (
-            <div className="slider parametersBody">
+            <div className={this.props.activeparameters ? "slider parametersBody" : "parametersBody"}>
                 <div className="parametersHead">
-                    <Link className="parametersClose" to = "/Home" />
+                    <a href="#" class="parametersClose" onClick={this.props.toggleClassParameters} />
                     <p className="parametersParametres">Paramètres</p>
                 </div>
                 <div className="parametersCompteContainer">
@@ -22,14 +14,15 @@ class Parameters extends React.Component {
                 </div>
                 <div className="parametersCompteContainer2">
                     <p className="parametersCompteInfos">Prénom</p>
-
-                    <div className="parametersCompteInput" id="parametersPrenom" type="text" value={this.props.storeLoggedUser.user.firstName}></div>
+                    <input className="parametersCompteInput" id="parametersPrenom" type="text" value="Nicolas"></input>
                     <p className="parametersCompteInfos">Nom</p>
-                    <div className="parametersCompteInput" id="parametersNom" type="text" value={this.props.storeLoggedUser.user.name}></div>
+                    <input className="parametersCompteInput" id="parametersNom" type="text" value="Borson"></input>
+                    <p className="parametersCompteInfos">Numéro de téléphone</p>
+                    <input className="parametersCompteInput" id="parametersNumero" type="text" value="06 06 118 712"></input>
                     <p className="parametersCompteInfos">Adresse e-mail</p>
-                    <div className="parametersCompteInput" id="parametersEmail" type="text" value={this.props.storeLoggedUser.user.mail}></div>
+                    <input className="parametersCompteInput" id="parametersEmail" type="text" value="nicolasborson@skills.app"></input>
                     <p className="parametersCompteInfos">Mot de passe</p>
-                    <div className="parametersCompteInput" id="parametersMotdepasse" type="text" value="●●●●●●"></div>
+                    <input className="parametersCompteInput" id="parametersMotdepasse" type="text" value="●●●●●●"></input>
                 </div>
                 <div className="parametersConfidentialiteContainer">
                     <p className="parametersConfidentialite">Confidentialité</p>
@@ -37,14 +30,12 @@ class Parameters extends React.Component {
                 <div className="parametersCompteContainer2">
                     <p className="parametersCompteInfos">Localisation</p>
                     <select className="parametersCompteInput" id="parametersLocalisation">
-
-                        <option defaultValue="Yes">Activé</option>
+                        <option selected value="Yes">Activé</option>
                         <option value="No">Desactivé</option>
                     </select>
                     <p className="parametersCompteInfos">Notifications</p>
                     <select className="parametersCompteInput" id="parametersNotifications">
-
-                        <option defaultValue="Yes">Activé</option>
+                        <option selected value="Yes">Activé</option>
                         <option value="No">Desactivé</option>
                     </select>
                 </div>
@@ -56,5 +47,4 @@ class Parameters extends React.Component {
     }
 }
 
-
-export default connect(mapStateToProps)(Parameters);
+export default Parameters;

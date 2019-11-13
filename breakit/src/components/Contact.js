@@ -1,16 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-
 import './Contact.css';
 
 class Contact extends React.Component {
     render() {
         return (
-
-            <div className="slider contactBody">
+            <div className={this.props.activecontact ? "slider contactBody" : "contactBody"}>
                 <div className="contactHead">
-                    <Link className="contactClose" to="/Home"/>
-
+                    <a href="#" class="contactClose" onClick={this.props.toggleClassContact} />
                     <p className="contactContact">Contact</p>
                 </div>
                 <div className="contactMentionsContainer">
