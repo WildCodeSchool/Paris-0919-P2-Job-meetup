@@ -99,8 +99,10 @@ class SearchLanguages extends React.Component {
           <p>
             {this.state.cardsLanguages.map(card =>
               <li className="listElements">
-                <div className="cardItem">{card} </div>
+                <div className="cardItem">{card} 
                 <button className='x' onClick={() => this.handleClick(card)}>X</button>
+                </div>
+
 
               </li>)}
           </p>

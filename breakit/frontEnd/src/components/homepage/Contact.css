@@ -6,7 +6,7 @@
   position: fixed;
   bottom: 0;
   z-index: 1000;
-  transition: ease 0.5s;
+  transition: ease 1s;
   overflow: hidden;
   height: 0vh;
   width: 100%;
@@ -51,7 +51,7 @@
 .contactHead {
   position: relative;
   width: 100%;
-  background: black;
+  background: #262626;
   padding: 1px;
   top: 0;
 }

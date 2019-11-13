@@ -38,14 +38,14 @@
   margin-top: 8vh;
   text-align: center;
   font-size: 30px;
-  color: #FAE404;
+  color: white;
 
 }
 
 .inputSearchLanguages {
-  width : 70%;
+  width : 100%;
   border: 4px solid #fae404;
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 0px 0px;
   padding : 2vh;
   margin: auto;
   font-size: 1.4em;
@@ -54,16 +54,16 @@
 
 .suggestionsList {
   height : 7vh;
-  width : 60%;
-  margin-left : 20%;
+  width : 78%;
   overflow: scroll;
   color: #505050;
   list-style-type: none;
-  background: #fae404;
-  border-radius: 5px 5px 5px 5px;
+  background: #ffffff;
+  border-color: #FAE404;
+  border-radius: 0px 0px 5px 5px;
   font-size: 1.4em;
   font-family: "HelveticaNeue_Light", "sans-serif";
-  margin-top: 0em;
+  margin-top: -2.05em;
   padding: 0 20px;
   z-index: 2;
   cursor: pointer;
@@ -80,9 +80,9 @@
 
 
 .cardItem {
-  padding: 1%;
+  padding-top: 5px;
   padding-right: 10%;
-  height: 5vh;
+  height: 5.3vh;
   text-align: center;
   width: 25vh;
   background-color: #fae404;
@@ -91,33 +91,46 @@
   font-family: "HelveticaNeue_Light", "sans-serif";
 }
 .x {
-  position : relative;
-  margin-left: 20vh;
-  width: 4vh;
-  background-color: #fae404;
-  font-size: 0.8em;
-  border:none;
+  position : absolute;
+  padding:  0px 15px;
+  padding-top: 0px;
+  background-color: #fae504;
+  font-size: 0.775em;
   cursor: pointer;
-  color: rgb(114, 110, 110);
-  font-weight: bold;
-  font-family: "HelveticaNeue_Light", "sans-serif";
-  cursor: pointer;
+  color: #262626;
+  font-family: "HelveticaNeue_Medium", "sans-serif";
+  right: 23%;
+  
+  border-style: none;
+  box-shadow: none;
+  border-radius: 100%;
+  padding-bottom: 7px;
+  
 }
+.x:active{
+  right: -50px;
+}
+
 .Add {
-  margin-left :24vh;
-  margin-top : 1vh;
+  font-family: "HelveticaNeue_Medium", "sans-serif";
   position: relative;
   background-color: #fae404;
-  border-radius: 7px 7px 7px 7px;
-  font-size: 1.4em;
+  border-radius: 0px 0px 7px 7px;
+  font-size: 1.3em;
   border-style: none;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
+  margin-left: 81%;
+  padding-bottom: 25%;
+  padding: 5px 10px;
+  box-shadow: none;
+  
 }
-.Add  :hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+.Add:active{
+  top: 0px;
 }
+
 
 .logoUserProfilSearch {
   display: block;
@@ -135,7 +148,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 2vh;
-  text-shadow: 0px 0px 1px #FAE404;
+  
 }
 a{
   text-decoration: none;

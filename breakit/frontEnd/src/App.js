@@ -15,7 +15,6 @@ import Contact from './components/homepage/Contact'
 import Home from './components/homepage/Home';
 import { connect } from 'react-redux'
 import PrivateRoute from "./components/utils/PrivateRoute";
-
 import './App.css';
 import SimpleExample from './components/homepage/SimpleExample';
 

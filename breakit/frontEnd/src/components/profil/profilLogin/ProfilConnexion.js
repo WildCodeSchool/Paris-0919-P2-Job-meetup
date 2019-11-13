@@ -149,7 +149,7 @@ class ProfilConnexion extends React.Component {
                         <button  onClick = {() => this.checkDB()} type="submit" id="login-button">Valider</button>
                     </div>
                     <div className="links">
-                    <div className = "link_text">Not register yet ? Please <Link to='ProfilInscription'><p className="link_button">Sign Up</p> </Link> </div>
+                    <div className = "link_text">Not register yet ? Please <Link to='ProfilInscription'><p className="link_button">SIGN UP</p> </Link> </div>
                     </div>
                 </div>
 

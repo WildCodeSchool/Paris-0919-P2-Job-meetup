@@ -45,9 +45,9 @@ class ProfilInterests extends React.Component {
 
                 <div className="containerChoiceSpec3">
                     <form className="form">
-                        <p> <button className="Interest_button" onClick={() => this.handleClick("Meet-Up")} type="button" id="meetup-button">Meet-Up</button> </p>
-                        <p> <button className="Interest_button" onClick={() => this.handleClick("Job")} type="button" id="job-button">Job</button> </p>
-                        <p> <button  className="Interest_button"onClick={() => this.handleClick("Rencontres pro")} type="button" id="rencontres-button">Rencontres pro</button> </p>
+                        <p> <button className={this.state.interest.includes("Meet-Up") ? "Valide2" : "Spec_button"} onClick={() => this.handleClick("Meet-Up")} type="button" id="meetup-button">Meet-Up</button> </p>
+                        <p> <button className={this.state.interest.includes("Job") ? "Valide2" : "Spec_button"} onClick={() => this.handleClick("Job")} type="button" id="job-button">Job</button> </p>
+                        <p> <button className={this.state.interest.includes("Rencontres pro") ? "Valide2" : "Spec_button"}onClick={() => this.handleClick("Rencontres pro")} type="button" id="rencontres-button">Rencontres pro</button> </p>
                     </form>
                 </div>
 
