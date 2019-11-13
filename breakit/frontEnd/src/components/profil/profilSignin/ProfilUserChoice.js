@@ -24,7 +24,6 @@ class UserChoice extends React.Component {
             <div className="containerUserProfil">
                 <Link to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
-                    <p className="inscriptionUserChoice">Profil</p>
                     <p className="inscriptionUserChoice">Vous êtes…</p>
                 </div>
 

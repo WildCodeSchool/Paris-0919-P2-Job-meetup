@@ -34,13 +34,13 @@ img.logoUserProfil {
     margin-top : 5vh;
   }
 
-.inscriptionUserChoice {
+.inscriptionUserChoice{
     font-family: "HelveticaNeue_Medium", "sans-serif";
     display: block;
     margin-top: 8vh;
     text-align: center;
     font-size: 30px;
-    color: #FAE404;
+    color: white;
 
 }
 
