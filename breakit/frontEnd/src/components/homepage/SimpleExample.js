@@ -45,7 +45,7 @@ class SimpleExample extends React.Component {
   render() {
 
     const locateOptions = {
-      position: 'topright',
+      position: 'topleft',
       strings: {
         title: 'Show me where I am, yo!'
       },
