@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import axios from 'axios'
@@ -7,10 +6,11 @@ import L from 'leaflet';
 import Logo from '../img/logo-skills-noir.svg'
 import './Map.css';
 
+
+
 const mapStateToProps = (state) => {
   return state
 }
-
 class SimpleExample extends React.Component {
   state = {
     zoom: 13,
@@ -30,33 +30,33 @@ class SimpleExample extends React.Component {
   componentDidMount() {
     this.getMeetUp();
   }
-
-
+  
 
   render() {
     this.meetupToStore()
+
 
     const position = [this.state.lat, this.state.lng];
 
     const IconMeetup = L.icon({
       iconRetinaUrl: require('../img/icon-meetup.png'),
       iconUrl: require('../img/icon-meetup.png'),
-      iconSize: new L.Point(40, 40),
+      iconSize: new L.Point(30, 30),
     })
 
     const IconDev = L.icon({
       iconRetinaUrl: require('../img/icon-dev.png'),
       iconUrl: require('../img/icon-dev.png'),
-      iconSize: new L.Point(40, 40),
+      iconSize: new L.Point(30, 30),
     })
 
     const IconRh = L.icon({
       iconRetinaUrl: require('../img/icon-rh.png'),
       iconUrl: require('../img/icon-rh.png'),
-      iconSize: new L.Point(40, 40),
+      iconSize: new L.Point(30, 30),
     })
-
     return (
+
       <div>
         <img className="logo" src={Logo} alt='logo du site skills' />
 
@@ -67,12 +67,13 @@ class SimpleExample extends React.Component {
             url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
 
+
           {this.props.toggleFilterMap.users.map(marker => {
             if (marker.online) {
               if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'DEV') {
                 return (
                   <Marker position={[marker.lat, marker.lng]}
-                  icon={this.props.toggleUsers.cto && marker.type === 'CTO' ? IconRh : IconDev}>
+                    icon={this.props.toggleUsers.cto && marker.type === 'CTO' ? IconRh : IconDev}>
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
@@ -111,10 +112,9 @@ class SimpleExample extends React.Component {
           }
           )}
         </Map>
-      </div>
+      </div>)
 
-    );
   }
 }
 
-export default connect(mapStateToProps)(SimpleExample);
+export default connect(mapStateToProps)(SimpleExample)

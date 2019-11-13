@@ -11,7 +11,6 @@ import Parameters from './components/homepage/Parameters'
 import Contact from './components/homepage/Contact'
 import './App.css';
 
-
 class App extends React.Component {
   state = {
     activeparameters: false,
