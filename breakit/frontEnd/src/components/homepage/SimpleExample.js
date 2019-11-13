@@ -16,7 +16,8 @@ class SimpleExample extends React.Component {
     zoom: 13,
     lat: 48.849044,
     lng: 2.352831,
-    meetups: []
+    meetups: [],
+    Users : []
   }
 
   getMeetUp() {
@@ -29,6 +30,14 @@ class SimpleExample extends React.Component {
   }
   componentDidMount() {
     this.getMeetUp();
+    this.getUsersOnline()
+  }
+
+  getUsersOnline() {
+      axios.get('http://localhost:4000/api/user/getOnlineUsers')
+      .then(res => {
+        return this.setState({Users : res.data})
+      })
   }
   
 
@@ -67,21 +76,18 @@ class SimpleExample extends React.Component {
             url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
           />
 
-
-          {this.props.toggleFilterMap.users.map(marker => {
+          {this.state.Users.map((marker, i) => {
             if (marker.online) {
-              if (this.props.toggleUsers.cto && marker.type === 'CTO' || this.props.toggleUsers.dev && marker.type === 'DEV') {
+              if ((this.props.toggleUsers.cto && marker.type === 'CTO') || (this.props.toggleUsers.dev && marker.type === 'Dev')) {
                 return (
-                  <Marker position={[marker.lat, marker.lng]}
-                    icon={this.props.toggleUsers.cto && marker.type === 'CTO' ? IconRh : IconDev}>
+                  <Marker position={marker.geoLoc} key={i} icon={this.props.toggleUsers.cto && marker.type === 'CTO' ? IconRh : IconDev}>
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
-                          <h2>{marker.firstname}<span> {marker.lastname}</span></h2>
+                          <h2>{marker.firstName}<span> {marker.name}</span></h2>
                           <h3>{marker.type}</h3>
-                          <h4>Languages : {marker.languages}</h4>
+                          <h4>Languages : {marker.languages.join(' / ')}</h4>
                         </div>
-                        <img className="avatar_map" src={marker.pic} alt='position du marker' />
                       </div>
                     </Popup>
                   </Marker>
@@ -90,11 +96,10 @@ class SimpleExample extends React.Component {
             }
           })}
 
-          {this.props.toggleList.meetups.map(marker2 => {
+          {this.props.toggleList.meetups.map((marker2, i) => {
             if (this.props.toggleUsers.meetup) {
               return (
-                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]}
-                  icon={IconMeetup}>
+                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]} key={i} icon={IconMeetup}>
                   <Popup>
                     <div className="pop">
                       <div className="meetupdes">
@@ -102,7 +107,7 @@ class SimpleExample extends React.Component {
                         <h4>{marker2.fields.address_name}</h4>
                         <h4>{marker2.fields.address_street}</h4>
                         <h4>{marker2.fields.address_zipcode}</h4>
-                        <img className="avatar_map2" src={marker2.fields.cover_url} />
+                        <img className="avatar_map2" src={marker2.fields.cover_url} alt="avatar_img" />
                       </div>
                     </div>
                   </Popup>

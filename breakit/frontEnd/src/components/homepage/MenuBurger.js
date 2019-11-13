@@ -1,11 +1,19 @@
 import React from "react";
+import { Link } from 'react-router-dom'
+import {connect} from 'react-redux'
+
 import Parameters from "./Parameters"
+
 import "./MenuBurger.css";
 
+const mapStateToProps = (state) => {
+  return state
+}
 
 class MenuBurger extends React.Component {
   state = {
     active: false,
+    propsLoaded : false,
   }
   toggleClass = () => {
     const currentState = this.state.active;
@@ -13,9 +21,18 @@ class MenuBurger extends React.Component {
       active : !currentState
     })
   }
+
+  componentDidMount = () => {
+    setTimeout(() => {
+    if (this.props.storeLoggedUser.user.spec !== undefined)   {
+      this.setState({propsLoaded : !this.state.propsLoaded})
+      }}, 200)
+  }
   
   render() {
+
     return (
+      
       <>
         <div className={this.state.active ? "change burgerContainer" : "burgerContainer"} onClick={this.toggleClass}>
           <div className="bar1"></div>
@@ -26,16 +43,17 @@ class MenuBurger extends React.Component {
           <div className="bar3"></div>
         </div>
         <div id="mnu" className={this.state.active ? "slider burgerMenu" : "burgerMenu"}>
-          <a className="burgerProfilePicParent" href="#"><img src="/profilPic.png" alt="Profil" className="burgerProfilePic" /></a>
-          <a className="burgerUserName" href="#">Nicolas Borson</a>
-          <a className="burgerJob" href="#">Développeur full-stack</a>
-          <a className="burgerContact" onClick={this.props.toggleClassContact} href="#">Contact</a>
-          <a className="burgerParametres" onClick={this.props.toggleClassParameters} href="#">Paramètres</a>
-          <a className="burgerDeconnexion" onClick={() => /*{ if*/ (window.confirm('Êtes-vous sur(e) de vouloir vous déconnecter ?'))/* this.onCancel(item)/* }*/} href="#">Deconnexion</a>
+          <div className="burgerProfilePicParent" ><img src="/profilPic.png" alt="Profil" className="burgerProfilePic" /></div>
+          <div className="burgerUserName" ><p>{this.props.storeLoggedUser.user.firstName} {this.props.storeLoggedUser.user.name} </p></div>
+          <div className="burgerJob">{this.props.storeLoggedUser.user.type}</div>
+          <div className="burgerJob">{this.state.propsLoaded ? this.props.storeLoggedUser.user.spec.join(' / ') : null}</div>
+          <Link to="/Contact" className="burgerContact" >Contact</Link>
+          <Link to="/Parameters" className="burgerParametres" >Paramètres</Link>
+          <div className="burgerDeconnexion" onClick={() => /*{ if*/ (window.confirm('Êtes-vous sur(e) de vouloir vous déconnecter ?'))/* this.onCancel(item)/* }*/} href="#">Deconnexion</div>
         </div>
       </>
     );
   }
 }
 
-export default MenuBurger;
+export default connect(mapStateToProps)(MenuBurger);

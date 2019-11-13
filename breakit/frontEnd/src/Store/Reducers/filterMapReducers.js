@@ -9,7 +9,6 @@ function toggleFilterMap(state = basicState, action) {
     case 'USER_LOADED':
       state.users = action.value
       nextState = state
-
       return nextState || state
     default: return state
   }

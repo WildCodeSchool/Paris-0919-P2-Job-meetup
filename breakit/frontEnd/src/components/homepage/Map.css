@@ -48,8 +48,11 @@ transition: ease 0.4s;
   display: flex;
   align-items: center;
   border-radius: 5%;
+<<<<<<< HEAD
 }
 
 .monbouton {
   z-index: 25000
+=======
+>>>>>>> origin/dev
 }

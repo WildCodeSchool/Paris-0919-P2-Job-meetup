@@ -37,16 +37,27 @@ class listFilter extends React.Component {
 	}
 
 	render() {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/dev
 		return (
-			<div className="first_container">
+			<div className="ListFilter_container_1">
 				{this.props.toggleFilter.isFiltered ?
+<<<<<<< HEAD
 					<div className="second_container">
+=======
+
+					<div className="ListFilter_container_2">
+>>>>>>> origin/dev
 						<div className="list">
-							<ul>
-								{this.props.toggleList.meetups.map(marker2 => {
+							<ul className = "list_meetup_around">
+								{this.props.toggleList.meetups.map((marker2, i) => {
 									return (
-										<div>
-											<li>{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
+
+										<div key={i}>
+											<li  className = "list_meetup_around_map">{marker2.fields.title} - {this.distanceComptuting(marker2.geometry.coordinates[0], marker2.geometry.coordinates[1])} km</li>
 										</div>
 									)
 								}
