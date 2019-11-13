@@ -37,20 +37,13 @@ class listFilter extends React.Component {
 	}
 
 	render() {
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/dev
 		return (
 			<div className="ListFilter_container_1">
 				{this.props.toggleFilter.isFiltered ?
-<<<<<<< HEAD
-					<div className="second_container">
-=======
 
 					<div className="ListFilter_container_2">
->>>>>>> origin/dev
 						<div className="list">
 							<ul className = "list_meetup_around">
 								{this.props.toggleList.meetups.map((marker2, i) => {
