@@ -18,19 +18,19 @@ class UserChoice extends React.Component {
         this.props.dispatch(action)
       }
 
+
     render() {
         return(
             <div className="containerUserProfil">
                 <Link to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
-                    <p className="inscriptionUserChoice">Profil</p>
                     <p className="inscriptionUserChoice">Vous êtes…</p>
                 </div>
 
                 <div className="containerChoice45">
                     <form className="form">
-                        <p> <button className="Choice_button" onClick={() => this.setState({ type: 'Dev' })} type="button" id="userDev-button">Un développeur</button> </p>
-                        <p> <button className="Choice_button" onClick={() => this.setState({ type: 'CTO' })} type="button" id="userSociety-button">Un recruteur</button> </p>
+                        <p> <button className={this.state.type === "Dev"?"Valide":"Choice_button"}onClick={() => this.setState({ type: 'Dev' })}  type="button" id="userDev-button">Un développeur</button> </p>
+                        <p> <button className={this.state.type === "CTO"? "Valide":"Choice_button"}onClick={() => this.setState({ type: 'CTO' })} type="button" id="userSociety-button">Un recruteur</button> </p>
                     </form>
                 </div>
 

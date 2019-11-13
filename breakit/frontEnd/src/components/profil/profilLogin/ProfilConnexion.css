@@ -14,13 +14,14 @@
     overflow: hidden;
     background-color: #262626;
     padding : 0;
-    height: 200vh;
+    height: 100vh;
     margin : 0;   
 }
 .logoProfilInscription {
     display: block;
     height: 7vh;
     margin: auto;
+    
 }
 
 img.logoProfilInscription {
@@ -219,21 +220,19 @@ font-size: 3.5vh;
   }
 
 .link_text{
-    color: rgb(180, 180, 180);
+    color: #ffffff;
     font-family: "HelveticaNeue_Medium", "sans-serif";
     text-decoration: none;
     font-size: 1.7vh;
-    text-shadow: 0px 0px 1px #FAE404;
+    
 }
  
  .link_button {
     
-    color: #fff;
+    color: #FAE404;
     font-family: "HelveticaNeue_Medium", "sans-serif";
     text-decoration: none;
-    text-transform: uppercase;
     font-size: 2vh;
-    text-shadow: 0px 0px 1px #FAE404;
 
 }
 

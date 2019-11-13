@@ -11,9 +11,10 @@
         font-family: "HelveticaNeue_Medium", "sans-serif";
         font-size: 20px;
         background: #262626;
+        color: #fff;
         border:none;
         border-radius: 10px;
-        color: white;
+        border: 3px solid #262626;
         display: flex;
         height: 2.2em;
         padding: 0em 2em;

@@ -43,9 +43,9 @@ class ProfilDevSpec extends React.Component {
 
                 <div className="containerChoiceSpec2">
                     <form className="form">
-                        <p> <button className="Spec_button" onClick={() => this.handleClick("Front-end")} name="Front-end" type="button" id="userFront-button">Front-end</button> </p>
-                        <p> <button className="Spec_button" onClick={() => this.handleClick("Back-end")} name="Back-end" type="button" id="userBack-button">Back-end</button> </p>
-                        <p> <button className="Spec_button" onClick={() => this.handleClick("Fullstack")} name="Fullstack" type="button" id="userFullStack-button">Fullstack</button> </p>
+                        <p> <button className={this.state.spec.includes("Front-end") ? "Valide1" : "Spec_button"} onClick={() => this.handleClick("Front-end")} name="Front-end" type="button" id="userFront-button">Front-end</button> </p>
+                        <p> <button className={this.state.spec.includes("Back-end") ? "Valide1" : "Spec_button"} onClick={() => this.handleClick("Back-end")} name="Back-end" type="button" id="userBack-button">Back-end</button> </p>
+                        <p> <button className={this.state.spec.includes("Fullstack") ? "Valide1" : "Spec_button"} onClick={() => this.handleClick("Fullstack")} name="Fullstack" type="button" id="userFullStack-button">Fullstack</button> </p>
                     </form>
                 </div>
 

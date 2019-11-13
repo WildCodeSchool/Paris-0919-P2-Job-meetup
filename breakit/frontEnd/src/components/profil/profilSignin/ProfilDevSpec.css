@@ -38,13 +38,27 @@ img.logoUserProfil {
     margin-top : 5vh;
 }
 
-.inscriptionUserChoice {
+.inscriptionUserChoice{
     font-family: "HelveticaNeue_Medium", "sans-serif";
     display: block;
     margin-top: 8vh;
     text-align: center;
     font-size: 30px;
-    color: #FAE404;
+    color: white;
+}
+
+.Valide1{
+    font-family: "HelveticaNeue_Light", "sans-serif";
+    background-color: #FAE404;
+    padding: 25px 25px 50px 25px;
+    color: #262626;
+    border-radius: 10px;
+    width: 70%;
+    cursor: pointer;
+    font-size: 1.5em;
+    border: 4px solid #FAE404;
+    margin: 0px 0px 40px 0px;
+    
 
 }
 
@@ -52,12 +66,12 @@ img.logoUserProfil {
 .Spec_button{
     font-family: "HelveticaNeue_Light", "sans-serif";
     background-color: #ffffff;
-    padding: 30px 25px;
+    padding: 25px 25px 50px 25px;
     color: #262626;
     border-radius: 10px;
-    width: 220px;
+    width: 70%;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.5em;
     border: 4px solid #FAE404;
     margin: 0px 0px 40px 0px;
 }
@@ -87,7 +101,7 @@ img.logoUserProfil {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 2vh;
-    text-shadow: 0px 0px 1px #FAE404;
+    
 
 }
   .dot {

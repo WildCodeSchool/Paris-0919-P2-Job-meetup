@@ -24,13 +24,12 @@ class ProfilDescription extends React.Component {
             <div className="containerUserProfil">
                 <Link to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
                 <div>
-                    <p className="inscriptionUserChoice">Profil</p>
                     <p className="inscriptionUserChoice">Description</p>
                 </div>
 
                 <div className="containerChoiceDes">
                     <form className="form">
-                        <textarea onChange={(e) => this.setState({ text: e.target.value })} name='textarea' id="story" rows="7" cols="33" placeholder="Saisissez votre besoin..."
+                        <textarea onChange={(e) => this.setState({ text: e.target.value })} name='textarea' id="story" rows="7" cols="33" placeholder="Saisissez votre besoin…"
                         ></textarea>
                     </form>
 
