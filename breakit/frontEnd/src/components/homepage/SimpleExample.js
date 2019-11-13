@@ -3,7 +3,6 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import axios from 'axios'
-
 import Logo from '../img/logo-skills-noir.svg'
 import './Map.css';
 
@@ -17,7 +16,7 @@ class SimpleExample extends React.Component {
     lat: 48.849044,
     lng: 2.352831,
     meetups: [],
-    Users : []
+    Users: []
   }
 
   getMeetUp() {
@@ -34,9 +33,9 @@ class SimpleExample extends React.Component {
   }
 
   getUsersOnline() {
-      axios.get('http://localhost:4000/api/user/getOnlineUsers')
+    axios.get('http://localhost:4000/api/user/getOnlineUsers')
       .then(res => {
-        return this.setState({Users : res.data})
+        return this.setState({ Users: res.data })
       })
   }
 
@@ -48,7 +47,7 @@ class SimpleExample extends React.Component {
     const position = [this.state.lat, this.state.lng];
     return (
       <div>
-        <img className="logo" src={Logo} alt='logo du site skills'/>
+        <img className="logo" src={Logo} alt='logo du site skills' />
 
         <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.toggleFilter.isFiltered ? "miSize" : "fullSize"}>
 
@@ -79,7 +78,7 @@ class SimpleExample extends React.Component {
 
           {this.props.toggleList.meetups.map((marker2, i) => {
             if (this.props.toggleUsers.meetup) {
-              return (
+              return ( 
                 <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]} key={i}>
                   <Popup>
                     <div className="pop">
@@ -87,6 +86,9 @@ class SimpleExample extends React.Component {
                         <h2>{marker2.fields.title}</h2>
                         <h4>{marker2.fields.address_name}</h4>
                         <h4>{marker2.fields.address_street}</h4>
+                            
+                         {/* <Link to='/contact_url'>  {marker2.fields.contact_url} clic </Link> */}
+                         <h4 onClick = { () => {window.open(marker2.fields.contact_url, "_blank")}}>Lien vers l'événement</h4>
                         <h4>{marker2.fields.address_zipcode}</h4>
                         <img className="avatar_map2" src={marker2.fields.cover_url} alt="avatar_img" />
                       </div>
