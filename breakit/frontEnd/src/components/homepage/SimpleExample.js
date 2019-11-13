@@ -3,10 +3,11 @@ import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import axios from 'axios'
 import L from 'leaflet';
+import LocateControl from './LocateControl';
 import Logo from '../img/logo-skills-noir.svg'
 import './Map.css';
 
-
+//npm install leaflet.locatecontrol
 
 const mapStateToProps = (state) => {
   return state
@@ -17,7 +18,7 @@ class SimpleExample extends React.Component {
     lat: 48.849044,
     lng: 2.352831,
     meetups: [],
-    Users : []
+    Users: []
   }
 
   getMeetUp() {
@@ -34,16 +35,24 @@ class SimpleExample extends React.Component {
   }
 
   getUsersOnline() {
-      axios.get('http://localhost:4000/api/user/getOnlineUsers')
+    axios.get('http://localhost:4000/api/user/getOnlineUsers')
       .then(res => {
-        return this.setState({Users : res.data})
+        return this.setState({ Users: res.data })
       })
   }
-  
+
 
   render() {
-    this.meetupToStore()
 
+    const locateOptions = {
+      position: 'topright',
+      strings: {
+        title: 'Show me where I am, yo!'
+      },
+      onActivate: () => { } // callback before engine starts retrieving locations
+    }
+
+    this.meetupToStore()
 
     const position = [this.state.lat, this.state.lng];
 
@@ -116,6 +125,7 @@ class SimpleExample extends React.Component {
             }
           }
           )}
+          <LocateControl options={locateOptions} startDirectly />
         </Map>
       </div>)
 
