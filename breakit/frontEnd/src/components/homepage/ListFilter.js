@@ -16,20 +16,10 @@ class listFilter extends React.Component {
 		return Math.PI * x / 180
 	}
 
-	earth_radius = 6378137
-	lat1 = this.state.lat
-	lng1 = this.state.lng
-	lat2 = this.state.lat2
-	lng2 = this.state.lng2
-	rlo1 = this.deg2rad(this.lng1)
-	rla1 = this.deg2rad(this.lat1)
-	rlo2 = this.deg2rad(this.lng2);
-	rla2 = this.deg2rad(this.lat2);
-	dlo = (this.rlo2 - this.rlo1) / 2;
-	dla = (this.rla2 - this.rla1) / 2;
-	a = (Math.sin(this.dla) * Math.sin(this.dla)) + Math.cos(this.rla1) * Math.cos(this.rla2) * (Math.sin(this.dlo) * Math.sin(this.dlo))
-	d = 0.002 * Math.atan2(Math.sqrt(this.a), Math.sqrt(1 - this.a));
-
+	order(a, b) {
+		return a < b ? -1 : (a > b ? 1 : 0);
+	}
+	  
 
 	distanceComptuting = (lng, lat) => {
 		const earth_radius = 6378137
@@ -64,7 +54,7 @@ class listFilter extends React.Component {
 										</div>
 									)
 								}
-								)}
+								)} 
 							</ul>
 						</div>
 					</div>
@@ -75,3 +65,4 @@ class listFilter extends React.Component {
 }
 
 export default connect(mapStateToProps)(listFilter)
+

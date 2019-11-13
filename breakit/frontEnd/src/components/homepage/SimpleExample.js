@@ -1,23 +1,24 @@
 import React from 'react';
-
 import { connect } from 'react-redux'
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 import axios from 'axios'
-
+import L from 'leaflet';
+import LocateControl from './LocateControl';
 import Logo from '../img/logo-skills-noir.svg'
 import './Map.css';
+
+//npm install leaflet.locatecontrol
 
 const mapStateToProps = (state) => {
   return state
 }
-
 class SimpleExample extends React.Component {
   state = {
     zoom: 13,
     lat: 48.849044,
     lng: 2.352831,
     meetups: [],
-    Users : []
+    Users: []
   }
 
   getMeetUp() {
@@ -34,21 +35,48 @@ class SimpleExample extends React.Component {
   }
 
   getUsersOnline() {
-      axios.get('http://localhost:4000/api/user/getOnlineUsers')
+    axios.get('http://localhost:4000/api/user/getOnlineUsers')
       .then(res => {
-        return this.setState({Users : res.data})
+        return this.setState({ Users: res.data })
       })
   }
 
 
-
   render() {
+
+    const locateOptions = {
+      position: 'topleft',
+      strings: {
+        title: 'Show me where I am, yo!'
+      },
+      onActivate: () => { } // callback before engine starts retrieving locations
+    }
+
     this.meetupToStore()
 
     const position = [this.state.lat, this.state.lng];
+
+    const IconMeetup = L.icon({
+      iconRetinaUrl: require('../img/icon-meetup.png'),
+      iconUrl: require('../img/icon-meetup.png'),
+      iconSize: new L.Point(30, 30),
+    })
+
+    const IconDev = L.icon({
+      iconRetinaUrl: require('../img/icon-dev.png'),
+      iconUrl: require('../img/icon-dev.png'),
+      iconSize: new L.Point(30, 30),
+    })
+
+    const IconRh = L.icon({
+      iconRetinaUrl: require('../img/icon-rh.png'),
+      iconUrl: require('../img/icon-rh.png'),
+      iconSize: new L.Point(30, 30),
+    })
     return (
+
       <div>
-        <img className="logo" src={Logo} alt='logo du site skills'/>
+        <img className="logo" src={Logo} alt='logo du site skills' />
 
         <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.toggleFilter.isFiltered ? "miSize" : "fullSize"}>
 
@@ -61,7 +89,7 @@ class SimpleExample extends React.Component {
             if (marker.online) {
               if ((this.props.toggleUsers.cto && marker.type === 'CTO') || (this.props.toggleUsers.dev && marker.type === 'Dev')) {
                 return (
-                  <Marker position={marker.geoLoc} key={i}>
+                  <Marker position={marker.geoLoc} key={i} icon={this.props.toggleUsers.cto && marker.type === 'CTO' ? IconRh : IconDev}>
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
@@ -80,7 +108,7 @@ class SimpleExample extends React.Component {
           {this.props.toggleList.meetups.map((marker2, i) => {
             if (this.props.toggleUsers.meetup) {
               return (
-                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]} key={i}>
+                <Marker position={[marker2.geometry.coordinates[1], marker2.geometry.coordinates[0]]} key={i} icon={IconMeetup}>
                   <Popup>
                     <div className="pop">
                       <div className="meetupdes">
@@ -97,11 +125,11 @@ class SimpleExample extends React.Component {
             }
           }
           )}
+          <LocateControl options={locateOptions} startDirectly />
         </Map>
-      </div>
+      </div>)
 
-    );
   }
 }
 
-export default connect(mapStateToProps)(SimpleExample);
+export default connect(mapStateToProps)(SimpleExample)

@@ -33,7 +33,6 @@ class Filter extends React.Component {
     this.props.dispatch(action)
   }
 
-
   render() {
     return (
       <div className="filter">
