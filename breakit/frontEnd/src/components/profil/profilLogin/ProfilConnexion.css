@@ -7,16 +7,14 @@
     src: url("../../fonts/HelveticaNeue_Medium.ttf")
  }
 
-body{
-  overflow: hidden ;
-}
+
 
 
 .containerProfilInscription{
     overflow: hidden;
     background-color: #262626;
     padding : 0;
-    height: 200vh;
+    height: 100vh;
     margin : 0;   
 }
 .logoProfilInscription {

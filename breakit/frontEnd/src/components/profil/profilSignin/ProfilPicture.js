@@ -62,7 +62,7 @@ class ProfilPicture extends React.Component {
                 <footer className="linearBalls"> 
                     <div className="links">
                         <Link to='/ProfilDescription'><p>Précédent</p> </Link>
-                        <button onClick = {() => this.putDataToDB()} to='/ProfilPicture'><p>Valider</p> </button>
+                        <input type="button" className="Validate_SignUp" onClick = {() => this.putDataToDB()} to='/ProfilPicture' value="VALIDER"/>
                     </div>
                 </footer>
                 

@@ -107,6 +107,13 @@ img.logoUserProfil {
 
 }
 
+.Validate_SignUp {
+    color: #FAE404;
+    background: #262626;
+    font-size: 2vh;
+    border: none;
+}
+
  
 /*  ********************* Section Media Queries ***************************/
 
