@@ -42,19 +42,22 @@ img.logoUserProfil {
     color: white;
 
 }
-
+form {
+    display: flex;
+}
 
 textarea{
+    display: flex;
+    justify-content: center;
     font-family: "HelveticaNeue_Light", "sans-serif";
     background-color: #ffffff;
     padding: 30px 25px;
     color: #262626;
     border-radius: 10px;
-    width: 220px;
     cursor: pointer;
     font-size: 20px;
     border: 4px solid #FAE404;
-    margin: 0px 0px 40px 0px;
+    margin: 0px 1em 40px 1em;
 }
 .linearBalls{
     position: fixed;
