@@ -80,9 +80,9 @@
 
 
 .cardItem {
-  padding: 1%;
+  padding-top: 5px;
   padding-right: 10%;
-  height: 5vh;
+  height: 5.3vh;
   text-align: center;
   width: 25vh;
   background-color: #fae404;
@@ -93,20 +93,26 @@
 .x {
   position : absolute;
   padding:  0px 15px;
+  padding-top: 0px;
   background-color: #fae504;
   font-size: 0.775em;
   cursor: pointer;
   color: #262626;
-  font-family: "HelveticaNeue_Light", "sans-serif";
+  font-family: "HelveticaNeue_Medium", "sans-serif";
   right: 23%;
-  font-weight: bold;
+  
   border-style: none;
+  box-shadow: none;
+  border-radius: 100%;
+  padding-bottom: 7px;
+  
 }
 .x:active{
   right: -50px;
 }
 
 .Add {
+  font-family: "HelveticaNeue_Medium", "sans-serif";
   position: relative;
   background-color: #fae404;
   border-radius: 0px 0px 7px 7px;
@@ -118,6 +124,7 @@
   margin-left: 81%;
   padding-bottom: 25%;
   padding: 5px 10px;
+  box-shadow: none;
   
 }
 .Add:active{
