@@ -43,7 +43,7 @@ class SimpleExample extends React.Component {
 
     const locateOptions = {
       maxZoom: 10,
-      position: 'topright',
+      position: 'topleft',
       strings: {
         title: 'Show me where I am, yo!'
       },
