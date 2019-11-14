@@ -49,7 +49,7 @@ class Filter extends React.Component {
             </div>
             <form id ="Filter_form" className={this.state.active ? "slider checkBox" : "checkBox"}>
               <div className="check-meet-up">
-                <label>
+                <label >
                   <input className="inputCheck" type="checkbox" value="Meet-up" onClick={() => this.toggleUsers('MEETUP_ON')}></input>
                   Meet-up
                 </label>

@@ -52,7 +52,7 @@ form{
    margin-left: 5em;
  }
 
-.check-meet-up, .check-entreprise, .check-cowork{
+.check-meet-up, .check-entreprise, .check-cowork {
    margin: 1.3vh;
    color: #262626;
    display: flex;
@@ -61,13 +61,11 @@ form{
    
 
 }
-
-
+.check-meet-up input{
+   border: 10px solid #ff1515;
+}
 .inputCheck{
-   height: 2em;
-   width: 3em;
+   cursor: pointer;
    margin-right: 1em;
-   background: blue;
-   border: 2px solid #262626;
-   
+  content: 4em;
 }
