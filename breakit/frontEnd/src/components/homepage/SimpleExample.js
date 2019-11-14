@@ -40,7 +40,6 @@ class SimpleExample extends React.Component {
 
 
   render() {
-
     const locateOptions = {
       maxZoom: 10,
       position: 'topright',
