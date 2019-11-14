@@ -14,7 +14,9 @@ class ProfilPicture extends React.Component {
 
     state = {
         intervalIsSet: false,
-        userChecked : false
+        userChecked : false,
+        file: '',
+        imagePreviewUrl: ''
     }
 
     componentWillUnmount() {
@@ -48,7 +50,41 @@ class ProfilPicture extends React.Component {
         this.props.history.push('/Home')
     }
 
+    //FUNCTION FOR DOWNLOADING PICTURE__>
+
+    // handleSubmit = (e) => {
+    //   e.preventDefault();
+    //   this.setState({file: e.target.files[0]})
+    // }
+
+    handleImageChange = (e)=> {
+      e.preventDefault();
+
+      let reader = new FileReader();
+      let file = e.target.files[0]
+
+      reader.onloadend = () => {
+        this.setState({
+          file: file,
+          imagePreviewUrl: reader.result
+        });
+      }
+      reader.readAsDataURL(file)
+    }
+
+    //<__FUNCTION FOR DOWNLOADING PICTURE
+    
+
     render() {
+
+      // IMAGE DOWNLOAD__>
+      let {imagePreviewUrl} = this.state;
+      let $imagePreview = null;
+      if (imagePreviewUrl) {
+        $imagePreview = (<img src={imagePreviewUrl} />);
+      }
+      // <__IMAGE DOWNLOAD
+
         return(
             <div className="containerUserProfil">
                 <Link to ="/"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
@@ -56,7 +92,16 @@ class ProfilPicture extends React.Component {
                     <p className="inscriptionUserChoice">Photo de profil</p>
                 </div>
                 <div className="containerChoice">
-                    <img src={avatar} className="avatar" alt="" />
+                    {/* <img src={avatar} className="avatar" alt="" /> */}
+                    <div className='avatar'>{$imagePreview}</div>
+                </div>
+                
+                <div>
+                  <form onSubmit={this.handleSubmit}>
+                    <input type="file" onChange={this.handleImageChange} />
+                    {/* <button type="submit" onClick={this.handleSubmit}>Upload Image</button> */}
+                  </form>
+                  
                 </div>
 
                 <footer className="linearBalls"> 
