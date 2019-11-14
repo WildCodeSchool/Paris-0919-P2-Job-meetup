@@ -32,7 +32,7 @@
 }
 
 
-button:active {
+#button_filter_1:active {
   box-shadow: none;
   position: relative;
   top: 0.2em;
