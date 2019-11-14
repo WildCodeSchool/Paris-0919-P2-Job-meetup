@@ -18,7 +18,7 @@
    justify-content: center;
    margin: 5%;
 }
-#button_filter_1{
+button{
    width: auto;
    background: white;
    color: black;
@@ -30,7 +30,9 @@
    font-size: 20px;
    font-family: 'HelveticaNeue_Medium';
 }
-#button_filter_1:active {
+
+
+button:active {
   box-shadow: none;
   position: relative;
   top: 0.2em;
@@ -41,52 +43,31 @@
    overflow: hidden;
    height:0;
 }
-#Filter_form{
+form{
    display: flex;
    flex-direction: column;
 }
 .slider.checkBox{
-   height:18vh;
+   height:21.3vh;
+   margin-left: 5em;
  }
+
 .check-meet-up, .check-entreprise, .check-cowork{
-   margin: 1vh;
+   margin: 1.3vh;
+   color: #262626;
+   display: flex;
+   font-size: 1.4em;
+   justify-content: space-between;
+   
+
 }
 
- .buttonfilter{
-    display: flex;
-    justify-content: center;
-    margin: 5%;
- }
- button{
-    width: auto;
-    background: white;
-    color: black;
-    border: 1px solid #262626;
-    box-shadow: 2px 2px 2px 1px rgba(122, 112, 112, 0.486);
-    border-radius: 10px;
-    height: 2.2em;
-    padding: 0em 2em;
-    font-size: 20px;
-    font-family: 'HelveticaNeue_Medium';
- }
-button:active {
-   box-shadow: none;
-   position: relative;
-   top: 0.2em;
- }
- .checkBox {
-    z-index: 40;
-    transition: ease 0.5s;
-    overflow: hidden;
-    height:0;
- }
- form{
-    display: flex;
-    flex-direction: column;
- }
- .slider.checkBox{
-    height:18vh;
-  }
- .check-meet-up, .check-entreprise, .check-cowork{
-    margin: 1vh;
- }
+
+.inputCheck{
+   height: 2em;
+   width: 3em;
+   margin-right: 1em;
+   background: blue;
+   border: 2px solid #262626;
+   
+}
