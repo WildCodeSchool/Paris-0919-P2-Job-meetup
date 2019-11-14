@@ -90,7 +90,9 @@ app.get('/api/user/getOnlineUsers', function(req, res) {
             interest : user.interest,
             text : user.text,
             geoLoc : user.geoLoc,
-            online : user.online
+            online : user.online,
+            web : user.web,
+            field : user.field
         };
       });
       res.status(200).send(userMap)
