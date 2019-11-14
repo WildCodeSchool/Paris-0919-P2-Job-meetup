@@ -14,9 +14,6 @@ const mapStateToProps = (state) => {
 }
 class SimpleExample extends React.Component {
   state = {
-    zoom: 13,
-    lat: 48.849044,
-    lng: 2.352831,
     meetups: [],
     Users: []
   }
@@ -45,7 +42,8 @@ class SimpleExample extends React.Component {
   render() {
 
     const locateOptions = {
-      position: 'topleft',
+      maxZoom: 10,
+      position: 'topright',
       strings: {
         title: 'Show me where I am, yo!'
       },
@@ -53,8 +51,6 @@ class SimpleExample extends React.Component {
     }
 
     this.meetupToStore()
-
-    const position = [this.state.lat, this.state.lng];
 
     const IconMeetup = L.icon({
       iconRetinaUrl: require('../img/icon-meetup.png'),
@@ -78,8 +74,7 @@ class SimpleExample extends React.Component {
       <div>
         <img className="logo" src={Logo} alt='logo du site skills' />
 
-        <Map center={position} zoom={this.state.zoom} id="leaflet-container" className={this.props.toggleFilter.isFiltered ? "miSize" : "fullSize"}>
-
+        <Map id="leaflet-container" className={this.props.toggleFilter.isFiltered ? "miSize" : "fullSize"}>
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'

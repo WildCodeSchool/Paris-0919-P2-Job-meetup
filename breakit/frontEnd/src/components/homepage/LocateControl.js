@@ -6,6 +6,7 @@ class LocateControl extends Component {
    const { options, startDirectly } = this.props;
    const { map } = this.props.leaflet;
    const lc = new Locate(options);
+   /*const locate = NewClass _layer._mapToAdd._lastCenter*/
    lc.addTo(map);
    if (startDirectly) {
      // request location update and set location

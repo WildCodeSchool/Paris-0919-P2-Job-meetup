@@ -9,8 +9,7 @@ const mapStateToProps = (state) => {
 
 class listFilter extends React.Component {
 	state = {
-		lat: 48.849044,
-		lng: 2.352831,
+		position : []
 	}
 	deg2rad = (x) => {
 		return Math.PI * x / 180
@@ -19,12 +18,17 @@ class listFilter extends React.Component {
 	order(a, b) {
 		return a < b ? -1 : (a > b ? 1 : 0);
 	}
-	  
+	
+	pos(){
+		navigator.geolocation.getCurrentPosition((location) => {
+		let latlng = [location.coords.latitude, location.coords.longitude]
+		this.setState({position : latlng})
+	});}
 
 	distanceComptuting = (lng, lat) => {
 		const earth_radius = 6378137
-		const lat1 = this.state.lat
-		const lng1 = this.state.lng
+		const lat1 = this.state.position[0]
+		const lng1 = this.state.position[1]
 		const rlo1 = this.deg2rad(lng1)
 		const rla1 = this.deg2rad(lat1)
 		const rlo2 = this.deg2rad(lng);
@@ -36,8 +40,11 @@ class listFilter extends React.Component {
 		return Math.round(earth_radius * d * 100) / 100
 	}
 
-	render() {
+	componentDidMount() {
+		this.pos()
+	}
 
+	render() {
 
 		return (
 			<div className="ListFilter_container_1">
