@@ -82,15 +82,31 @@ class SimpleExample extends React.Component {
 
           {this.state.Users.map((marker, i) => {
             if (marker.online) {
-              if ((this.props.toggleUsers.cto && marker.type === 'CTO') || (this.props.toggleUsers.dev && marker.type === 'Dev')) {
+              if (this.props.toggleUsers.dev && marker.type === 'Dev'){
                 return (
-                  <Marker position={marker.geoLoc} key={i} icon={this.props.toggleUsers.cto && marker.type === 'CTO' ? IconRh : IconDev}>
+                  <Marker position={marker.geoLoc} key={i} icon={IconDev}>
                     <Popup>
                       <div className="popup_desc">
                         <div className="desciption">
                           <h2>{marker.firstName}<span> {marker.name}</span></h2>
                           <h3>{marker.type}</h3>
                           <h4>Languages : {marker.languages.join(' / ')}</h4>
+                        </div>
+                      </div>
+                    </Popup>
+                  </Marker>
+                )
+              }
+              else if((this.props.toggleUsers.cto && marker.type === 'CTO')){
+                return (
+                  <Marker position={marker.geoLoc} key={i} icon={IconRh}>
+                    <Popup>
+                      <div className="popup_desc">
+                        <div className="desciption">
+                          <h2>Société : <span> {marker.name}</span></h2>
+                          <h4>Secteur : <span> {marker.field}</span> </h4> 
+                          <h4>Langages recherchés: {marker.languages.join(' / ')}</h4>
+                          <h4>Site Web : <span> {marker.web}</span></h4>
                         </div>
                       </div>
                     </Popup>

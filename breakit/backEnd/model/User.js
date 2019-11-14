@@ -66,7 +66,15 @@ const userSchema =  mongoose.Schema(
         online : {
           type : Boolean,
           required : false
-      }
+      },
+      field : {
+        type : String,
+        required : false
+    },
+    web : {
+      type : String,
+      required : false
+  }
 
         
     },
