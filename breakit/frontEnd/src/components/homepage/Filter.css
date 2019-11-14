@@ -18,7 +18,7 @@
    justify-content: center;
    margin: 5%;
 }
-button{
+#button_filter_1{
    width: auto;
    background: white;
    color: black;
@@ -43,7 +43,7 @@ button:active {
    overflow: hidden;
    height:0;
 }
-form{
+#Filter_form{
    display: flex;
    flex-direction: column;
 }
