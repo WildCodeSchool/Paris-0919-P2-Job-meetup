@@ -29,7 +29,7 @@ class ProfilDescription extends React.Component {
 
                 <div className="containerChoiceDes">
                     <form className="form">
-                        <textarea onChange={(e) => this.setState({ text: e.target.value })} name='textarea' id="story" rows="7" cols="33" placeholder="Saisissez votre besoin…"
+                        <textarea onChange={(e) => this.setState({ text: e.target.value })} className='textDescription'name='textarea' id="story" rows="7" cols="33" placeholder="Saisissez votre besoin…"
                         ></textarea>
                     </form>
 

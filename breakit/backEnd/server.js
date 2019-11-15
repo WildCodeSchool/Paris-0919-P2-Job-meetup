@@ -55,7 +55,7 @@ app.post('/api/user/signin', (req,res) => {
 
 app.post('/api/user/getUsers', (req, res) => {
     User.find({'mail' : req.body.mail}, function(err, result) {
-        console.log('result = ', result)
+
         if (err) res.status(400).send('User does not exist');
         result.map(user => {
             onlineUser = {

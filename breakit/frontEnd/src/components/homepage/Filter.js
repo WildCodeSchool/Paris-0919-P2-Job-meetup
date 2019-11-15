@@ -45,7 +45,7 @@ class Filter extends React.Component {
                   const newOpenFilter = !this.state.openFilter;
                   this.setState({ openFilter: newOpenFilter });
                 }}
-              >Filter</button>
+              >Filtrer</button>
             </div>
             <form id ="Filter_form" className={this.state.active ? "slider checkBox" : "checkBox"}>
               <div className="check-meet-up">

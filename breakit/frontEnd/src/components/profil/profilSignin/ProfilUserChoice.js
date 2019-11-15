@@ -27,7 +27,7 @@ class UserChoice extends React.Component {
                     <p className="inscriptionUserChoice">Vous êtes…</p>
                 </div>
 
-                <div className="containerChoice45">
+                <div className="containerChoiceButton">
                     <form className="form">
                         <p> <button className={this.state.type === "Dev"?"Valide":"Choice_button"}onClick={() => this.setState({ type: 'Dev' })}  type="button" id="userDev-button">Un développeur</button> </p>
                         <p> <button className={this.state.type === "CTO"? "Valide":"Choice_button"}onClick={() => this.setState({ type: 'CTO' })} type="button" id="userSociety-button">Un recruteur</button> </p>
