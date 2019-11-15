@@ -41,7 +41,7 @@ class Formulaire extends Component {
   render () {
     return (
       <div>
-      <Link to ="/Home"><img src={logo} alt="logo Skills" className="logoUserProfil"></img></Link> 
+      <Link to ="/Home"><img src={logo} alt="logo Skills" className="logoUserProfilChat"></img></Link> 
       <form
         className='formchat'
         onSubmit={this.handleSubmit}>
