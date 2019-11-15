@@ -1,30 +1,25 @@
-import React, { Component } from 'react'
+/* import { auth } from '../../base';
+import React from 'react'
 
-class Connexion extends Component {
-  state = {
-    goToChat: false
+class Connexion extends React.Component{
+
+  onSubmit = (event) => {
+    const {
+      email,
+      password,
+    } = this.state;
+
+    auth.doSignInWithEmailAndPassword("morgan.leblanc@gmail.com", "testtest")
+    event.preventDefault();
   }
 
-
-
-  handleSubmit = event => {
-    event.preventDefault()
-    this.setState({ goToChat: true })
-  }
-
-  render () {
-
-    return (
-      <div className='connexionBox'>
-        <form className='connexion' onSubmit={this.handleSubmit}>
-          <input
-            type='text'
-            required />
-          <button type='submit'>GO</button>
-        </form>
-      </div>
+  render() {
+    return(
+      null
     )
   }
 }
 
-export default Connexion
+export default Connexion */
+
+

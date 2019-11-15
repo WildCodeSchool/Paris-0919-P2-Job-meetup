@@ -7,7 +7,7 @@ import './Chat.css'
 
 
 // Firebase
-import base from './base'
+import base from '../../base'
 
 // Animations
 import {
