@@ -76,4 +76,10 @@
       justify-content: center;
       margin: 2%;
    }
+   .slider.checkBox{
+      height:21.3vh;
+      margin-left: 30em;
+    }
+   
+   
 }

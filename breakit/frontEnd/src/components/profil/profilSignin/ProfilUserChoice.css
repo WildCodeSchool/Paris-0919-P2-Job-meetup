@@ -100,4 +100,12 @@ img.logoUserProfil {
     margin: 5px 0px 6px 0px;
 }
 
- 
+@media screen and (min-width: 1000px)
+{ 
+.containerChoiceButton{
+    width: 100%;
+	padding: 30px 0px 00px 0px;
+    text-align: center;
+    margin-top: 10%;
+}
+}

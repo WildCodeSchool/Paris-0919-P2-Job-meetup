@@ -1,4 +1,11 @@
-
+@font-face {
+  font-family: "HelveticaNeue_Light";
+  src: url("../fonts/HelveticaNeue_Light.ttf")
+}
+@font-face {
+  font-family: "HelveticaNeue_Medium";
+  src: url("../fonts/HelveticaNeue_Medium.ttf")
+}
 
   .burgerMenu{
     position:fixed;
@@ -16,7 +23,7 @@
   .burgerMenu a{
     opacity:100%;
     padding:10px 0px;
-    font-family:Helvetica;
+    font-family: "HelveticaNeue_Medium", "sans-serif";
     color:white;
     display:block;
     transition: opacity 2s;
