@@ -16,6 +16,7 @@ import Home from './components/homepage/Home';
 import { connect } from 'react-redux'
 import PrivateRoute from "./components/utils/PrivateRoute";
 import './App.css';
+import Chat from './components/chat/Chat'
 import SimpleExample from './components/homepage/SimpleExample';
 
 const mapStateToProps = (state) => {
@@ -43,6 +44,7 @@ class App extends React.Component {
           <PrivateRoute path="/Home" component={Home} isAuthenticated={this.props.validLog.isLoggedIn} redirect="/" />
           <PrivateRoute className="Parameters" path="/Contact" isAuthenticated={this.props.validLog.isLoggedIn} component={Contact} />
           <PrivateRoute className="Parameters" path="/Parameters" isAuthenticated={this.props.validLog.isLoggedIn} component={Parameters} />
+          <PrivateRoute className="chat" path="/Chat" isAuthenticated={this.props.validLog.isLoggedIn} component={Chat} />
           {/* For the Meetup */}
 
    

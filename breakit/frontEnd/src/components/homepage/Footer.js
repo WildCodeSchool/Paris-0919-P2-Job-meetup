@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css'
 import pictoMail from '../img/Mail-picto.svg'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const mapStateToProps = (state) => {
   return state
@@ -22,7 +23,8 @@ class Footer extends React.Component {
             <input type="button" className="FisrtButton" onClick={() => this._toggleFilter()}
               value={this.props.toggleFilter.isFiltered ? "Carte" : "A proximité"}></input>
             <div className="pictoMail">
-              <img src={pictoMail} alt="picto mail"></img>
+            <Link to="/Chat" className="burgerParametres" ><img src={pictoMail} alt="picto mail"></img></Link>
+              
             </div>
           </div>
         </footer>
