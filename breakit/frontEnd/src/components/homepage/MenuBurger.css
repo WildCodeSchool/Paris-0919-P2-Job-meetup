@@ -23,6 +23,7 @@
     text-decoration:none;
     white-space:nowrap;
   }
+
   .slider.burgerMenu{
     width:80vw;
     box-shadow:0px 0px 15px black;
@@ -120,4 +121,13 @@
     font-size:24px;
     margin:0px 10px;
     color : grey;
+  }
+
+  @media screen and (min-width: 600px)
+  {
+    .slider.burgerMenu{
+      width:30vw;
+      box-shadow:0px 0px 15px black;
+    }
+   
   }
