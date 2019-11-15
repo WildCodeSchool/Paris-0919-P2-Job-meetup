@@ -45,7 +45,6 @@ class listFilter extends React.Component {
 	}
 
 	render() {
-
 		return (
 			<div className="ListFilter_container_1">
 				{this.props.toggleFilter.isFiltered ?

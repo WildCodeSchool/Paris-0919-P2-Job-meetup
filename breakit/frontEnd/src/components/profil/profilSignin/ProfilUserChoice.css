@@ -53,36 +53,32 @@ img.logoUserProfil {
 .Choice_button{
     font-family: "HelveticaNeue_Light", "sans-serif";
     background-color: #ffffff;
-    padding: 25px 25px 50px 25px;
+    padding: 25px 25px 25px 25px;
     color: #262626;
     border-radius: 10px;
     width: 70%;
     cursor: pointer;
     font-size: 1.5em;
     border: 4px solid #FAE404;
-    margin: 0px 0px 40px 0px;
     
 }
 .Valide{
-    
         font-family: "HelveticaNeue_Light", "sans-serif";
         background-color: #FAE404;
-        padding: 25px 25px 50px 25px;
+        padding: 25px 25px 25px 25px;
         color: #262626;
         border-radius: 10px;
         width: 70%;
         cursor: pointer;
         font-size: 1.5em;
         border: 4px solid #FAE404;
-        margin: 0px 0px 40px 0px;
-        
-    
 }
 
-.containerChoice45{
+.containerChoiceButton{
     width: 100%;
 	padding: 30px 0px 00px 0px;
     text-align: center;
+    margin-top: 20%;
 }
 .linearBalls{
     position: fixed;
@@ -104,4 +100,12 @@ img.logoUserProfil {
     margin: 5px 0px 6px 0px;
 }
 
- 
+@media screen and (min-width: 1000px)
+{ 
+.containerChoiceButton{
+    width: 100%;
+	padding: 30px 0px 00px 0px;
+    text-align: center;
+    margin-top: 10%;
+}
+}

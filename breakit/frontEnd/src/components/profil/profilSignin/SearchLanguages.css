@@ -23,7 +23,7 @@
 }
 
 .inputContainerLang {
-  display : flex;
+  /* display : flex; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@
 }
 
 .inputSearchLanguages {
-  width : 100%;
+  width : 80%;
   border: 4px solid #fae404;
   border-radius: 5px 5px 0px 0px;
   padding : 2vh;
@@ -54,7 +54,7 @@
 
 .suggestionsList {
   height : 7vh;
-  width : 78%;
+  width : 80%;
   overflow: scroll;
   color: #505050;
   list-style-type: none;
@@ -63,10 +63,11 @@
   border-radius: 0px 0px 5px 5px;
   font-size: 1.4em;
   font-family: "HelveticaNeue_Light", "sans-serif";
-  margin-top: -2.05em;
+  /*! margin-top: -2.05em; */
   padding: 0 20px;
   z-index: 2;
   cursor: pointer;
+  margin: -1.6em auto;
 }
 
 .listElements {
@@ -89,26 +90,23 @@
   border-radius: 5px 5px 5px 5px;
   font-size: 1.4em;
   font-family: "HelveticaNeue_Light", "sans-serif";
+  margin: auto;
 }
 .x {
-  position : absolute;
-  padding:  0px 15px;
-  padding-top: 0px;
+  position: absolute;
   background-color: #fae504;
   font-size: 0.775em;
   cursor: pointer;
   color: #262626;
   font-family: "HelveticaNeue_Medium", "sans-serif";
-  right: 23%;
-  
-  border-style: none;
+   border-style: none;
   box-shadow: none;
   border-radius: 100%;
   padding-bottom: 7px;
-  
-}
-.x:active{
-  right: -50px;
+  z-index: 2;
+  display: flex;
+  margin-top: -22px;
+  margin-left: 162px;
 }
 
 .Add {
@@ -121,7 +119,7 @@
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  margin-left: 81%;
+  margin-left: 64%;
   padding-bottom: 25%;
   padding: 5px 10px;
   box-shadow: none;
