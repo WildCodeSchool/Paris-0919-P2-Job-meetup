@@ -101,7 +101,6 @@ class ProfilPicture extends React.Component {
                     <input type="file" onChange={this.handleImageChange} />
                     {/* <button type="submit" onClick={this.handleSubmit}>Upload Image</button> */}
                   </form>
-                  
                 </div>
 
                 <footer className="linearBalls"> 
